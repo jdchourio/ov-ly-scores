@@ -118,7 +118,7 @@ left = \relative c' {
   d8 c bes a g f ees d | c bes a d g,2 | d' bes4 g | ees2 d8 e fis g | 
   a bes c a bes c d e | fis g a fis g a b c | d ees f g aes2 | g8 f e d c bes aes g |
 
-  f' ees des c bes aes g f | e d c e f g aes f | bes c d bes ees ees, f aes | 
+  f' ees des c bes aes g f | e d c e f g aes f | bes c d bes ees ees, g aes | 
   bes bes, d ees f g aes bes | \clef treble c d ees f g a bes c | d4. c8 bes a g f | 
   ees d c bes a4 d | \clef bass g,4 c f, bes | e, a d,2 | g f8 e d c | bes2-\trill a8 b cis d | 
   e f g e f4. g8 | a b cis a d e fis g | \clef treble << { a8 g a fis g4 s } \\ { c,2 bes4 ees } >> | 
