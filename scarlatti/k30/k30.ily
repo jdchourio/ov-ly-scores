@@ -45,9 +45,9 @@ right = \relative c' {
   << {ees4. s} \\ {ees 8 fis,8 g a bes c} >>
   \su bes cis d e fis g
   fis8 g a << {d, g fis} \\ { d g, a} >>
-  << { g'4. s} \\ {bes,8 c d ~ d d bes} >>
+  << { g'4. s} \\ {bes,8 c \tu d ~ d d bes} >>
   
-  g8 c ees4 d8 fis,
+  g8 c \once \sd ees4 d8 fis,
   g4. bes
   ees fis
   bes cis,
@@ -55,7 +55,7 @@ right = \relative c' {
   g d' c << {g'8} \\ {bes,8 a g} >>
   
   << {f'8 s2 f8} \\ {a,8 b c b c d} >>
-  << {e8 s2 e8} \\ {g,8 a bes a bes c} >>
+  << {ees8 s2 ees8} \\ {g,8 a bes a bes c} >>
   \sn d c bes ~ bes f' d
   bes ees g4 f8 c' ~
   c bes d,4 c8 bes
@@ -63,7 +63,7 @@ right = \relative c' {
   
   
   << {d8 bes c d4 e8 f4. ~ f ees8 c d ees4 fis8 g4. ~ g f8 a g f e d } \\
-    {fis,4. ~ fis4 g8 a c bes a g f g4. ~ g4 a8 bes d c bes a g a4. s }>>
+    {f,4. ~ f4 g8 a c bes a g f g4. ~ g4 a8 bes d c bes a g a4. s }>>
   \sn cis4. 
   
   << {a'4. ~ a8 g4 ~ g8 f e f e d ~ d a f} \\
@@ -330,9 +330,9 @@ left = \relative c {
   << {s4. c'8 bes a} \\ {c,4. ~ c} >>
   g'4. ~ g
   
-  d f
+  d' f
   s2.
-  <d, d'>4. <f f'>
+  <d,, d'>4. <f f'>
   <bes bes'> <cis cis'>
   <f f'> <gis gis'>
   <a a'> <fis fis'>
@@ -350,7 +350,7 @@ left = \relative c {
   c4. e,
   f4 g8 a4. 
   bes <ees, bes'>
-  <aes, aes'> <a' c>
+  <aes, aes'> <aes' c>
   bes8 d c bes aes g
   
   
@@ -365,7 +365,7 @@ left = \relative c {
   g bes
   s a
   d, f 
-  g, g'
+  \once \su g, g'
   << {c ~ c} \\ {ees, c} >>
   << {d' d} \\ {d, ~ d} >>
   
