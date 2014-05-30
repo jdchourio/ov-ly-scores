@@ -1,7 +1,15 @@
 \version "2.18.2"
 \include "k41.ily"
 
-#(set-global-staff-size 15.5)
+breaks = {
+  s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break \pageBreak
+  s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break \pageBreak
+  s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break \pageBreak
+  s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break \pageBreak
+  s1*3 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break \pageBreak
+}
+
+#(set-global-staff-size 17)
 
 \header {
   title = "K41"
@@ -22,6 +30,7 @@
   \new PianoStaff <<
     \new Staff = "right" {
       << 
+        \breaks
         { \rightOne }
         { \rightTwo }
       >>

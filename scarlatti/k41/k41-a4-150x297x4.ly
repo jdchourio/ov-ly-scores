@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "k41.ily"
 
-#(set-global-staff-size 15.5)
+#(set-global-staff-size 15.9)
 
 \header {
   title = "K41"
@@ -16,6 +16,9 @@
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  
+  left-margin = 3 \cm
+  right-margin = 3 \cm
 }
 
 \score {
