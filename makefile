@@ -27,7 +27,9 @@ pdf_scarlatti_A4x2 = $(scarlatti:%=pdf/$(A4x2)/%-$(A4x2).pdf)
 pdf_scarlatti_A4x3 = $(scarlatti:%=pdf/$(A4x3)/%-$(A4x3).pdf)
 pdf_scarlatti_A4x4 = $(scarlatti:%=pdf/$(A4x4)/%-$(A4x4).pdf)
 pdf_scarlatti_A3x1 = $(scarlatti:%=pdf/$(A3x1)/%-$(A3x1).pdf)
-rdf_scarlatti_A3x2 = $(scarlatti:%=pdf/$(A3x2)/%-$(A3x2).pdf)
+pdf_scarlatti_A3x2 = $(scarlatti:%=pdf/$(A3x2)/%-$(A3x2).pdf)
+
+png_scarlatti_std = $(scarlatti:%=png/%.png)
 
 pdf = $(pdf_scarlatti_A4x1) \
       $(pdf_scarlatti_A4x2) \
@@ -62,7 +64,10 @@ pdf/$(A3x2)/%-$(A3x2).pdf: %-$(A3x2).ly %.ily
 pdf/%.pdf: %.ly %.ily
 	mkdir -p pdf && $(LILY_CMD) -o pdf $<
 
-all: $(pdf)
+png/%.png: %.ly %.ily
+	mkdir -p png && $(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=192 -o png $<
+
+all: $(pdf) $(png_scarlatti_std)
 .PHONY : all
 
 # ./others/Suite_jeremiah_clarke.ly
