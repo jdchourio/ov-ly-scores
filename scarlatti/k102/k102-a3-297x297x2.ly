@@ -30,5 +30,5 @@
       \clef bass \left 
     }
   >>
-  \layout { }
+  \layout { indent = 0 }
 }

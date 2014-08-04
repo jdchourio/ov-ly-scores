@@ -34,8 +34,8 @@ right = \relative c''' {
     \repeat unfold 2 {
       a a' g a
       a, g' fis g a, fis' e fis
-      a, e' d e }
-    a,4 r8 e'[ a d,]
+      a, e' d e } a,4 
+    \sd r8 e'[ a d,]
 
     cis d e4
     r8 e[ a d,]
@@ -58,7 +58,7 @@ right = \relative c''' {
   }
   
   \repeat volta 2 {
-    d4 cis
+    \sn d4 cis
     d8 cis16 d d,8 b'
     \repeat unfold 2 {
       a4 g
@@ -75,7 +75,7 @@ right = \relative c''' {
     c16 e d e c e b e
     
     a, e' d e a, e' g, e'
-    fis, a g a fis a e a
+    fis,! a g a fis a e a
     d, a' g a d, a' c, a'
     b,8[( d g b])
     c,[( fis a c])
@@ -83,14 +83,14 @@ right = \relative c''' {
     d,[( g b d])
     e,[( a c e])
     fis,-\parenthesize-\trill e16 fis d8 d'
-    ees16 g,( fis g) b8( c)
+    \sd ees16 g,( fis g) b8( c) \su
     d16 g,( fis g) a8( bes)
     
     c16 g( fis g) a8 c
     bes16 d,( cis d) g8 bes
     aes16 ees( d ees)
-    <<{ c'4 ~ c8 d b a bes4 a } \\
-      { aes8 g fis4 g ~ g fis }>>
+    <<{ c'4 ~ c8[ d b! a] bes4 a } \\
+      { aes8 g fis!4 g ~ g fis }>>
     g4 r
   }
 }
@@ -102,7 +102,7 @@ left = \relative c {
     <g b g'>4 <a c fis>
     <b d g> \repeat unfold 2 {
       r8 <<{ e'8 d4 c b } \\ 
-        { c8 b g a d, g4 }>> }
+        { c8 b[ g a d, g4] }>> }
     
     r8 g
     <<{ r d'4 cis8 d4 } \\ { fis,4 e d }>>
@@ -130,7 +130,7 @@ left = \relative c {
     
     e4 r8 e'
     d4 r8 d,
-    g4 r8 <g, g'>
+    g4 r8 \once \sd <g, g'>
     <a a'>[ <cis cis'> <d d'> <g, g'>]
     <a a'>4 q
     <d, d'> r
@@ -148,21 +148,21 @@ left = \relative c {
     r8 <b d>
     
     <c e>4 r8 <c, e>
-    <d fis>4 r8 <e g> 
+    <d fis!>4 r8 <e g> 
     <fis a>4 r8 d
-    g[( d b g])
+    \sd g[( d b g])
     a'[( fis c a])
     
     b'[( g d b])
     c'[( a e c])
-    d4 r8 d'
+    \sn d4 r8 d'
     c4 r8 c,
     bes4 r8 bes'
     
     a4 r8 a,
-    g4 r8 <g g'>
+    g4 r8 \once \sd <g g'>
     <c c'>4 r8 q
-    d[ fis g c,]
+    d[ fis! g c,]
     d4 d,
     g4 r
   }

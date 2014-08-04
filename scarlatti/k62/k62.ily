@@ -20,7 +20,7 @@ right = \relative c''' {
   \global
  
   \repeat volta 2 {
-    a16 gis a e cis a
+    \sd a16 gis a e cis a
     e' dis e b gis e
     cis'4.-\trill 
     b-\trill
@@ -43,14 +43,15 @@ right = \relative c''' {
     fis g bes,
     bes-\parenthesize-\trill a e' ~
     e f a,
-    a-\trill gis a
+    \su a-\trill gis a
     
     a-\parenthesize-\trill gis a
     \appoggiatura a16 b4
     e8
-    \repeat unfold 3 {
-      f,-\trill e d' }
-    f,-\parenthesize-\trill e e'
+    f,-\trill e d'
+    f,-\trill e c'
+    f,-\trill e b'
+    f-\parenthesize-\trill e e'
     
     a, gis a
     \appoggiatura a16 b4.
@@ -58,11 +59,11 @@ right = \relative c''' {
       <a c>8 <g b> <a c> 
       b4. }
     b a-\trill g-\trill fis-\trill
-    e-\trill des-\parenthesize-\trill 
+    e-\trill dis-\parenthesize-\trill 
     e-\parenthesize-\trill
     
     R4. r4 <dis fis a>8
-    <<{ gis8 e a } \\ { <b, e>4 <cis e>8 }>>
+    <<{ gis!8 e a } \\ { <b, e>4 <cis e>8 }>>
     <<{ gis' a fis } \\ { e4 dis8 }>>
     \su e64*24/16[ e' dis cis b a gis fis] e[ b' a gis fis e dis cis]
     b64*24/17[ e dis cis \cstl b a gis fis] e[ b' a gis fis e dis cis b]
@@ -77,7 +78,7 @@ right = \relative c''' {
     g-\parenthesize-\trill f d' ~
     
     d e g,
-    g-\trill fis d' ~
+    g-\trill fis! d' ~
     d ees c
     c-\trill b d ~
     d ees c
@@ -93,17 +94,17 @@ right = \relative c''' {
     f e a,
     a-\trill gis4
     \repeat unfold 3 { 
-      <d' fis>8 <c e> <d fis> e4. }
+      <d' f>8 <c e> <d fis> e4. }
     e d-\trill c-\trill b-\trill a-\trill
     gis-\trill a-\trill R
     
     r4 <e gis b d>8
-    <<{ <a cis> a <a d> } \\ { e4 <d fis>8 }>>
+    <<{ <a cis!> a <a d> } \\ { e4 <d fis>8 }>>
     <<{ <a' cis> d <gis, b> } \\ { e4 e8 }>>
     
     \repeat unfold 3 {
       \sd cis'16 e a, cis e, a }
-    <<{ c4.-\trill } \\ { cis16 b a g fis e }>>
+    <<{ cis4.-\trill } \\ { cis16 b a g fis e }>>
     \repeat unfold 4 {
       fis'16 a d, fis a, d }
     
@@ -142,7 +143,7 @@ left = \relative c'' {
     \clef treble <dis fis a>
     <e gis>
     <dis fis a>
-    <e gis>4 d8
+    <e gis>4 d!8
     
     \repeat unfold 2 {
       <cis g'>4. <d g> }
@@ -159,8 +160,8 @@ left = \relative c'' {
     \clef treble \repeat unfold 3 {
       <dis'' fis>
       <e g>8 <dis fis> <e g> }
-    <d fis> <cis e> <d fis>
-    <c e> <d fis> <c e>
+    <d! fis> <cis e> <d fis>
+    <c e> <b d> <c e>
     
     \clef bass <b d> <a cis> <b d>
     <a c> <g b> <a c>
@@ -189,7 +190,7 @@ left = \relative c'' {
       <a c e> }
     
     \repeat unfold 2 {
-      <c, g' a d e>
+      <cis, g' a d e>
       <d g a d> }
     
     \repeat unfold 2 {
@@ -198,7 +199,7 @@ left = \relative c'' {
     
     \clef treble \repeat unfold 2 {
       <<{ g'4 aes8 ~ aes g4 } \\ { <b, f'>4. ~ <c f> }>> }
-    <gis' b>4. a
+    <gis'! b>4. a
     
     \clef bass <d,, a' d>
     <e b' e> \clef treble 

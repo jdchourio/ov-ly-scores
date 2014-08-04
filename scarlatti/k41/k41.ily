@@ -15,27 +15,27 @@ rightOne = \relative c'' {
   d2 a
   f8 d d' e16 f g8 f e d 
   cis4 d2 cis4
-  d2 r8 d c[ b]
+  d2 r8 d c![ b]
   
   \su r8 e a4 ~ a8 gis16 a b8 gis
   a4. s8 s2
   s1 
-  a,2 r8 g f e
+  a,2 r8 g! f[ e]
    
-  r8 a d4 ~ d8 cis16 d e8 c
-  d4. c8 bes a \once \tieDown g4 ~
+  r8 a d4 ~ d8 cis16 d e8 cis
+  d4. c!8 bes a \once \tieDown g4 ~
   g f e2
   d8 e f g a f e d
   
   r8 e a4 ~ a8 gis16 a b8 gis
   a4 a,8 b16 c d8 c b a
   r e' f[ e] d c16 d e8 d
-  c b a'4 ~ a8 g e'4 ~
+  c b a'4 ~ a8 g! e'4 ~
   
   e d ~ d8 cis16 d e8 cis
   d4 g ~ g8 f16 g a8 g
   f e d4 ~ d8 cis16 d e8 cis
-  d4. c8 bes a \once \tieDown g4 ~
+  d4. c!8 bes a \once \tieDown g4 ~
   
   
   g4 f e2
@@ -51,9 +51,9 @@ rightOne = \relative c'' {
   e d2 cis4
   d2 a
   f8 d \sn d' e16 f g8 f e d
-  cis4 \su d2 c8 bes
+  cis4 \su d2 c8 bes!
   
-  a4 ~ a8 b16 c d8 c d4 ~
+  a4 ~ a8 b!16 c d8 c d4 ~
   d c b2
   a' e
   c8 a a' g f e d4 ~
@@ -67,7 +67,7 @@ rightOne = \relative c'' {
   a8 g f4 ~ f8 e d4 ~
   d8 c bes4 ~ bes8 a16 g e'4 ~ 
   e8 a, d4 ~ d8 cis16 d e8 cis
-  d4. c8 bes2
+  d4. c!8 bes2
   
   a4 ~ a8 g16 f e4 a ~
   a8 g16 a d4 ~ d8 cis16 d g4 ~
@@ -80,7 +80,7 @@ rightOne = \relative c'' {
   g fis g ees8 d
   
   c4 c ~ c8 bes16 c d8 c
-  b4 c ~ c8 b16 a b4
+  b!4 c ~ c8 b16 a b4
   c'2 g
   ees8 c c' bes a g f ees
   
@@ -100,7 +100,7 @@ rightOne = \relative c'' {
   d c b2
   r8 e a4 ~ a8 gis16 a b8 a
   
-  g2 ~ g8 f16 g a8 g
+  g!2 ~ g8 f16 g a8 g
   f e d4 ~ d8 cis16 d e8 d
   cis2 d8 a d4 ~ 
   d8 cis16 d e8 cis d4 f,8 g
@@ -111,13 +111,13 @@ rightOne = \relative c'' {
   bes a b c ~
   
   c8 bes16 a bes4 cis d ~
-  d8 c16 b c4 bes2 
+  d8 c!16 b c4 bes2 
   << { \su r4 s4 r4 g'4 ~ g8 fis16 g a8 g } \\ 
      { \su s4 d4 ~ d8 cis16 d \sn e8 d cis2 } \\ 
      { a2 s s } >>
   fis'4 g ~
   
-  g f ~ f8 e d4 ~
+  g f! ~ f8 e d4 ~
   d cis d4. cis16 d 
   e8 d16 e f4 ~ f8 ees16 d ees4
   fis g ~ g8 f16 e f4
@@ -127,7 +127,7 @@ rightOne = \relative c'' {
   f! f e4. d16 c
   b4 b r8 e f[ e]
   
-  d2 ~ d4 c ~
+  d2 ~ d4 c! ~
   c8 b a2 e'4 ~
   e8 d16 e a2 g4 ~
   g f e2
@@ -167,7 +167,7 @@ rightTwo = \relative c'' {
   s1*4
   
   c4. c8 b2
-  \sd a4. g'8 f e \once \tieUp d4 ~
+  \sd a4. g'!8 f e \once \tieUp d4 ~
   d c b2 
   s1
   
@@ -190,7 +190,7 @@ rightTwo = \relative c'' {
   s1 s1 s1
   \change Staff ="left" c8 \change Staff ="right" d e f g a bes c16 bes
   
-  a4 s r g
+  a4 s e\rest g
   s4 \change Staff = "left" \clef treble \su f'8 e d c bes d
   c bes a \change Staff = "right" \sd bes16 c d8 c bes4 ~
   bes8 a16 g f4 g2
@@ -203,7 +203,7 @@ rightTwo = \relative c'' {
   g8 f16 e f4 r b8 a
   gis4 a2 gis4
   a2 gis8 a b4
-  r a2 ~ a8 g16 f
+  r a2 ~ a8 g!16 f
   
   e8 gis a2 gis4
   a2 bes
@@ -211,7 +211,7 @@ rightTwo = \relative c'' {
   f8 g a4 ~ a8 b cis d
   
   
-  e4 d8 c bes4. a8
+  e4 d8 c! bes4. a8
   g4. f8 e4 f8 e
   f4. g16 f e2
   f4. e8 d e16 f g4 ~
@@ -233,7 +233,7 @@ rightTwo = \relative c'' {
   
   d8 c bes4 ~ bes8 a16 bes c8 a
   s4 d8 c bes a g bes
-  \su \once \shiftOn cis8 b a4 ~ \sd a8 gis16 a b8 gis
+  \su \once \shiftOn cis8 b! a4 ~ \sd a8 gis16 a b8 gis
   \su cis[ a] ~ \sd a[ g] f e16 d e4
   
   
@@ -325,7 +325,7 @@ leftOne = \relative c'' {
   
   
   cis4 d2 cis4
-  d2. c4 ~
+  d2. c!4 ~
   c4. bes8 a bes c d
   s1
   
@@ -347,9 +347,9 @@ leftOne = \relative c'' {
   s1 s1 s1
   
   s2 \change Staff = "right" g'''2
-  d s4 \change Staff = "left" \clef treble g8 f
-  ees d c bes a4 s
-  s2 \change Staff = "right" \sd r8 \su d \change Staff = "left" ees,4 ~
+  d s4 \change Staff = "left" \clef treble g8 f!
+  \sd ees d c bes \su a4 s
+  s2 \change Staff = "right" d8\rest \su d \change Staff = "left" ees,4 ~
   
   ees2 d
   s1
@@ -362,7 +362,7 @@ leftOne = \relative c'' {
   e4 s2.
   
   
-  a,4. b8 c4. bes8
+  a,4. b!8 c4. bes8
   c4. d8 e4. d8
   e4. f8 g4. f8
   \clef treble s4 a8 b c b16 a b4
@@ -387,7 +387,7 @@ leftOne = \relative c'' {
   
   
   s1 s1 s1
-  d4. e8 f e16 d e8 \change Staff = "right" \sd e
+  d4. e8 f! e16 d e8 \change Staff = "right" \sd e
   \change Staff = "left" \su a,4. b8 c b16 a b4
   a2 s2
   \change Staff = "right" \sd r8 a'8 bes[ a] g f16 g a8 g \change Staff = "left"
@@ -397,9 +397,9 @@ leftOne = \relative c'' {
   bes a16 g a4 s2
   s2 a4. gis8
   
-  a r r4 r2
+  a a\rest a4\rest a2\rest
   s1
-  r8 a bes[ a] g f16 g a8 g
+  a8\rest a bes[ a] g f16 g a8 g
   f e d c16 bes s2
   
   s1 s1 s1 s1
@@ -419,7 +419,7 @@ leftTwo = \relative c' {
   s1
   
   s1 s1
-  r8 a bes a g f16 g a8 g
+  r8 a bes[ a] g f16 g a8 g
   f e d e f4 g
   
   a2 e
@@ -439,8 +439,8 @@ leftTwo = \relative c' {
   R1
   
   a4. bes8 c2
-  f,4 \clef treble r r2
-  r4 \sd f'8 g16 a \sn bes8 a g f 
+  f,4 \clef treble e'\rest e2\rest 
+  e4\rest \sd f8 g16 a \sn bes8 a g f 
   e c d c \clef bass bes a16 bes c8 bes
   
   a g16 a bes8 a g f16 g a8 g
@@ -480,8 +480,8 @@ leftTwo = \relative c' {
   c4. d16 ees f,4. g16 a
   
   bes8 c d, ees f2
-  bes4. c16 d e4 r4
-  a,8 b cis d e,2
+  bes4. c16 d e!4 r4
+  a,8 b! cis d e,2
   a4 bes a4. g8
   
   
@@ -510,7 +510,7 @@ leftTwo = \relative c' {
   cis b16 cis d8 c bes a g4
   a4. b16 cis d4 ees
   
-  d4. c8 b2
+  d4. c8 b!2
   a4. g8 f e d4
   g a8 f b g c,4
   d d' cis d

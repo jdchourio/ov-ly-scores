@@ -21,7 +21,7 @@ right = \relative c'' {
     c16[ g ees c] g''8
     aes4-\trill g8
     aes,16 c d f ees b
-    c8. b16 d c
+    c8. b16 c d
     ees8 f g
     
     aes16 c, b g' c, f
@@ -46,7 +46,7 @@ right = \relative c'' {
     }
     bes \clef treble bes'''[ aes]
     
-    g f <ees fis>
+    g f <ees! fis>
     <d g> c bes
     a ees' g,
     fis d' c
@@ -90,7 +90,7 @@ right = \relative c'' {
     
     g,16 d' f ees d c 
     \repeat unfold 2 { \appoggiatura d32 c16 b f' ees d c }
-    \appoggiatura d32 c16 b bes' aes g f
+    \appoggiatura d32 c16 b bes'! aes g f
     \repeat unfold 2 { \appoggiatura g32 f16 e bes' aes g f }
     
     \appoggiatura g32 f16 e c' bes aes g
@@ -100,11 +100,11 @@ right = \relative c'' {
     \clef bass c,, \clef treble c'''[ <g bes>]
     <f aes> <e g> <f aes>
     
-    \clef bass \repeat unfold 2 {
+    \clef bass \su \repeat unfold 2 {
       c,, d e f aes, bes }
     c d e
     
-    f g aes 
+    \sn f g aes 
     bes, c d
     ees f g
     aes, bes c
@@ -130,8 +130,8 @@ right = \relative c'' {
     d16*2/3 ees f <c es>8 <b d>
     c16 c' \repeat unfold 7 { b c} s8
     d,16*2/3 ees f <c es>8 <b d>
-    c,16 c' \repeat unfold 7 { b c} s8
-    d,16*2/3 ees f <c es>8 <b d>
+    \sd c,16 c' \repeat unfold 7 { b c} s8
+    \sn d,16*2/3 ees f <c es>8 <b d>
     c b''[ c]
     
     aes-\trill g r
@@ -175,10 +175,10 @@ left = \relative c' {
     bes g' a, fis' g, g'
     
     \clef bass 
-    <<{ c,, s d s ees s d s e s fis s g s f s ees s }
-      { \repeat unfold 9 { s c' } }>>
+    <<{ c,, s d s ees s d s e s fis s g s f! s ees! s }
+      { s c' s c s c s d s d s d s d s d s c }>> 
     \repeat unfold 2 {
-      <<{ d, s fis s d s g s f s ees s }
+      <<{ d, s fis s d s g s f! s ees s }
         { \repeat unfold 5 { s d' } s c }>>
     }
     <<{ d, s fis s d s g s bes s g s }
@@ -223,7 +223,7 @@ left = \relative c' {
     
     \clef treble \repeat unfold 3 {
       g''aes aes }
-    g <g bes> <g c>
+    g <g bes!> <g c>
     \repeat unfold 2 { <g bes des> q <aes c> }
     
     <g bes des> <<{ c4 } \\ { c,8 e }>>
@@ -246,7 +246,7 @@ left = \relative c' {
       c,[ ees g] b,[ d g] c,[ ees g]
     } g,[ d' g] b,[ d g] g,[ d' g]
     
-    \clef treble 
+    \clef treble \su
     \repeat unfold 3 { c,[ ees g] }
     \repeat unfold 3 { f[ aes c] }
     \repeat unfold 3 { f,[ bes d] }
@@ -260,14 +260,14 @@ left = \relative c' {
     f, c' ees, c' d, b'
     c, c' d, b' ees, g
     f8 g g,
-    c4 <ees' g>8
+    \sn c4 <ees' g>8
     <f aes> <ees g> <d f>
     <c ees> <bes d> <aes c>
     
     f g g,
     \clef bass c d <ees g>8
     <f aes> <ees g> <d f>
-    <c ees> <bes d> <aes c>
+    <c ees> <bes! d> <aes c>
     \sd f g g,
     \sn c'16 ees d f ees g
     

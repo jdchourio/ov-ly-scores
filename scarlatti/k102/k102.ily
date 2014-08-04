@@ -22,14 +22,14 @@ right = \relative c''' {
     g8( d a)
     bes4 c8
     d ees g,
-    fis4-\trill g8
+    \su fis4-\trill g8
     r a8.( bes32 c)
     
     bes8 a g
     r a8.( bes32 c)
     bes8 a g
     r a8.( bes32 c)
-    bes8 c d ~ d c16 bes a g
+    \sn bes8 c d ~ d c16 bes a g
     
     \repeat unfold 2 {
       \appoggiatura g64 a4 d8 ~
@@ -187,9 +187,9 @@ left = \relative c'' {
     d e f
     
     g a a,
-    d e f
+    d ees f
     g a a,
-    d e f
+    d ees f
     g a a,
     d,4.
   }

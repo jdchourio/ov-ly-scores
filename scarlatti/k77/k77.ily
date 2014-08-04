@@ -38,37 +38,37 @@ right = \relative c''' {
     \appoggiatura g32 a4 r16 bes,( a bes c bes a g)
     \appoggiatura g32 a4 ~ a16 g f e f e d c
     
-    d e f g f g f g f8.-\trill f32 g
+    d e f g f g f g g8.-\trill f32 g
     \appoggiatura g32 f4 r2
   }
   
   \repeat volta 2 {
-    c''4 r8. g16 g8. a16
+    c''4 r8. f,16 g8. a16
     bes,4 ~ bes8.[ d16 c8. b16]
     
     \appoggiatura b32 c4 r8. c16 d8. ees16
-    \appoggiatura g,32 fis4 r8. f16 g8. a16
+    \appoggiatura g,32 fis4 r8. fis16 g8. a16
     \appoggiatura ees32 d4 ~ d16 e fis g a bes c d
-    \appoggiatura c32 bes4 ~ bes8.[ a16 g8. fis16]
+    \appoggiatura c32 \once \tu bes4 ~ bes8.[ a16 g8. fis16]
     
     \appoggiatura fis32 g4 ~ g16 a b c d ees f g
     \appoggiatura f32 ees4 ~ ees8.[ d16 c8. b16]
-    \appoggiatura b32 c4 ~ c16[ d e f g a bes c]
+    \appoggiatura b32 c4 ~ c16[ d e! f g a bes! c]
     \appoggiatura bes32 a4 ~ a8.[ g16 f8. e16]
     
     \appoggiatura e32 f4 ~ f16 g( a g f e d cis)
     \appoggiatura cis32 d4 ~ d16 e( f e d c b a)
-    \appoggiatura a32 gis4 gis16 a b a gis f e d
+    \appoggiatura a32 gis4 gis16 a b a gis f! e d
     \appoggiatura d32 c4.-\trill b16 a a'4 ~
     
     a16[ b a gis a b a b] b8.-\parenthesize-\trill a32 b
     \appoggiatura b32 a4 r16 f[( e f g a bes c])
     \appoggiatura c32 d4 r16 g,[( fis g a b c d])
-    \appoggiatura d32 e4 r16 a,[( gis a b cis d e])
+    \appoggiatura d32 e4 r16 \su a,[( gis a b cis d e]) \sn
     
     \appoggiatura e32 f4 ~ f16[ d( cis d e f g a])
     bes( g a f g e f d) ees cis d b
-    \appoggiatura b32 cis4 r16 cis( d e c bes a gis)
+    \appoggiatura b32 cis4 r16 \sd cis( d e c bes a gis) \sn
     \appoggiatura gis32 a4 r16 e d e g e d e
     
     bes' g fis g cis g fis g e' bes a bes
@@ -112,7 +112,7 @@ right = \relative c''' {
   }
   
   \repeat volta 2 {
-    d16[ a] d,8 c' ~
+    d16[ a] d,8 \once \td c' ~
     c16[ a] bes8 g' ~
     g16 ees c bes a g
     \appoggiatura g32 fis8. a16 bes c
@@ -166,7 +166,7 @@ left = \relative c {
   
   \repeat volta 2 {
     f4 a bes
-    r c, d
+    r c, \once \su d
     
     ees c r
     r d e

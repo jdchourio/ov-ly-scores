@@ -30,14 +30,14 @@ right = \relative c'' {
     fis d a' fis d fis a fis d d fis a
     b g d d g b c a fis c fis c'
     
-    d b g d b' d e c g e c' e
-    fis d fis g d b e d c b c b
+    d b g d b' d e c g \sd e c' e \sn
+    fis d fis g d b e d c b c a \su 
     << { s b c d c b s a b c b a } { g g a b a g d fis g a g fis } >>
     
     << { s b c d c b s a b c b a } { d, g a b a g d fis g a g fis } >>
-    << { b c d } \\ { g,4. } >> e'8 fis g f e d c b a
+    \sn << { b c d } \\ { g,4. } >> e'8 fis g fis e d c b a
     b c d c d e d c b a g fis
-    g' d b \su g d \cstl b \sn g d b g4.
+    g' d b \su g d \cstl b g d b g4. \sn 
   }
   
   \repeat volta 2 {
@@ -49,23 +49,23 @@ right = \relative c'' {
     e, c' d e d c e, b' c d c b
     c c d e fis g a g fis e d c
     
-    b b c d c b d, a' b c b a
-    d, b' c d c b d, a' b c b a
-    b b cis d cis d e f g f e f
+    b b c d c b \su d, a' b c b a
+    d, b' c \sd d c b \su d, a' b c b a
+    \sn b b cis d cis d e f g f e f
     
     e e f g f e r g a bes a g
     r e f g f e r g a bes a g
     r e f g f e a gis a g fis g
     
-    f e f e d e d c d c b c
+    f! e f e d e d c d c b c
     b d e f g a g fis g f e f
     e d e d c d c e d c b a
     
-    b g d' b g d' b g d' b g d'
+    \sd b g d' b g d' b g d' b g d'
     c g e' c g e' b f d' b f f'
     e c g e' c g d' b g d' b g
     
-    c a g c a g d' b g d' b g
+    \sn c a g c a g d' b g d' b g
     d' b g d' b g e' c g e' c g
     f' d g, f'd g, e' c d e f g
     
@@ -81,9 +81,9 @@ right = \relative c'' {
     r << { e, f g f e s d e f e d } { c d e d c g b c d c b } >>
     r << { e' f g f e s d e f e d } { c d e d c g b c d c b } >>
     
-    << { e f g } \\ { c,4. } >> a'8 b c \appoggiatura c32 b8 a g f e d
+    << { e f g a[ b c] } \\ { c,4. } >>  \appoggiatura c'32 b8 a g f e d
     e f g f g a g f e d c b
-    c' g e c g e \cstl c g e c g e
+    c' g e \su c g e \cstl c g e c g e
     c1.-\fermata
   }
 }
@@ -115,14 +115,14 @@ left = \relative c {
     g, g' d, d'
     
     g c d, <fis d'>
-    <g d'> c, d d,
+    <g d'> c, \once \su d d,
     g s s2.
   }
   \once \set Staff.explicitClefVisibility = #end-of-line-invisible 
   
   \repeat volta 2 {
     \clef treble g''8 r r g4. <f a> <f a> 
-    <e gis> <e gis> <d gis a b> <d g a b>
+    <e gis> <e gis> <d gis a b> <d gis a b>
     <e gis> <d e gis> <c e a> <b d e gis>
     
     << { \sn \clef bass a s \clef bass <e, e'> s
@@ -135,17 +135,17 @@ left = \relative c {
          \clef bass <g g'> s \clef bass <d d'> s } \\
        { \sn s \clef treble <g''' b> s \clef treble <fis a>
          s \clef treble <g b> s \clef treble <fis a> } >>
-     r4 r8 <f, a>4. <e g cis> <d a' d>
+     r4 r8 <f,! a>4. <e g cis> <d a' d>
      
-     <a' cis> <a cis> <g cis e> <g cis e>
+     \sd <a' cis> <a cis> <g cis e> <g cis e>
      <a cis> <a cis> <g cis e> <g cis e>
-     <a cis> <g a cis> <f a d> <e g cis>
+     <a cis> <g a cis> \sn <f a d> <e g cis>
      
      <d d'> <e g> <f a> <fis a>
-     g <f b> <e g c> <d f b>
+     g <f! b> <e g c> <d f b>
      <c g' c> << { g'2. fis4. } \\ { b,4. a a } >>
      
-     << { \sn \clef bass g s \clef bass f s
+     << { \sn \clef bass g s \clef bass f! s
           \clef bass e s \clef bass d s
           \clef bass c s \clef bass b s
           \clef bass a s \clef bass g s

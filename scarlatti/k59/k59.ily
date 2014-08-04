@@ -23,7 +23,7 @@ right = \relative c'' {
     e8[ c] g'[ c,] bes4.-\trill a16 g
     
     a4 c f8 c a'4
-    \repeat unfold 2 {
+    \sd \repeat unfold 2 {
       g8 c,4 d16 e f8 b, ~ b16 c d e32 f}
     
     g8 c, ~ c16 d e f32 g a8 e d c
@@ -34,26 +34,26 @@ right = \relative c'' {
     ees8 g, c g ees'4.-\parenthesize-\trill d16 c
     aes'8 b, c g' f[ g,] aes[ ees']
     
-    d g, f c' b c16 d g,8 f
-    ees c' d, b' c g' e c
-    g \cstl e, c g c,4 r \cstr
+    \sn d g, f c' b c16 d g,8 f
+    ees c' d, b' c g' e! c
+    g \cstl e,! c g c,4 r \cstr
   }
   
   \repeat volta 2 {
-    c''''8 g e c bes4.-\trill a16 g
+    c''''8 g e c bes!4.-\trill a16 g
     f'8 c a f a'4.-\trill g16 f
     g8 cis, ~ cis16 d e f32 g a8 d,4 e16 f
     
     g8 cis, ~ cis16 d e f32 g a8 d, cis g'
-    f bes, a e' d[ g,] fis[ c']
+    f bes, a e' \su d[ g,] fis[ c']
     bes[ ees,] d[ a'] g4 f
     
-    e' d cis8 d16 e a,8 g'
+    \sn e' d cis8 d16 e a,8 g'
     f4-\trill e-\trill fis8 g16 a d,8 c
     bes4-\trill a-\parenthesize-\trill b8 c16 d g,8 f'
     e4-\trill d-\trill e8 f16 g c,8 g'
     
-    bes,4.-\parenthesize-\trill a16 g a8 f4 g16 a
+    \once \su bes,4.-\parenthesize-\trill a16 g a8 f4 g16 a
     bes8 e, ~ e16 f g a32 bes c8 f,4 g16 a
     bes8 e, ~ e16 f g a32 bes c8 f, ~ f16 g a bes32 c
     
@@ -80,10 +80,10 @@ left = \relative c, {
     <c ees> <c ees > r <c ees>
     
     <b d> <g b d> r <b d>
-    <c ees> <c ees> r <c ees>
+    \sd <c ees> <c ees> r <c ees>
     <f c'> <ees c'> <d b'> <c c'>
     
-    <bes bes'> <aes aes'> <g g'> r8 b
+    <bes bes'> <aes aes'> <g g'> r8 \sn b
     c ees f g c,4 r
     s1
   }
@@ -94,10 +94,10 @@ left = \relative c, {
     e4 g f bes
     
     e, g <f a> <e g>
-    <d f> <c e> <bes d> <a c>
-    <g' bes> <f a> <<{ g8[ c] } \\ { e,4 }>> d8 b'
+    <d f> <c! e> <bes d> <a c>
+    <g' bes> <f a> <<{ g8[ c] } \\ { e,!4 }>> d8 b'
     
-    c, a' bes, g' a,4 r8 cis'
+    c, a' bes,! g' a,4 r8 cis'
     d d, a' a, d,4 r8 fis'
     g g, d' d, g,4 r8 b''
     c c, g' g, c,4 r8 c'

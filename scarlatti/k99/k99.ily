@@ -19,10 +19,10 @@ right = \relative c'' {
  
   \repeat volta 2 {
     r16 g a b b c b c c8.-\trill b32 c
-    \repeat unfold 2 {
+    \sd \repeat unfold 2 {
       d16 g, a b b c b c c8.-\trill b32 c }
     
-    c8 d4. \acciaccatura {d16 ees} f4
+    \sn c8 d4. \acciaccatura {d16 ees} f4
     \appoggiatura f32 ees8 d16 c a8 c4 b8
     b c4. d8 ees16 f
     \appoggiatura f32 ees8 d16 c a8 c4 b8
@@ -49,8 +49,8 @@ right = \relative c'' {
     
     c8 c d ees f16 g aes f
     g^"D" b d f aes8 g ~ g16 f ees d
-    c' ees, bes' d, a' c, g' bes, fis' a, ees' g,
-    << { cis8-( d4-) } \\ { fis,4 } >> a'16 c, a' c, bes' d,
+    c' ees, bes'! d, a' c, g' bes, fis' a, ees' g,
+    << { \once \slurDown cis8-( d4-) } \\ { fis,4 } >> a'16 c, a' c, bes' d,
     
     c' ees, bes' d, a' c, g' bes, fis' a, ees' g,
     cis8-( d4-) a'16 c, a' c, bes' d,
@@ -69,14 +69,14 @@ right = \relative c'' {
     
     \appoggiatura c64 bes8 a16 g e8 g4 fis8
     g16 ees' g4 ~ g f32 ees d c
-    \appoggiatura c64 bes8 a16 g <a c>8 <g bes>4 <fis a>8
+    \appoggiatura c64 bes8 a16 g \once \su <a c>8 <g bes>4 <fis a>8
     g2.
   }
   
   \repeat volta 2 {
-    r16 g aes a bes b c d ees8 f
+    r16 g aes! a bes b c d ees8 f
     d[ b] b c4-\trill b16 c
-    d g, aes a bes b c d ees8 f
+    \sd d g, aes a bes b c d ees8 f \sn
     d[ b b] c ~ c8.-\trill b32 c
     
     \appoggiatura c32 d4. bes'16 des, bes' des, aes' c,
@@ -108,9 +108,9 @@ right = \relative c'' {
     b'16 g c g b g c g b g c g
     
     b f c' f, d' f, c' f, d' f, ees' f,
-    d' g, c g d' g, c g d' g, ees' g,
+    \sd d' g, c g d' g, c g d' g, ees' g,
     d' aes ees' aes, f' aes, ees' aes, d aes c aes
-    b g a g b g c g b g c g
+    \sn b g a g b g c g b g c g
     
     b f c' f, b f c' f, b8 c16-\trill b32 c
     \appoggiatura c32 d4 ~ d16 g, b d g f ees d
@@ -120,8 +120,10 @@ right = \relative c'' {
     b g b d f d f b d f, b d
     g ees d ees ees c b c c aes g aes
     aes f e f f d c d d b a b
-    r4-\fermata  r <g' b d f>
-    << { \appoggiatura f'32 \stemUp ees8 d16 c } \\ { <g c>4 } >> a8 c4 b8
+    r4-\fermata  r 
+    << { f''4 \appoggiatura f32 ees8 d16 c } \\ { <g b d>4 <g c> } >> a8 c4 b8
+    %<g' b d f>
+    %\appoggiatura f'32 << { \stemUp ees8 d16 c } \\ { <g c>4 } >> a8 c4 b8
     
     c16 f aes4 ~ aes g32( f ees d)
     \appoggiatura f32 ees8 d16 c a8 c4 b8
@@ -161,11 +163,11 @@ left = \relative c' {
     
     
     \repeat unfold 2 {
-      c'16 bes aes g f8 ees d c
+      c'16 bes! aes g f8 ees d c
       b4 r r
     }
     
-    c'16 bes aes g f8 ees d c
+    c'!16 bes aes g f8 ees d c
     r4 \clef bass \repeat unfold 2 <g, d' f>4
     <c ees g> <c ees g> <c ees>
     <d, a' d> <d a' d> <d a' d>
@@ -222,12 +224,12 @@ left = \relative c' {
     f f' f,
     g g' g,
     f f' f,
-    g \clef treble g'''^"G" \clef bass <g,,, g'>
+    g \clef treble g'''^"G" \clef bass \once \sd <g,,, g'>
     
     <aes aes'> \clef treble aes''' \clef bass <aes,,, aes'>
-    <g g'> \clef treble g''' \clef bass <g,,, g'>
+    \once \sd <g g'> \clef treble g''' \clef bass <g,,, g'>
     <f f'> \clef treble aes''' \clef bass <f,,, f'>
-    <g g'> \clef treble g''' \clef bass <g,,, g'>
+    <g g'> \clef treble g''' \clef bass \once \sd <g,,, g'>
     
     <aes aes'> \clef treble aes''' \clef bass <aes,,, aes'>
     <g g'> <g g'> r

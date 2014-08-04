@@ -40,7 +40,7 @@ right = \relative c''' {
     r16 b b, cis d e 
     f gis a gis gis a
     r a a, b cis d
-    e fis g fis fis g
+    e fis! g fis fis g
     r g cis, d g, bes
     
     \repeat unfold 2 {
@@ -54,7 +54,7 @@ right = \relative c''' {
       e16 d e f gis a
     }
     e4.-\trill ~
-    e16 a fis e d cis
+    e16 a fis! e d cis
     
     b b' g fis e d
     cis b a g fis e
@@ -81,9 +81,9 @@ right = \relative c''' {
   }
   
   \repeat volta 2 {
-    d'8 a fis
+    \su d'8 a fis
     d' b g
-    d' a fis16[ e']
+    \sn d' a fis16[ e']
     dis8 a e'
     fis16 c b a g fis
     
@@ -96,7 +96,7 @@ right = \relative c''' {
     \repeat unfold 2 {
       a' f e d cis d
       e bes a g f e }
-    fis g a bes c d
+    fis! g a bes c d
     ees4.-\trill
     fis,16 g a bes c d
     ees4.-\parenthesize-\trill
@@ -134,7 +134,7 @@ right = \relative c''' {
     a4.-\parenthesize-\trill ~
     
     a16 d b a g fis
-    e e' c b a g'
+    \sd e e' c b a g'
     fis e d c b a
     b c d c b a
     
@@ -150,7 +150,7 @@ right = \relative c''' {
     
     b a g fis g d
     e c b a g fis
-    g d' b a g fis
+    \sn g d' b a g fis
     e c' b a g fis
     g[ d] \clef bass b a g fis
     e c' b a g fis
@@ -189,10 +189,10 @@ left = \relative c'' {
     \repeat unfold 2 {
       g,16 bes a d cis g' f4. }
     g,16 bes a d cis g' 
-    fis4.
+    fis!4.
     
     g4.
-    fis8 a, cis
+    a8 a, cis
     d g, a
     \repeat unfold 3 {
       d,, d' a' a,, a' a' }
@@ -210,7 +210,7 @@ left = \relative c'' {
   }
   
   \repeat volta 2 {
-    d'' d d c
+    d'' d d c!
     \repeat unfold 2 {
       b8 b, dis' 
       e g, a }
@@ -253,7 +253,7 @@ left = \relative c'' {
       c,16 ees d g fis c' bes4. }
     c,16 ees d g fis c'
     
-    b4. c
+    b!4. c
     d8 d, fis 
     g c, d
     g, \repeat unfold 3 {

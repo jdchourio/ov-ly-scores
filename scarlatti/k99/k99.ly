@@ -44,5 +44,5 @@ breaks = {
       >>
     }
   >>
-  \layout { }
+  \layout { indent = 0 }
 }

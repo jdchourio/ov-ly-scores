@@ -32,7 +32,7 @@ right = \relative c'' {
     
     <a c>[ e f-\parenthesize-\trill e]
     <b' d>[ e, f-\parenthesize-\trill e]
-    <c'e> e, e' d16 c
+    \sd <c'e> e, e' d16 c \sn
     b8-\trill a16 b e,8 gis'
     
     a a, e'-\trill d16 c
@@ -84,7 +84,7 @@ left = \relative c {
   
   \repeat volta 2 {
     <d a' d>4 <a e' a>
-    <d f a> r8 <g, d' g>
+    <d f a> r8 \once \sd <g, d' g>
     <a d a'>4 <a e' g>
     <d f a>4.
     <e g>8
@@ -102,14 +102,14 @@ left = \relative c {
     
     <f a>4 r8 <c e a>8
     <d a' b>4 <e gis b>
-    <a, e' a>4 a'16 g f e
+    <a, e' a>4 a'16 g! f e
   }
   
   \repeat volta 2 {
     <f, f'>4 <e' g c>
     \repeat unfold 2 {
       <f a c> r8 <e g c> }
-    f4 f,8 f' 
+    f4 f,8 \once \sd f' 
     bes[ a g f]
     e[ d c bes]
     a[ g f e]
@@ -128,7 +128,7 @@ left = \relative c {
     <d f a>4 r8 q
     <e g a cis>4 r8 q
     <f a d>4 r8 q
-    <g bes d>4 r8 <g, d' g>
+    <g bes d>4 r8 \once \sd <g, d' g>
     <a d e a>4 <<{ <d g a>4 } \\ { bes8 g }>>
     
     <a d a'>4 <a d e g a>
@@ -138,7 +138,7 @@ left = \relative c {
     <e g a cis>4 r8 q
     
     <f a d>4 r8 q
-    <g bes d>4 r8 <g, d' g>
+    <g bes d>4 r8 \once \sd <g, d' g>
     <a d e a>4 <<{ <d g a>4 } \\ { bes8 g }>>
     <a d a'>4 <a d e g a>
     <d f a> r

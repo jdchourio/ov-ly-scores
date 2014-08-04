@@ -31,6 +31,7 @@
       >>
     }
     \new Staff = "left" { 
+      R1*6
       <<
         \clef bass \leftOne 
         \\

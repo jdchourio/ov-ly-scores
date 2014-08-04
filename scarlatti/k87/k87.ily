@@ -25,7 +25,7 @@ rightOne = \relative c' {
     ais4 r8 b cis4
     d4. cis8 b4 ~
     
-    b a8 gis fis4
+    b a8 gis fis4 ~ 
     fis eis8 fis gis eis
     fis2 cis'4 ~
     cis8 fis, b2 ~
@@ -56,7 +56,7 @@ rightOne = \relative c' {
     d4 cis4. b'8
     
     d,4 cis8 g' fis eis
-    fis4. e4 d8
+    fis4. e!4 d8
     cis fis g fis e d
     cis b ais gis fis eis
     fis cis ais fis \clef bass fis,4
@@ -73,13 +73,13 @@ rightOne = \relative c' {
     r8 bis cis4. dis8
     e d cis4. b8
     fis' e d4. cis8
-    b' a g4. fis8
+    b' a! g4. fis8
     g fis e4 fis8 e
     d4 e8 d cis4
     
     b8 cis d4. e8
     fis e dis fis e d
-    cis e d cis b d
+    cis! e d cis b d
     cis b ais cis b cis
     d cis b4. ais8
     b cis d dis e fis
@@ -156,7 +156,7 @@ rightTwo = \relative c' {
   }
   
   \repeat volta 2 {
-    r4 r r8 fis'
+    d'4\rest d\rest r8 fis
     gis4 ais8 b4 ais8
     r8 fis \noBeam g fis4 e8
     fis4 e s
@@ -167,7 +167,7 @@ rightTwo = \relative c' {
     e8 gis a4. gis8
     fis ais b4. ais8
     b dis e4. dis8
-    e d cis4 d8 cis
+    e d! cis4 d8 cis
     b4 cis8 b ais4
     
     b4 b2
@@ -175,7 +175,7 @@ rightTwo = \relative c' {
     a g fis a g fis
     e d cis cis d e
     fis4 g8 fis e4
-    fis4. fis8 g a
+    fis4. fis8 g a!
     
     b4 c8 b a4
     b s s
@@ -225,19 +225,19 @@ leftOne = \relative c' {
     b,8 cis d b cis4 ~
     
     cis4. b4 ais8
-    b4. a8 g a
+    b4. a!8 g a
     b4 s s
     s g a
     ais b8 a b cis
     d b cis d e fis
     
-    \clef treble g e fis g a b
+    \clef treble g[ e] fis g a b
     c a b4 s
     b, 8 b'4 a8 g4
     s2.*5
     
     \repeat unfold 3 {
-      fis,,4 r r }
+      fis,,4 d'\rest d\rest }
   }
   
   \repeat volta 2 {
@@ -277,7 +277,7 @@ leftOne = \relative c' {
     s2.
     
     s2.
-    s4 b8 a g fis
+    s4 b8 a! g fis
     r8 e' d4 cis
     s2.
     r8 g fis e d cis
@@ -293,12 +293,12 @@ leftTwo = \relative c' {
     fis2.
     b
     cis8 d e4 ais,
-    b4. a8 gis4
+    b4. a!8 gis4
     
     fis4. e8 d4
     cis2.
     fis
-    b4. a8 g4
+    b4. a!8 g4
     fis2 b4
     \clef treble e4. d8 c4
     
@@ -332,11 +332,11 @@ leftTwo = \relative c' {
     cis fis fis,
     b,8 b'4 a8 g4
     fis2 b4
-    e4. d8 cis4
+    e4. d!8 cis4
     b4. a8 gis4
     
-    fis4 s8 e'8 dis4
-    cis4. d8 e4
+    fis4 s8 e'!8 dis4
+    cis4. d!8 e4
     d4. e8 fis4
     g4.a8 b,4
     e a, d
@@ -347,14 +347,14 @@ leftTwo = \relative c' {
     <a a'> d s
     \sd cis fis, s
     \sn b b' cis
-    \sd d8 cis b a g fis
+    \sd d8 cis b a! g fis
     
     e4 e' fis
-    g8 fis e d cis b
+    g8 fis e d! cis b
     ais2 b4
     cis8 b ais fis b4
-    \sn <e, e'>4 <a, a'> <d, d'>
-    <g g'> <cis cis'> <fis, fis'>
+    \sn <e, e'>4 <a,! a'!> <d, d'>
+    \once \sd <g g'> <cis cis'> <fis, fis'>
     
     \sd b8 b'4 a8 g4
     fis2.

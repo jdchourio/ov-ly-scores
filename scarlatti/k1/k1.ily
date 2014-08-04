@@ -18,6 +18,7 @@ right = \relative c'' {
   \global
  
   \repeat volta 2 {
+    \tieUp
     d16 e f g a a, cis a \su d4. e8
     f16 d g e a f e d cis8 a' a4-\trill ~
     
@@ -32,8 +33,8 @@ right = \relative c'' {
     a g-\trill a g-\trill
     f16 d g e a f e d cis a d b e g, f e
     
-    f d g e a f e d cis \cstl a \cstr d \cstl b \cstr e \cstl cis \cstr f d
-    g g f e f8 g16.-\trill f64 g a16 e f d e cis d8
+    << { f d g e } \\ { d16 } >> a' f e d cis \cstl a \cstr d \cstl b \cstr e \cstl cis \cstr f d
+    g g f e f8 g16.-\trill f64 g a16 e f d e cis! d8
     e d cis16 \cstl e, cis e a,4-\trill r-\fermata
   }
   
@@ -48,7 +49,7 @@ right = \relative c'' {
     
     e g c, e g, c bes a bes g d' bes g' d bes' g
     f a d, f a, d c b c a e' c a' e c' a
-    gis b e, gis b, d cis b cis8 a' a4-\trill ~
+    gis b e, gis \once \override Beam #'positions = #'(5 . 5) b, d cis b cis8 a' a4-\trill ~
     
     a16 g f e d c bes a bes8 g' g4-\trill ~
     g16 f e d c bes a g a8 f' f4-\trill ~ 
@@ -56,7 +57,8 @@ right = \relative c'' {
     
     e16 d cis b a g f e \repeat unfold 3 { <<{ \shiftOn f d g e } \\ {\su d'4}>> a16 f bes g }
     \repeat unfold 3 { <<{ a8[ f'] g,[ e'] } \\ { s d s cis }>> }
-    <<{ d8 } \\ { d, } \\ { f16 d g e a f b g }>>
+    <<{ d8 } \\ { d, } \\ 
+      { \once \override Beam #'positions = #'(2 . 2) f16 d g e a f b g }>>
     
     \sd cis a d e f d e cis \su d a bes g a f bes8 
     a g f16 s8. s2
@@ -82,7 +84,9 @@ left = \relative c' {
     <<{ \sd d } \\ { d,8 e f g }>> <<{ \sd a16 } \\ { \cstl a,8 b cis a }>>
     
     \cstl d, e f g a[ b] cis[ \cstr d] 
-    \cstl \su e,16 \cstr \sd e' d cis d8 \cstl bes \su a,4 s8 \cstr \sd d'16 \cstl \su b
+    \cstl \su e,16 \cstr \sd e' d cis 
+    \once \override Beam #'positions = #'(-11 . -11) 
+    d8 \cstl bes \su a,4 s8 \cstr \sd d'16 \cstl \su b
     cis a b gis a s8. s2 
   }
   
@@ -109,6 +113,6 @@ left = \relative c' {
     
     \cstl d,8 e f g
     a g a a, d4 s8 \cstr g'16 e
-    f d e cis c \cstl \su a f a d,4-\trill r-\fermata
+    f d e cis d \cstl \su a f a d,4-\trill r-\fermata
   }
 }

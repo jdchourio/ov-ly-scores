@@ -20,7 +20,7 @@ right = \relative c'' {
  
   \repeat unfold 2 {
     a4. a8 
-    b e,4 b'8
+    \once \su b e,4 b'8
     c a d b
     e4 d
   } \alternative {
@@ -95,7 +95,7 @@ right = \relative c'' {
     b' a gis fis e d c b
     c'b a c b a gis b
   } \alternative {
-    { a g f e d c b a
+    { a g! f e d c b a
       gis a b gis e4 }
     { a'16 a, d b <<{ <a c>8 <gis b> } \\ { e8 e }>>
       a4 r }
@@ -122,10 +122,10 @@ right = \relative c'' {
       a8[ c e a] }
   }
   
-  \repeat unfold 2 {
+  \repeat unfold 2 { \sd 
     \repeat unfold 2 { e16 c b a }
     \repeat unfold 2 { f' b, a gis }
-    e' c b a d b a gis
+    e' c b a d b a gis \sn
   } \alternative {
     { c e d c b a gis a
       gis8.-\parenthesize-\trill fis16 e4 }
@@ -156,9 +156,9 @@ right = \relative c'' {
   }
   
   \repeat unfold 2 {
-    <c e>8 <a c> <gis b> <a c>
+    \sd <c e>8 <a c> <gis b> <a c>
     <b d> <gis b> q <b d>
-    <a c>
+    <a c> \sn
   } \alternative {
     { <a e'> <gis d'> <gis f'>
       <a e'> <c e> <b d> <a c>
@@ -179,7 +179,7 @@ right = \relative c'' {
   gis e fis gis a b c d
   e d c b a g f e
   d' c b a gis fis e d
-  c' b a g f e d c
+  c' b a g! f! e d c
   
   b' e d e a, d c d
   gis,8 a b c
@@ -217,7 +217,7 @@ left = \relative c' {
       a[ c e a] }
   } \bar "||"
   
-  <a, e'>4 <a a'>
+  \once \sd <a, e'>4 <a a'>
   <gis' b> <e gis b>
   <a, e' a> <b d gis>
   <<{ <e a>4 } \\ { c8 a }>> b gis
@@ -262,7 +262,7 @@ left = \relative c' {
     <a, e' a> <b d gis>
   } \alternative {
     { <c e a> <d f a>
-      <e b'> ~ e16 d c b }
+      \once \td <e b'> ~ \sd e16 d c b \sn }
     { <<{ a'4 } \\ { c,8 d }>> e e,
       a[ c e a] }
   }
@@ -290,7 +290,7 @@ left = \relative c' {
   <a a'>4 r8 q
   <d a'>4 r8 d 
   c a' b, e
-  a,4 d
+  a,4 \once \su d
   e8 e, e'16 d c b
   
   a4 r8 a
@@ -344,9 +344,9 @@ left = \relative c' {
   b, c d e fis gis a b
   a, b c d e fis gis a
   
-  g, g' f g f, f' e f
+  \su g, g' f g f, f' e f
   e, e' fis, fis' gis, gis' a, a'
-  b, b' c, c' d, d' c b
+  \sd b, b' c, c' d, d' c b
   c8 d e e,
   <a, e' a>4 r \bar "|."
 }

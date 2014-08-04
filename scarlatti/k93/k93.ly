@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "k93.ily"
 
-#(set-global-staff-size 24)
+#(set-global-staff-size 22)
 
 \header {
   title = "K93"

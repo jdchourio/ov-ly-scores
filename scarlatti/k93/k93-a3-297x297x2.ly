@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "k93.ily"
 
-#(set-global-staff-size 18.1)
+#(set-global-staff-size 17.9)
 
 \header {
   title = "K93"
@@ -29,5 +29,5 @@
       \clef bass \left 
     }
   >>
-  \layout { }
+  \layout { indent = 0 }
 }

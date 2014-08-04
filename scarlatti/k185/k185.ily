@@ -69,7 +69,7 @@ right = \relative c'' {
     \repeat unfold 2 {
       <c a'> <c ees> }
     <c a'> <c c'>
-    des'8 c bes aes g f ees des
+    des'8 c bes aes! g f ees des
     c \repeat unfold 3 { aes' f des ~ des2 ~ 
     des8 } c e f ~ f des f g ~
     g des g aes ~ aes bes f e
@@ -96,7 +96,7 @@ left = \relative c, {
     bes4 bes'4. aes8 g f
     c4 c'4. bes8 aes g
     f4 \clef treble f'4. ees8 des c
-    bes4 bes'4. aes8 g f
+    bes4 \once \su bes'4. aes8 g f
     c4 c'4. bes8 aes g
     
     f2. \clef bass aes,4
@@ -106,7 +106,7 @@ left = \relative c, {
     ees4 ees'4. des8 c bes
     aes4 aes'4. g8 f ees
     
-    d2 d,
+    des2 des,
     ees4 ees'4. des8 c bes
     aes4 \clef treble aes'4. g8 f ees
     d4 d'4. c8 b aes
@@ -160,7 +160,7 @@ left = \relative c, {
       } f4 aes, bes c
     }
     
-    <<{ f2 g } \\ { d4 bes e c }>>
+    <<{ f2 g } \\ { des4 bes e c }>>
     f, aes, bes c
     f,1-\fermata
   }

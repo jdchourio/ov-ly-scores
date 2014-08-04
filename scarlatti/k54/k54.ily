@@ -20,18 +20,18 @@ right = \relative c''' {
  
   \repeat volta 2 {
     a8 e c a b gis' a e c a b gis'
-    a e c a b d c4 b8 a4 <d f>8
+    a e c a b d c4 \once \su b8 a4 <d f>8
     <c e>4. ~ <c e>4 <b d>8 <b d>4. <c e>4 <b d>8
     
-    <b d>4. <c e>4 <b d>8 c4-\trill b8 a4.
+    <b d>4. <c e>4 <b d>8 c4-\trill \once \su b8 a4.
     gis'8 a g f e dis fis g f e d cis
     e f e d c b dis e d c b a
      
     cis d c bes a gis b c b a gis a
     b c d c-\trill b c <a c>4. <gis b>-\trill
-    e4._"D" ~ e8 fis gis a b c \appoggiatura b32 a8 g f
+    \su e4._"D" ~ e8 fis gis a b c \appoggiatura b32 a8 g f
     
-    e4. ~ e8 fis gis a b c \appoggiatura b32 a8 g a
+    e4. ~ e8 fis gis a b c \appoggiatura b32 a8 gis a
     b,4. ~ b8 cis dis e fis g \appoggiatura fis32 e8 d c
     b4. ~ b8 cis dis e fis g e8 d c
     
@@ -47,14 +47,15 @@ right = \relative c''' {
     b, b' fis dis b dis e4 fis8 g4 a8
     << {b,8 b' a g fis g a g fis e fis dis} \\ {s4 dis8 e dis e c4. b4 a8} >>
 
+    \sn
     r8 << {e'8 fis g4. ~ g8 fis gis a4. ~
-           a8 g a b a b c b a g fis e
+           a8 g! a b a b c b a g fis e
            fis e fis g4. ~ g8 fis gis a4. ~
-           a8 g a b a b c b a g a fis}
+           a8 g! a b a b c b a g a fis}
           {e'8 fis g4. ~ g8 fis gis a4. ~
-           a8 g a b a b c b a g fis e
+           a8 g! a b a b c b a g fis e
            fis e fis g4. ~ g8 fis gis a4. ~
-           a8 g a b a b c b a g a fis} >>
+           a8 g! a b a b c b a g a fis} >>
        
     <e e,>4. 
     << {g8 fis g a g fis e fis dis
@@ -83,17 +84,17 @@ right = \relative c''' {
     a e cis a a' cis, d4 e8 f4 g8
     
     a e cis a cis e cis' d c bes-\trill a gis
-    b c b a-\trill gis a cis d c bes-\parenthesize-\trill a g
-    b c b a-\trill gis a e' f e d-\parenthesize-\trill c b
+    b! c b a-\trill gis a cis d c bes-\parenthesize-\trill a g
+    b! c b a-\trill gis a e' f e d-\parenthesize-\trill c b
     
     dis e d c-\trill b a e' f e d-\parenthesize-\trill c b
     dis e d c-\parenthesize-\trill b a <a f'> <g e'> <f d'> 
     << {<e c'> <d b'> <c a'> ~ a' b gis} \\  {s4. b,} >>
-    e8 e' gis, a b gis a b c
+    \su e8 e' gis, a b gis a b c
     
     
-    b e b gis e gis a b gis a b c
-    b e b gis e gis a b gis a b c
+    \sd b e b \su gis e gis a b gis a b c
+    \sd b e b \su gis e gis a b gis a b c \sn
     <<{ \sn b e d \once \su \once \td \appoggiatura d32 c8 b c ~ \su c d c b a b ~
         b c b a gis \once \td  a ~ a b a gis fis e} \\
       { s2. f e } >>
@@ -124,15 +125,15 @@ left = \relative c'' {
   \repeat volta 2 {
     R1.
     R1.
-    \clef treble a8 e c a b gis' a e c a b gis'
+    \su \clef treble a8 e c a b gis' a e c a b gis'
     
     a e c a b gis' a4. a,
-    << {a'4. a g g} {c c b b} >>
+    << {a'4. a g! g} {c c b b} >>
     << {f f e e} {a a g g} >>
     
     << {d d c c} {f f e e} >>
     <b d e gis> <a e' a> \clef bass e e,
-    \clef treble b''''8^"G" gis e b' c d c b a s4.
+    \clef treble \sn b''''8^"G" gis e b' c d c b a s4.
     
     b8 gis e b' c d c b a s4.
     a8 fis dis a' g fis g fis e s4.
@@ -149,13 +150,13 @@ left = \relative c'' {
     
     \clef bass b,,,4. ~ b4 \clef treble b''''8 c b a g-\trill fis e
     \clef bass b,,,4. e <a, a'> b
-    e r8 << {b'8 cis d4. ~ d8 cis dis} {b'8 cis d4. ~ d8 cis dis} >>
+    e r8 \sd << {b'8 cis d4. ~ d8 cis dis} {b'8 cis d4. ~ d8 cis dis} >>
     
     << {e,4. g, a c} {e' g, a c} >>
     << {b4. ~ b8 b cis d4. ~ d8 cis dis} {b,4. ~ b8 b cis d4. ~ d8 cis dis} >>
     << {e4. g, a b} {e'4. g, a b}  >>
     
-    <e,, e'> <c'' e> <a e'> b
+    \sn <e,, e'> <c'' e> <a e'> b
     e, c a b
     e, s4. s2.
   }

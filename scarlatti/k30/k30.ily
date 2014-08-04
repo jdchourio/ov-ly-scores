@@ -21,7 +21,7 @@ right = \relative c' {
   \tu \cstl g4. bes
   \cstr ees fis
   bes cis
-  d8 c bes a g fis
+  d8 c! bes a g fis
   << {g g' f e d cis}  \\ {s8 bes a g f e} >>
   << {d'4. s} \\ {f,8 e \tu d ~ d a' f} >>
   \su d g bes4 a8 e' ~
@@ -41,7 +41,7 @@ right = \relative c' {
   e d f4 e8 d
   
   cis4 d8 g f e
-  << {f4. s} \\ {f8 b, c d ees f} >>
+  << {f4. s} \\ {f8 b, c d ees! f} >>
   << {ees4. s} \\ {ees 8 fis,8 g a bes c} >>
   \su bes cis d e fis g
   fis8 g a << {d, g fis} \\ { d g, a} >>
@@ -51,7 +51,7 @@ right = \relative c' {
   g4. bes
   ees fis
   bes cis,
-  d8 c bes a g fis
+  d8 c! bes a g fis!
   g d' c << {g'8} \\ {bes,8 a g} >>
   
   << {f'8 s2 f8} \\ {a,8 b c b c d} >>
@@ -68,15 +68,15 @@ right = \relative c' {
   
   << {a'4. ~ a8 g4 ~ g8 f e f e d ~ d a f} \\
     {a'8 d, c bes4. a a ~ a8 }>>
-  \su d,8 g bes4 a8 e' ~ 
+  \su d,8 g bes4 a8 \tu e' ~ 
   e d f4 e8 d 
   cis4 d8 g4.
-  << {f4.} \\ {f8 b, c} >> d ees f
+  << {f4.} \\ {f8 b, c} >> \sn d ees f
   
   << {ees4.} \\ {ees8 fis, g} >> a bes c
   << {bes4.} \\ {bes8 cis, d} >> e fis g
   fis4. 
-  << {g8 a bes c d ees4 d8 c b4.} \\ {g4. ~ g f4. ~ f8 ees d} >>
+  << {g8 a bes c d ees4 d8 c b4.} \\ {g4. ~ g f!4. ~ f8 ees d} >>
   << {c'4. ~ c8 d ees4 d8 c f4. d8 ees f} \\ {s4 d,8 ees f g aes4. ~ aes8 b c g4.} >>
   
   ees'8-\trill d c ~ c g ees
@@ -121,7 +121,7 @@ right = \relative c' {
   << {g4.} \\ {g8 cis, d} >> e f g
   << {f4.} \\ {f8 b, c} >> d ees f
   << {ees4.} \\ {ees8 a, bes} >> c d ees
-  <f, d'>4. <g e'>
+  \once \sd <f, d'>4. <g e'>
   <c aes'> <d, b'>
   <g ees'> <a, fis'>
   
@@ -130,14 +130,14 @@ right = \relative c' {
   << {e'8 d ~ d cis bes ~ bes a g} \\
     {g8 f ~ f e d cis4. } >>
   << {f4 g8 a4 b8 c4. ~ c ~ c8 bes a <bes d>4 <cis e>8} \\
-    {d,4 e8 f4. ~ f8 ees d <ees g>4 <fis a>8 <d g>4. g8 f e} >>
+    {d,4 e8 f4. ~ f8 ees! d <ees g>4 <fis a>8 <d g>4. g8 f! e} >>
   
   << {f'8 g a ~ a a f} \\ {a,4. a} \\ {d4. s} >>  
-  << {d8-\trill cis d e f g} \\ {bes,4. cis} >>
+  << {d8-\trill cis d e f g} \\ {bes,4. cis!} >>
   f8-\trill e d4 a8 f
   d g bes4 a8 e' ~
   e d f4 e8 d ~ d
-  c <ees c'>4 <d bes'>8 <c a'>8 ~ 
+  c <ees! c'>4 <d bes'>8 <c a'>8 ~ 
   <c a'> <a fis'> <bes g'>4 <a f'>8 <g e'> ~
   
   <g e'> <f d'> <aes f'>4 <g ees'>8 <f d'> ~
@@ -145,7 +145,7 @@ right = \relative c' {
   <c a'> <a fis'> <bes g'>4 
   << {a'8 bes ~ bes a ees' d4 g8 ~ g[ f]} \\
     {fis,8 g ~ g fis4 g8 a bes c[ f]} >>
-  <ees c'>4 <d bes'>8 <c a'>
+  <ees! c'>4 <d bes'>8 <c a'>
   
   << {bes'8 a g4 f8 ees 
       d4 e8 f4. ~ 
@@ -158,14 +158,14 @@ right = \relative c' {
       \su bes' a bes c4. ~
       c8 bes f'4 ees8 bes' ~ \sd <des, bes'>8[ <c aes'>8]} \\
     {s2 s2.
-      c,8 f4 ~ f8 ees c
+      c,8 f!4 ~ f8 ees! c
       des4 aes'8 g4 des'8 ~ <des bes'>8[ <c aes'>8]}>> 
   <bes g'>4 <aes f'>8 <g ees'>
   << {d'8 bes c d4 e8} \\ {f,4. ~ f4 g8} >>
 
   
   << {f'4. ~ f} \\ {aes,8 c bes aes g f} \\ {s4. s4 b8} >>
-  << {ees8 g f g4 \sd <a, fis'>8} \\ {g4. ~ g4} \\ {c8 s4 ees8 d c} >>
+  << {ees8 g f g4 fis8} \\ {g,4. ~ g4 a8} \\ {c8 s4 ees8[ d] c} >>
   << {bes d c bes a g} {g' bes a g f ees} >>
   << {d4. ~ d} \\ {fis,4. g8 a bes} >>
   << {c8[ d] ees d4 c8 } \\ {a4 g8 fis g a} >>
@@ -174,7 +174,7 @@ right = \relative c' {
   g8 c ees4 << {d8 c'} \\ {s ees,} >>
   << {bes' a g ~ g d' bes} \\ {d, c bes d4.} >>
   << {g8 g' d cis e g} \\ {e,4. e} >>
-  << {f'8 e d4 d8 c} {a g f4 f8 ees} \\ {d4. ~ d} >>
+  << {f'8 e d4 d8 c} {a g f4 f8 ees!} \\ {d4. ~ d} >>
   << {d8 ees f4 ees8 d} {b' c d4 c8 b} >>
   << {c d ees4 fis8 g} {ees, f g4 a8 bes} >>
   << {a bes c4 bes8 a} {fis' g a4 g8 fis} >>
@@ -185,9 +185,9 @@ right = \relative c' {
   << {a8 d ees f4.} \\ {a,4. ~ a8 bes a} >>
   << {g8 c d ees4.} \\ {g,4. ~ g8 a g} >>
   << {d'4. ~ d8 c bes} \\ {fis g a d,4 g8} >>
-  << {a bes c bes a <g cis>} \\ {fis g a g f e} >>
+  << {a bes c bes a <g cis>} \\ {fis g a g fis e} >>
   
-  << {d'4 c8 g'4 f8
+  << {d'4 c!8 g'4 f8
       ees f g ~ g f ees
       d ees f ~ f ees d
       c d ees ~ ees d c 
@@ -198,17 +198,17 @@ right = \relative c' {
       bes a g fis g a ~
       a g f ees d c
       fis g a} >>
-  << {d c bes} \\ {bes a g} \\ {s4 g'8} >>
+  << {d c g'} \\ {bes, a g} \\ {s4 bes8} >>
   
-  << {fis8 g a bes a g} \\ {a, bes c d c bes} >>
+  << {fis'8 g a bes a g} \\ {a, bes c d c bes} >>
   << {fis' ees d c bes a} \\ {a g fis ees d c} >>
   << {g'4. g8 e g} \\ {bes, a g cis4.} >>
   << {fis8 a c b d f} \\ {d,4. f} >>
   << {cis'8 e g fis a c} \\ {g,4. c} >>
   << {bes'8 fis g f cis d} \\ {d c bes a g fis} >>
   
-  << {ees'8 b c c4.} \\ {g8 f ees d e fis} \\ {s4. fis8  g a} >>
-  << {g'4. ~ g8 f ees} \\ {g,2.} \\ {bes8 c d \sd ees d c} >>
+  << {ees'8 b c c4.} \\ {g8 f! ees d e fis} \\ {s4. fis8  g a} >>
+  << { \shape #'((0 . 1) (0 . 1) (0 . 1) (0 . 1)) Tie g'4. ~ g8 f ees} \\ {g,2.} \\ {bes8 c d \sd ees d c} >>
   << {<bes d>8 c bes ~ bes c a} \\ {g a g ~ g a fis} >>
   << {g8 g' f ~ f ees d~
       d b c4 c ~
@@ -227,24 +227,24 @@ left = \relative c {
   bes cis
   
   \cstr \sd f gis
-  a8 g f e d cis
-  d f ees \cstl \sn d c b
+  a8 g! f e d cis
+  d f ees! \cstl \sn d c b
   c ees d c bes a
   g,4. bes
   ees fis
   
   bes cis
-  d8 c bes a g fis
+  d8 c! bes a g fis
   g bes a g f e
   d,4. f
   bes cis
   f gis
   
-  a8 g f e d cis
+  a8 g! f e d cis
   << {d8 d' c} \\ {d,4.} >> b'8 a g
-  << {c,8 c' bes} \\ {c,4.} >> a'8 g fis
+  << {c,8 c' bes!} \\ {c,4.} >> a'8 g fis
   << {g8 \cstr \sd g' f e d cis} \\ {g4. s} >>
-  << {d8 d' c} \\ {d,4.} >> bes'4 a8
+  << {d8 d' c!} \\ {d,4.} >> bes'4 a8
   g4. bes
   
   ees c
@@ -259,7 +259,7 @@ left = \relative c {
   \sn bes,4. <d bes'>
   <ees g> <a c>
   <d f> <e g>
-  f8 ees d c bes a
+  f8 ees! d c bes a
   
   
   bes d c bes a g
@@ -274,9 +274,9 @@ left = \relative c {
   bes cis
   \cstr \sd f gis
   a8 g f \cstl \sn e d cis
-  << {d,8 d' c b a g} \\ {d4.} >>
+  << {d,8 d' c \sd b a g} \\ {d4.} >>
   
-  << {c8 c' bes a g fis} \\ {c4.} >>
+  << {c8 c' bes \sd a g fis} \\ {c4.} >>
   g'8 bes a g fis ees
   << {d8 d' c bes a g} \\ {d4. ~ d} >>
   a'8 bes c << {\sd d4. ~ \su d8 c b c4} \\ {s4. g4. aes8 g f} >>
@@ -294,31 +294,31 @@ left = \relative c {
   f4. s
   s e
   \clef treble ees4. d8 c bes
-  << {c8 c' bes} \\ {c,4.} >> a'
-  << {bes,8 bes' a} \\ {bes,4.} >> g'
+  << {c8 c' bes} \\ {c,4. a'} >>
+  << {bes,8 bes' a} \\ {bes,4. g'} >>
   
-  << {a,8 a' g fis4.
-      g,8 g' f e4.} \\
-    {a,4. s g s} >>
+  << {a,8 a' g s4.
+      g,8 g' f s4.} \\
+    {a,4. fis' g, e'} >>
   \clef bass
-  << {f8 f' e} \\ {f,4.} >> d'
+  << {f,8 f' e} \\ {f,4.} >> d'
   << {ees,8 e' d} \\ {ees,4.} >> cis'8 b a
-  << {d,8 d' c} \\ {d,4.} >> bes'8 a g
+  << {d,8 d' c!} \\ {d,4.} >> bes'8 a g
   a bes c d e fis
   
   
   g,,4. bes
   ees <fis a>
   <bes d> <cis e>
-  d <b d>
+  d <<{d}\\{b}>>
   c fis,
   g cis
   d gis,
   
    
-  << {\su a8 \cstr \sd a' g} \\ {a,4.} >> f'8 e d
+  << {\su a8 \cstr \sd a' g!} \\ {a,4.} >> f'8 e d
   e g f e d cis
-  d g ees d c b
+  d f ees! d c b
   c ees d c bes a
   bes, bes' d4 << {s8 bes c4} \\ {c8 g ~ g8[ f]} >> aes4
   << {s8 d, g4} \\ {g8 bes, ~ bes[ c]} >> ees4 
@@ -346,7 +346,7 @@ left = \relative c {
   \cstr \sd <d f>4 <ees g>8 <f a>4 \cstl a,8
   
   bes4 c8 des c bes
-  << {c4. d} \\ {aes8 g f bes4.} >>
+  << {c4. des} \\ {aes8 g f bes4.} >>
   c4. e,
   f4 g8 a4. 
   bes <ees, bes'>

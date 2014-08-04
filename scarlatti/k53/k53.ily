@@ -59,7 +59,7 @@ right = \relative c'' {
     d b e, b' d b e, b'
     
     d b e, b' d b e, b'
-    cis a fis' d e cis d b
+    cis! a fis' d e cis d b
     cis d e d cis b a gis
     a gis fis e d cis b a
     
@@ -80,7 +80,7 @@ right = \relative c'' {
     <cis' e>4 a, cis-\parenthesize-\trill b8 a
     <a' fis'>4 e'8 d cis b a gis
     a2 a' ~
-    a4 g8 fis e d cis b
+    a4 g!8 fis e d cis b
 
     \once \su e2 a ~
     a4 g8 fis e d cis b
@@ -130,7 +130,7 @@ right = \relative c'' {
       f' a, f a e' bes g bes
       d a f a cis g e g
     }
-    d'[ cis b a g fis e d]
+    d'[ cis b! a g fis e d]
     fis[ g a g fis e d cis]
     
     \clef bass d[ cis b a g fis e d]
