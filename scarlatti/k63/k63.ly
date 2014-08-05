@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k63.ily"
 
 breaks = {
   \repeat volta 2 {
@@ -22,17 +21,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      \clef bass \left
-    }
-  >>
-  \layout { }
-}
+\include "k63.ily"

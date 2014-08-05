@@ -9,6 +9,12 @@ tn = \tieNeutral
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
+\header {
+  title = "K35"
+  meter = "Allegro"
+  tagline = ##f
+}
+
 global = {
   \key g \minor
   \time 4/4
@@ -156,8 +162,20 @@ left = \relative c {
   }
 }
 
-\header {
-  title = "K35"
-  meter = "Allegro"
-  tagline = ##f
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \right
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+      \clef bass \left 
+      \breaks
+      >>
+    }
+  >>
+  \layout { indent = 0 }
 }

@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-#(set-global-staff-size 15.5)
+#(set-global-staff-size 17.6)
 
 \paper {
   #(set-paper-size "a4")

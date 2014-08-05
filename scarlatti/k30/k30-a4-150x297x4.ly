@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k30.ily"
 
 #(set-global-staff-size 17.9)
-
-\header {
-  title = "K30"
-  meter = "FUGA"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4")
@@ -21,14 +14,6 @@
   right-margin = 3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+
+\include "k30.ily"

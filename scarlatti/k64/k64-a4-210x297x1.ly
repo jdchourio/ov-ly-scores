@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k64.ily" 
 
 #(set-global-staff-size 20)
 
@@ -12,17 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      <<
-        \clef bass \left
-        { s2*16 \break }
-      >>
-    }
-  >>
-  \layout { }
-}
+breaks = {s2*16 \break}
+
+\include "k64.ily" 

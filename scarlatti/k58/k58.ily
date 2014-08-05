@@ -1,5 +1,11 @@
 \version "2.18.2"
 
+\header {
+  title = "K58"
+  meter = "FUGA"
+  tagline = ##f
+}
+
 global = {
   \key c \minor
   \time 4/4
@@ -91,4 +97,26 @@ leftTwo = \relative c {
   f g16 aes g8 f ees d \stemUp c bes16 a \stemDown | g4 s c c | f4. ees16 d c8 d ees f | 
   g,4 g g g | g g c s | s2 c4 c | f f bes, bes | ees8 d c bes16 aes g4 g | 
   g g g g | g g g g | g g g g | c, c c c | c c c2 \bar "|."
+}
+
+\score { 
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \rightOne 
+        \\
+        \rightTwo 
+      >>
+    }
+    \new Staff = "left" { 
+      R1*6
+      <<
+        \clef bass \leftOne 
+        \\
+        \clef bass \leftTwo 
+      >>
+    }
+  >>
+  \layout { indent = 0 }
 }

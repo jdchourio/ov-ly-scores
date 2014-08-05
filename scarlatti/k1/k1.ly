@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k1.ily"
 
 breaks = {
   \repeat volta 2 {
@@ -8,12 +7,6 @@ breaks = {
   \repeat volta 2 {
     s1*3 \break s1*3 \break s1*3 \break s1*3 \break s1*3 \break s1*3 \pageBreak
   }
-}
-
-\header {
-  title = "K1"
-  meter = "Allegro"
-  tagline = ##f
 }
 
 #(set-global-staff-size 18)
@@ -27,21 +20,4 @@ breaks = {
   %ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      \breaks
-      {s1*13 \pageBreak}
-      >>
-    }
-  >>
-  \layout { }
-}
+\include "k1.ily"

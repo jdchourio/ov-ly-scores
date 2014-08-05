@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k77.ily"
 
 breaks = {
     s2.*3 \break s2.*4 \break s2.*4 \break s2.*4 \break s2.*2
@@ -20,21 +19,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      \breaks
-      % {s1*11 \pageBreak}
-      >>
-    }
-  >>
-  \layout { }
-}
+\include "k77.ily"

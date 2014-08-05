@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k64.ily" 
 
 breaks = {
     s2*4 \break s2*5 \break s2*4 \break s2*5 \break s2*5 \pageBreak
@@ -17,17 +16,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+\include "k64.ily" 

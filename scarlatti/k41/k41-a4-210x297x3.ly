@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k41.ily"
 
 #(set-global-staff-size 15.5)
-
-\header {
-  title = "K41"
-  meter = "FUGA"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4")
@@ -18,20 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        { \rightOne }
-        { \rightTwo }
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-        { \clef bass \leftOne }
-        { \clef bass \leftTwo } 
-      >>
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+
+\include "k41.ily"

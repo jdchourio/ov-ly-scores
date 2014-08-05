@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k93.ily"
 
 #(set-global-staff-size 22)
-
-\header {
-  title = "K93"
-  meter = "FUGA"
-  tagline = ##f
-}
 
 \paper {
   print-page-number = ##f
@@ -25,17 +18,4 @@ breaks = {
   s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break s1*4 \break
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \rightOne 
-      >>
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+\include "k93.ily"

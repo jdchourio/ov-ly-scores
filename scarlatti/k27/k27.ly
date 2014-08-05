@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k27.ily"
 
 breaks = {
   \partial 2.*5/6
@@ -13,7 +12,7 @@ breaks = {
   }
 }
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 
 \paper {
   #(set-paper-size "a4")
@@ -24,21 +23,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      \breaks
-      {s2.*31 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+\include "k27.ily"

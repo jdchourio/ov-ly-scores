@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k87.ily"
 
 #(set-global-staff-size 17.8)
 
@@ -14,20 +13,6 @@
   bottom-margin = .3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        { \rightOne } \\
-        { \rightTwo }
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-        \clef bass \leftOne \\
-        \leftTwo
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {}
+
+\include "k87.ily"

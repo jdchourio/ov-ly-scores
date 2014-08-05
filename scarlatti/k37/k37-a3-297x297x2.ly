@@ -1,7 +1,6 @@
 \version "2.18.2"
-\include "k37.ily"
 
-#(set-global-staff-size 19.7)
+#(set-global-staff-size 19.9)
 
 \paper {
   #(set-paper-size "a3")
@@ -14,17 +13,6 @@
   bottom-margin = .3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      {s1*28 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {s1*28 \pageBreak}
+
+\include "k37.ily"

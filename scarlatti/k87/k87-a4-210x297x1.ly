@@ -1,7 +1,6 @@
 \version "2.18.2"
-\include "k87.ily"
 
-#(set-global-staff-size 15.4)
+#(set-global-staff-size 15.3)
 
 \paper {
   #(set-paper-size "a4")
@@ -12,20 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        { \rightOne } \\
-        { \rightTwo }
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-        \clef bass \leftOne \\
-        \leftTwo
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {s2.*34 \break}
+
+\include "k87.ily"

@@ -5,6 +5,12 @@ global = {
   \time 4/4
 }
 
+\header {
+  title = "K41"
+  meter = "FUGA"
+  tagline = ##f
+}
+
 su = \stemUp
 sd = \stemDown
 sn = \stemNeutral
@@ -546,3 +552,21 @@ leftTwo = \relative c' {
   d1 \bar "|."
 }
 
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        { \rightOne }
+        { \rightTwo }
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+        { \clef bass \leftOne }
+        { \clef bass \leftTwo } 
+      >>
+    }
+  >>
+  \layout { indent = 0 }
+}

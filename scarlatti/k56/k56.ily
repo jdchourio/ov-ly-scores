@@ -9,6 +9,12 @@ tn = \tieNeutral
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
+\header {
+  title = "K56"
+  meter = "Con spirito"
+  tagline = ##f
+}
+
 global = {
   \key c \minor
   \time 12/8
@@ -195,4 +201,23 @@ left = \relative c' {
     c4 aes8 f4 g8 c,,4. r4 r8
     R1.
   }
+}
+
+
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \right
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+        \breaks
+        \clef bass \left 
+      >>
+    }
+  >>
+  \layout { indent = 0 }
 }

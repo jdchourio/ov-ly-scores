@@ -1,7 +1,6 @@
 \version "2.18.2"
-\include "k77.ily"
 
-#(set-global-staff-size 22)
+#(set-global-staff-size 20)
 
 \paper {
   #(set-paper-size "a4")
@@ -12,17 +11,7 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \right
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      { s2.*47 \pageBreak }
-      >>
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+breaks = { s2.*17 \break s2.*30 \break s4.*20 \break }
+
+\include "k77.ily"

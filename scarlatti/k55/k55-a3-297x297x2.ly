@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k55.ily"
 
-#(set-global-staff-size 20)
-
-\header {
-  title = "K55"
-  meter = "Allegro"
-  tagline = ##f
-}
+#(set-global-staff-size 19.7)
 
 \paper {
   #(set-paper-size "a3")
@@ -20,14 +13,6 @@
   bottom-margin = .3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+breaks = {s4.*59 \pageBreak}
+
+\include "k55.ily"

@@ -116,3 +116,27 @@ left = \relative c' {
     f d e cis d \cstl \su a f a d,4-\trill r-\fermata
   }
 }
+
+\header {
+  title = "K1"
+  meter = "Allegro"
+  tagline = ##f
+}
+
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \right
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+      \clef bass \left 
+      \breaks
+      >>
+    }
+  >>
+  \layout { indent = 0 }
+}

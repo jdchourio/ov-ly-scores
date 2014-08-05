@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k102.ily"
 
 breaks = {
   \repeat volta 2 {
@@ -14,12 +13,6 @@ breaks = {
 
 #(set-global-staff-size 24)
 
-\header {
-  title = "K102"
-  meter = "Allegro"
-  tagline = ##f
-}
-
 \paper {
   #(set-paper-size "a4")
   print-page-number = ##f
@@ -29,20 +22,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      {s4.*54 \pageBreak}
-      >>
-    }
-  >>
-  \layout { }
-}
+\include "k102.ily"

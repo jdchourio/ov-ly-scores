@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k27.ily"
 
 #(set-global-staff-size 20)
 
@@ -12,14 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {}
+
+\include "k27.ily"

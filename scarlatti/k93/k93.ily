@@ -4,6 +4,12 @@ su = \stemUp
 sd = \stemDown
 sn = \stemNeutral
 
+\header {
+  title = "K93"
+  meter = "FUGA"
+  tagline = ##f
+}
+
 global = {
   \key g \minor
   \time 4/4
@@ -135,3 +141,17 @@ left = \relative c' {
   << { d'2 d } \\ { g, g } >> | < g d' g>1\fermata \bar "|."
 }
 
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \rightOne 
+      >>
+    }
+    \new Staff = "left" { 
+      \clef bass \left 
+    }
+  >>
+  \layout { indent = 0 }
+}

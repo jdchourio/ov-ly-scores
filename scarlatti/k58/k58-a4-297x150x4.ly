@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k58.ily"
 
 #(set-global-staff-size 20)
-
-\header {
-  title = "K58"
-  meter = "FUGA"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4" 'landscape)
@@ -20,23 +13,6 @@
   top-margin = 6 \cm
 }
 
-\score { 
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \rightOne 
-        \\
-        \rightTwo 
-      >>
-    }
-    \new Staff = "left" { 
-      R1*6
-      <<
-        \clef bass \leftOne 
-        \\
-        \clef bass \leftTwo 
-      >>
-    }
-  >>
-  \layout { }
-}
+breaks = {s1*31 \pageBreak} 
+
+\include "k58.ily"

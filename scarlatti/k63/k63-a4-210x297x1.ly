@@ -1,7 +1,6 @@
 \version "2.18.2"
-\include "k63.ily"
 
-#(set-global-staff-size 17.2)
+#(set-global-staff-size 17.3)
 
 \paper {
   #(set-paper-size "a4")
@@ -12,14 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+
+\include "k63.ily"

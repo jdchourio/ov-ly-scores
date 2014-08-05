@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k37.ily"
 
 breaks = {
   \repeat volta 2 {
@@ -23,21 +22,4 @@ breaks = {
   %ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      \breaks
-      {s1*28 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+\include "k37.ily"

@@ -9,6 +9,12 @@ tn = \tieNeutral
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
+\header {
+  title = "K62"
+  meter = "Allegro"
+  tagline = ##f
+}
+
 global = {
   \key a \major
   \time 3/8
@@ -227,19 +233,20 @@ left = \relative c'' {
   }
 }
 
-breaks = {
-  \repeat volta 2 {
-    s4.*5 \break s4.*6 \break s4.*6 \break s4.*6 \pageBreak
-    s4.*6 \break s4.*6 \break s4.*6 \break s4.*6 \break s4.*4 \pageBreak
-  }
-  \repeat volta 2 {
-    s4.*5 \break s4.*7 \break s4.*6 \break s4.*6 \break s4.*7 \pageBreak
-    s4.*6 \break s4.*6 \break s4.*6 \break s4.*6 \break s4.*6 \pageBreak
-  }
-}
-
-\header {
-  title = "K62"
-  meter = "Allegro"
-  tagline = ##f
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \right
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+        \breaks
+        \clef bass \left 
+      >>
+    }
+  >>
+  \layout { indent = 0 }
 }

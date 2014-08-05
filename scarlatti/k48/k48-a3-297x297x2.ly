@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k48.ily"
 
 #(set-global-staff-size 20.5)
 
@@ -14,17 +13,6 @@
   bottom-margin = .3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      {s4.*63 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {s4.*63 \pageBreak}
+
+\include "k48.ily"

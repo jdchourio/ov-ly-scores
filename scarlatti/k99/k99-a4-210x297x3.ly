@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k99.ily"
 
-#(set-global-staff-size 19.3)
-
-\header {
-  title = "K99"
-  meter = "Allegro"
-  tagline = ##f
-}
+#(set-global-staff-size 19.5)
 
 \paper {
   #(set-paper-size "a4")
@@ -18,14 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+breaks = {s2.*43 \break}
+
+\include "k99.ily"

@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k61.ily"
 
 breaks = {
   s2*5 \break s2*5 \break s2*5 \break s2*5 \break s2*5 \break s2*5 \pageBreak
@@ -12,11 +11,6 @@ breaks = {
 
 #(set-global-staff-size 20)
 
-\header {
-  title = "K61"
-  tagline = ##f
-}
-
 \paper {
   #(set-paper-size "a4")
   print-page-number = ##f
@@ -26,20 +20,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-        \breaks
-      \clef bass \left 
-      >>
-    }
-  >>
-  \layout { }
-}
+\include "k61.ily"

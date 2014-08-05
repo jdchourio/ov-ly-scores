@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k53.ily"
 
 #(set-global-staff-size 20)
-
-\header {
-  title = "K53"
-  meter = "Presto"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4" 'landscape)
@@ -21,19 +14,6 @@
   bottom-margin = 3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        {s1*41 \pageBreak}
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      >>
-    }
-  >>
-  \layout { }
-}
+breaks = {s1*41 \pageBreak}
+        
+\include "k53.ily"

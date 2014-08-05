@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k93.ily"
 
 #(set-global-staff-size 17.9)
-
-\header {
-  title = "K93"
-  meter = "FUGA"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a3")
@@ -20,14 +13,6 @@
   top-margin = 12.3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \rightOne 
-     }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {}
+
+\include "k93.ily"

@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k100.ily"
 
 #(set-global-staff-size 24)
-
-\header {
-  title = "K100"
-  meter = "Allegrissimo"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4")
@@ -18,17 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      {s1.*16 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {s1.*16 \pageBreak}
+
+\include "k100.ily"

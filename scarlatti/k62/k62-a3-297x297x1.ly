@@ -1,7 +1,6 @@
 \version "2.18.2"
-\include "k62.ily"
 
-#(set-global-staff-size 17.7)
+#(set-global-staff-size 17.3)
 
 \paper {
   #(set-paper-size "a3")
@@ -14,14 +13,6 @@
   bottom-margin = .3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left
-    }
-  >>
-  \layout { }
-}
+breaks = {s4.*51 \break}
+
+\include "k62.ily"

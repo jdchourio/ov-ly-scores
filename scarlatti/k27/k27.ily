@@ -206,3 +206,21 @@ left = \relative c {
   meter = "Allegro"
   tagline = ##f
 }
+
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" {
+      << 
+        \breaks
+        \right
+      >>
+    }
+    \new Staff = "left" { 
+      <<
+      \clef bass \left 
+      \breaks
+      >>
+    }
+  >>
+  \layout { indent = 0 }
+}

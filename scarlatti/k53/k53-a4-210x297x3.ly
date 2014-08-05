@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k53.ily"
 
 #(set-global-staff-size 20.7)
-
-\header {
-  title = "K53"
-  meter = "Presto"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4")
@@ -18,14 +11,6 @@
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-        \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+
+\include "k53.ily"

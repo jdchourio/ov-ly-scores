@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "k35.ily"
 
 breaks = {
   \partial 4 
@@ -25,21 +24,4 @@ breaks = {
   ragged-bottom = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      << 
-        \breaks
-        \right
-      >>
-    }
-    \new Staff = "left" { 
-      <<
-      \clef bass \left 
-      \breaks
-      { s1*19 \pageBreak}
-      >>
-    }
-  >>
-  \layout { indent = 0 }
-}
+\include "k35.ily"

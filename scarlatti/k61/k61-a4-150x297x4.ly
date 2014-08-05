@@ -1,12 +1,6 @@
 \version "2.18.2"
-\include "k61.ily"
 
 #(set-global-staff-size 17.3)
-
-\header {
-  title = "K61"
-  tagline = ##f
-}
 
 \paper {
   #(set-paper-size "a4")
@@ -19,14 +13,6 @@
   right-margin = 3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { }
-}
+breaks = {}
+
+\include "k61.ily"

@@ -1,13 +1,6 @@
 \version "2.18.2"
-\include "k1.ily"
 
-\header {
-  title = "K1"
-  meter = "Allegro"
-  tagline = ##f
-}
-
-#(set-global-staff-size 18.4)
+#(set-global-staff-size 18.5)
 
 \paper {
   #(set-paper-size "a3")
@@ -20,14 +13,6 @@
   bottom-margin = 0.3 \cm
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" {
-      \right
-    }
-    \new Staff = "left" { 
-      \clef bass \left 
-    }
-  >>
-  \layout { indent = 0 }
-}
+breaks = {}
+
+\include "k1.ily"
