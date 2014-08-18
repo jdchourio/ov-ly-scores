@@ -146,11 +146,17 @@ right = \relative c' {
         \autoBeamOff
         \hideNotes 
         \slurUp 
-        \cstr \sd g16( g8 g)( g
-        f)( f f)( f
-        ees)( ees ees)( ees
-        d)( d d)( d
-        d)( d c)( c c)
+        \cstr \sd \shape #'((1 . 1) (0 . 0.5) (0 . 0) (-1 . 0.5)) Slur g16( g8 
+        \shape #'((0 . -0.5) (0 . 0) (0 . 0) (0 . 0.5)) Slur g)( g
+        \shape #'((3 . 0.5) (2 . 0) (0 . 0) (-1 . .5)) Slur f)( f 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur f)( f
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)( c 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)
       }
     >>
     
