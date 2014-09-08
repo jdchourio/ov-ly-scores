@@ -40,6 +40,8 @@ violon = \relative c'' {
   \once \override HorizontalBracket #'direction = #UP 
   c2^\startGroup c^\stopGroup ees4\rest ees8\rest <<{ ees^u }  \\ { bes }>>
   
+  \break
+  
   <<{ \slurDown ees4( d8) f\rest f4\rest f8\rest f
       f4( ees8) f\rest f4\rest f8\rest f
       g4( f8) f\rest a4\rest a8\rest aes
@@ -56,6 +58,8 @@ violon = \relative c'' {
     \appoggiatura g8 f4._+ ees16( d) \appoggiatura d8 ees bes' aes_+ g }
   \once \override Beam #'positions = #'(-1 . 1) \sd c \su d, ees aes f4._+( ees16 f)
   ees2
+  
+  \break
   
   c2_\markup "2e Reprise" \breathe \sd ees'4^u c8.^+( bes32 c)
   d4 \su g, \sd c \appoggiatura bes8 \su a4_+
@@ -82,6 +86,8 @@ viole = \relative c {
   c8[ aes f16.*16/24^+ ees32 f] g4 \su g,
   \once \override HorizontalBracket #'direction = #UP
   c,8^\startGroup g' a^\markup "Fin." b c,2^\stopGroup b''4\rest b8\rest \sd c8
+  
+  \break
  
   c4( b8) b\rest b4\rest d8\rest d
   d4( c8) b\rest b4\rest b8\rest ees
@@ -95,6 +101,8 @@ viole = \relative c {
   \su aes,4 g8 aes bes4 \clef bass \key c \minor bes,
   \sd ees8 f ees^+ d
   
+  \break
+  
   \su c,8( g') a( b) \breathe \sd c( ees) g( c)
   bes,( d) e(g) \su a,( \sd g') fis( d)
   g[( d]) \su bes( g) \clef "mensural-c3" \key c \minor \sd g''2
@@ -103,7 +111,8 @@ viole = \relative c {
   
   \su d8( c) bes_+( a) bes( d) 
   %\override Staff.NoteCollision #'merge-differently-Headed = ##t
-  <<{ g4 ~ g8 d g4 } \\ { \slurUp g8( c,) bes4. bes8 } \\
+  <<{ \shape #'((0 . 1) (0 . 1) (0 . 1) (0 . 1)) Tie g4 ~ g8 d g4 } \\ 
+    { \slurUp \shape #'((0.5 . -0.5) (0.5 . -0.5) (0 . 0) (0 . 0)) Slur g8( c,) bes4. bes8 } \\
     { \hideNotes \slurDown s4 bes8( f') }>>
   <<{ a,8[( d c]) bes } \\ { a4. g8 }>>
   <<{ \slurDown fis[ a] f[( d']) \once \override Beam #'positions = #'(-0.5 . -1) 
@@ -149,12 +158,12 @@ right = \relative c' {
         \cstr \sd \shape #'((1 . 1) (0 . 0.5) (0 . 0) (-1 . 0.5)) Slur g16( g8 
         \shape #'((0 . -0.5) (0 . 0) (0 . 0) (0 . 0.5)) Slur g)( g
         \shape #'((3 . 0.5) (2 . 0) (0 . 0) (-1 . .5)) Slur f)( f 
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur f)( f
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees 
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d 
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d
-        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur d)( d 
+        \shape #'((0 . 0) (0 . 0.25) (0 . 0.25) (0 . 0)) Slur f)( f
+        \shape #'((4 . .25) (4  . 0) (0 . 0) (0 . .25)) Slur ees)( ees 
+        \shape #'((0 . -0.25) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees
+        \shape #'((3 . 0.25) (3 . 0.25) (0 . .25) (0 . 0.25)) Slur d)( d 
+        \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -1)) Slur d)( d
+        \shape #'((4 . 0) (4 . 0) (0 . 0) (0 . 0)) Slur d)( d 
         \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)( c 
         \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)
       }
@@ -196,17 +205,26 @@ right = \relative c' {
         \autoBeamOff
         \hideNotes 
         \slurUp 
-        \cstr \sd g16( g8 g)( g
-        f)( f f)( f
-        ees)( ees ees)( ees
-        d)( d d)( d
-        d)( d c)( c c)
+        \cstr \sd \shape #'((1 . 1) (0 . 0.5) (0 . 0) (-1 . 0.5)) Slur g16( g8 
+        \shape #'((0 . -0.5) (0 . 0) (0 . 0) (0 . 0.5)) Slur g)( g
+        \shape #'((3 . 0.5) (2 . 0) (0 . 0) (-1 . .5)) Slur f)( f 
+        \shape #'((0 . 0) (0 . 0.25) (0 . 0.25) (0 . 0)) Slur f)( f
+        \shape #'((4 . .25) (4  . 0) (0 . 0) (0 . .25)) Slur ees)( ees 
+        \shape #'((0 . -0.25) (0 . 0) (0 . 0) (0 . 0)) Slur ees)( ees
+        \shape #'((0 . 0.25) (0 . 0.25) (0 . .25) (0 . 0.25)) Slur d)( d 
+        \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -1)) Slur d)( d
+        \shape #'((4 . 0) (4 . 0) (0 . 0) (0 . 0)) Slur d)( d 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)( c 
+        \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur c)
       }
     >>
     \once \override HorizontalBracket #'direction = #UP
     \cstr <\parb ees, g \parb c>2\startGroup 
     \slurDown
     q \stopGroup ees'4\rest ees8\rest <c ees>8
+    
+    \break
+    
     q4( ^\markup "P.re Reprise "  <b d>8) ees8\rest a4\rest a8\rest <d, f>
     q4( <c ees>8) f8\rest a4\rest a8\rest <ees g>
     q4( <d f>8) f8\rest c'4\rest c8\rest <f, aes>
@@ -222,13 +240,15 @@ right = \relative c' {
         \once \override Beam #'positions = #'(-1 . 1) 
         \sd bes \su \slurUp ees,( g \cstl bes,) \cstr } \\
       { \override Stem.cross-staff = ##t
-        \override Stem.length = #14
+        \override Stem.length = #16
         <bes ees g>2 }>>
     
     \repeat unfold 2 {
-      \cstr \slurUp \sd c8( ees \cstl \su \slurDown <f, aes>)( 
+      \cstr \slurUp \sd \shape #'((0 . 0) (0 . 1) (0.5 . 1) (0 . 0)) Slur c8( 
+      ees \cstl \su \slurDown \shape #'((0 . 0.5) (0 . 1) (0 . 1) (0 . 1.5)) Slur <f, aes>)( 
       \sd \cstr <bes d>) \cstl \su 
-      <<{ <g bes> \slurUp \cstr \sd ees'( g \cstl \su bes,) }
+      <<{ <g bes> \slurUp \cstr \sd \shape #'((0 . 0) (0 . 1) (0.5 . 1) (0 . 0)) Slur 
+      ees'( g \cstl \su bes,) }
         \new Voice { 
           \once \override Stem.cross-staff = ##t
           \once \override Flag.transparent = ##t
@@ -240,8 +260,10 @@ right = \relative c' {
       >>
     }
     \cstr <<{ \slurDown c[ d] ees( c) ees4. d8 }
-      \new Voice { \hideNotes s4 ees'4( ees) }>>
+      \new Voice { \hideNotes s4 \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -0.5)) Slur ees'4( ees) }>>
     \partial 2 ees,2 \bar "|."
+    
+    \break
     
     <<{ \once \override Stem.cross-staff = ##t
         \once \override Stem.length = #13
@@ -273,14 +295,14 @@ left = \relative c {
 
   \partial 2
   %\repeat volta 2 {
-    <<{ \sd \para c2} \\ {c,4\rest \su c }>>
+    <<{ \once \override Stem.length = #4 \sd \para c2} \\ {c,4\rest \su c }>>
     <<{ s8( \sd g'') s( \sd ees) s( \sd f) s( \sd d) s( \sd ees) s( \sd c) s( \sd d) s( \sd bes) }
       { \su g s \su e s \su f s \su d s \su ees s \su c s \su d s \su b }>>
     
     << { c2 } \\ { c'4\rest c4 } >> \su f,4. d8
     \once \override Beam #'positions = #'(-0.5 . -2) \su g \sd f' ees_\prall d 
 
-    <<{\sd c2} \\ {c,4\rest \su c }>>
+    <<{ \once \override Stem.length = #4 \sd c2} \\ {c,4\rest \su c }>>
     <<{ s8( \sd g'') s( \sd ees) s( \sd f) s( \sd d) s( \sd ees) s( \sd c) s( \sd d) s( \sd bes) }
       { \su g s \su e s \su f s \su d s \su ees s \su c s \su d s \su b }>>
     
@@ -289,6 +311,8 @@ left = \relative c {
       { \override Stem.length = #4 \para g'2 }>>
     \partial 2 c,8\startGroup g' aes bes \bar ":|.:"
     c,\stopGroup ees g c \sd ees g \para c \su c,
+    
+    \break
     
     \once \override Beam #'positions = #'(1.5 . 1) g b d \sd g 
     \once \override Beam #'positions = #'(1 . 3) b \cstr d \para f \cstl \su g,,
@@ -313,62 +337,70 @@ left = \relative c {
     <<{ \once \override Stem.cross-staff = ##t
         \once \override Stem.length = #14
         <g'' bes>2 }
-      \new Voice { \sd <ees ees,>8 f ees^\prall d }
+      \new Voice { 
+        \sd \once \override Beam #'positions = #'(-1.5 . -2) 
+         ees 8 f ees^\prall d 
+      }
+      \new Voice { 
+        \override Flag.transparent = ##t
+        \override Stem.X-offset = #0
+        \override NoteHead.X-offset = #-0.9
+        \su ees, }
     >> \bar "|."
+    
+    \break
  
     \once \override Beam #'positions = #'(-2.5 . -4) 
-    \su c,8 \sd g' a b \breathe <<{ c,4\rest c } \\ { \para c'2 }>>
+    \su c8 \sd g' a b \breathe <<{ c,4\rest c } \\ 
+      { \once \override Stem.length = #4 \para c'2 }>>
     <<{ b,4\rest bes a\rest aes g\rest g g'\rest g } \\ 
-      { \para bes2 \para a \para g \para g' }>>
+      { \override Stem.length = #4 \para bes2 \para a \para g 
+        \para g' }>>
     
-    fis2^\prall <<{ f,4\rest f } \\ { \para f'2 }>>
-    e2^\prall <<{ ees,4\rest ees } \\ { \para ees'2 }>>    
+    fis2^\prall <<{ f,4\rest f } \\ { \once \override Stem.length = #4 \para f'2 }>>
+    e2^\prall <<{ ees,4\rest ees } \\ { \once \override Stem.length = #4 \para ees'2 }>>    
     \su \once \override Beam #'positions = #'(2 . 0)
     <d, d'>8 \sd c'' bes^\prall a bes4. c8
     bes2 a4. g8
     fis4^\prall f ees d
     \su c bes8. c16 
     <<{ a'4 c } 
-      \new Voice { \sd d,2 }
+      \new Voice { \sd \once \override Stem.length = #4 d,2 }
       \new Voice { d,4\rest d }
     >>
-    \sd <g g,>8 g a b \bar "|."
+    << { \sd \once \override Beam #'positions = #'(-4 . -3.5) g 8 g a b }
+      \new Voice {
+        \override Flag.transparent = ##t
+        \override Stem.length = #6
+        \override Stem.X-offset = #-0.4
+        \override NoteHead.X-offset = #-1.5
+        \su g,
+    }>> \bar "|."
 
   %}
 }
 
-breaks = {
-  \repeat volta 2 {
-    s1*2 \break s1*3 \break s1*3 \break s1*3 \break s1*3 \pageBreak
-  }
-  \repeat volta 2 {
-    s1*3 \break s1*3 \break s1*4 \break s1*3 \break s1*4 \pageBreak
-  }
-}
 
 \header {
   title = "La Livri"
-  %meter = "Rondeau gracieux"
-  tagline = ##f
+  %tagline = ##f
 }
 
-#(set-global-staff-size 13.4)
+#(set-global-staff-size 19)
 
   % {
 \paper {
-  #(set-paper-size "a4" 'landscape)
+  #(set-paper-size "a3" 'landscape)
   %print-page-number = ##f
   %between-system-padding = #0.1
   %between-system-space = #0.1
-  %ragged-last-bottom = ##f
-  %ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  ragged-bottom = ##f
 }
 %}
 
 \score {
   \new StaffGroup <<
-    %\set StaffGroup.systemStartDelimiterHierarchy
-    %= #'(SystemStartBrace a b (c d))
     \new Staff {
       \override Staff.BarLine #'allow-span-bar = ##f
       << { \violon } >>
@@ -380,18 +412,11 @@ breaks = {
     \new PianoStaff << 
       \set StaffGroup.systemStartDelimiter = #'SystemStartBracket
       \new Staff = "right" {
-      \override Staff.BarLine #'allow-span-bar = ##f
-        << 
-          %\breaks
-          \right
-        >>
+        \override Staff.BarLine #'allow-span-bar = ##f
+        \right
       }
       \new Staff = "left" { 
-        <<
          \clef bass \left 
-        %\breaks
-        % {s1*11 \pageBreak}
-        >>
       }
       >>
     >>
@@ -401,10 +426,5 @@ breaks = {
       \Voice
       \consists "Horizontal_bracket_engraver"
     }
-    %\context {
-    %  \Staff
-    %  \consists "Custos_engraver"
-    %  \override Custos.style = #'mensural
-    %}
   }
 }
