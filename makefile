@@ -65,7 +65,7 @@ pdf/%.pdf: %.ly %.ily
 	mkdir -p pdf && $(LILY_CMD) -o pdf $<
 
 png/%.png: %.ly %.ily
-	mkdir -p png && $(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=192 -o png $<
+	mkdir -p png && $(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=300 -o png $<
 
 all: $(pdf) $(png_scarlatti_std)
 .PHONY : all
