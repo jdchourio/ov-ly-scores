@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-#(set-global-staff-size 19.8)
+#(set-global-staff-size 20)
 
 \paper {
   #(set-paper-size "a3" 'landscape)
@@ -14,6 +14,8 @@
   two-sided = ##t
   inner-margin = 1 \cm
   outer-margin = 13.3 \cm
+  top-margin = .5 \cm
+  bottom-margin = .6 \cm
 }
 
 breaks = {s1*41 \pageBreak}

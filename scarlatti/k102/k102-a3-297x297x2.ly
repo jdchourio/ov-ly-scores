@@ -14,6 +14,8 @@
   two-sided = ##t
   inner-margin = 1 \cm
   outer-margin = 13.3 \cm
+  top-margin = .5 \cm
+  bottom-margin = .6 \cm
 }
 
 breaks = {s4.*54 \pageBreak}

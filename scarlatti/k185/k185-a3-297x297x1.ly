@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-#(set-global-staff-size 19.6)
+#(set-global-staff-size 19.8)
 
 \paper {
   #(set-paper-size "a3")
@@ -9,8 +9,11 @@
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
-  top-margin = 12 \cm
-  bottom-margin = .3 \cm
+
+  left-margin = 1 \cm
+  right-margin = 1 \cm
+  top-margin = 12.8 \cm
+  bottom-margin = .6 \cm
 }
 
 breaks = {s1*36 \break}
