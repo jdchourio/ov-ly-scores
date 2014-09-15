@@ -26,7 +26,7 @@ pdf_scarlatti_A4x1 = $(scarlatti:%=pdf/$(A4x1)/%-$(A4x1).pdf)
 pdf_scarlatti_A4x2 = $(scarlatti:%=pdf/$(A4x2)/%-$(A4x2).pdf)
 pdf_scarlatti_A4x3 = $(scarlatti:%=pdf/$(A4x3)/%-$(A4x3).pdf)
 pdf_scarlatti_A4x4 = $(scarlatti:%=pdf/$(A4x4)/%-$(A4x4).pdf)
-pdf_scarlatti_A3x1 = $(scarlatti:%=pdf/$(A3x1)/%-$(A3x1).pdf)
+pdf_scarlatti_A3x1 = $(scarlatti:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) $(scarlatti:%=pdf/$(A3x1)/%-$(A3x1)r.pdf)
 pdf_scarlatti_A3x2 = $(scarlatti:%=pdf/$(A3x2)/%-$(A3x2).pdf)
 
 png_scarlatti_std = $(scarlatti:%=png/%.png)
@@ -55,8 +55,12 @@ pdf/$(A4x3)/%-$(A4x3).pdf: %-$(A4x3).ly %.ily
 pdf/$(A4x4)/%-$(A4x4).pdf: %-$(A4x4).ly %.ily
 	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x4) $<
 
-pdf/$(A3x1)/%-$(A3x1).pdf: %-$(A3x1).ly %.ily
+pdf/$(A3x1)/%-$(A3x1)l.pdf: %-$(A3x1)l.ly %.ily
 	mkdir -p pdf/$(A3x1) && $(LILY_CMD) -o pdf/$(A3x1) $<
+
+pdf/$(A3x1)/%-$(A3x1)r.pdf: %-$(A3x1)r.ly %.ily
+	mkdir -p pdf/$(A3x1) && $(LILY_CMD) -o pdf/$(A3x1) $<
+
 
 pdf/$(A3x2)/%-$(A3x2).pdf: %-$(A3x2).ly %.ily
 	mkdir -p pdf/$(A3x2) && $(LILY_CMD) -o pdf/$(A3x2) $<
