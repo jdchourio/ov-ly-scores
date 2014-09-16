@@ -17,7 +17,7 @@ A3x1=a3-297x297x1
 A3x2=a3-297x297x2
 
 # partitions
-scarlatti = k1 k100 k102 k185 k27 k30 k35 k37 k41 k417 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99
+scarlatti = k1 k100 k102 k185 k27 k30 k35 k37 k41 k417 k417-longo k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99
 
 # objets a construire
 # /!\ utiliser make -k, car tous les formats ne sont pas présents pour toutes les cibles
