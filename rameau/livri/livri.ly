@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../side-ornementations.ily"
+\include "side-ornementations.ily"
 
 su = \stemUp
 sd = \stemDown
