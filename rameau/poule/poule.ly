@@ -21,7 +21,7 @@ breaks = {
 
 
 
-\include "side-ornementations.ily"
+\include "../side-ornementations.ily"
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
