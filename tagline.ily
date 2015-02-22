@@ -35,7 +35,7 @@
 			)
 		      ) #\newline))
 
-#(define (gitIsClean) (eq? "" (strsystem_internal  "git status --porcelain ."))) 
+#(define (gitIsClean) (eq? "" (strsystem_internal "git status --porcelain"))) 
 
 #(define-markup-command (isClean layout props) ()
    (if (gitIsClean)
