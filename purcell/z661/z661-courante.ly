@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 shake = \markup { \path #.2 #'(

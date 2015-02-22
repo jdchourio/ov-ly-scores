@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 breaks = {
   s2.*8 \break
   s2.*8 \break
@@ -15,6 +17,8 @@ breaks = {
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 \include "Rondeau.ily"

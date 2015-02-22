@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 breaks = {
   \repeat volta 2 {
     s2.*3 \break s2.*4 \break s2.*4 \break s2.*4 \break s2.*4 \pageBreak
@@ -20,6 +22,8 @@ breaks = {
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 \include "k99.ily"

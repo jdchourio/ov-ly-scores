@@ -1,5 +1,7 @@
 \version "2.12.3"
 
+\include "../tagline.ily"
+
 \header {
   title = "Trois suites dans le goût anglais"
   %subtitle = "pour flute à bec soprano ou ténor et basse continue"
@@ -12,6 +14,8 @@
   #(set-paper-size "a4")
   %annotate-spacing = ##t
   between-system-padding = #0.1
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 tempoMark = {

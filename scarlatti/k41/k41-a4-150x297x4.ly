@@ -9,6 +9,8 @@
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
   
   left-margin = 3 \cm
   right-margin = 3 \cm

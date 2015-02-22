@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 breaks = { \repeat unfold 22 { s2 \bar "" s2 \bar "|" } }
 
 #(set-global-staff-size 15.1)
@@ -11,6 +13,8 @@ breaks = { \repeat unfold 22 { s2 \bar "" s2 \bar "|" } }
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
     
   first-page-number = 2
   two-sided = ##t

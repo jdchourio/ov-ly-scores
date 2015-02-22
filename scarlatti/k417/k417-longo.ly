@@ -1,4 +1,6 @@
 \version "2.16.2"
+
+\include "../../tagline.ily"
 \include "k417.ily"
 
 longoBreaks = {
@@ -21,6 +23,8 @@ longoBreaks = {
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 %

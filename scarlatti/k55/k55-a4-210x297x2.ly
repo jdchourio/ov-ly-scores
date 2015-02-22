@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 #(set-global-staff-size 16.5)
 
 \paper {
@@ -9,6 +11,8 @@
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 breaks = {s4.*59 \pageBreak}

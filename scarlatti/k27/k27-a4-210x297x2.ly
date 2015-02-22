@@ -1,5 +1,9 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
+
 #(set-global-staff-size 16.6)
 
 \paper {

@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../../tagline.ily"
+
 breaks = {
   %s2.*4 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \pageBreak
   %s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*6 \pageBreak
@@ -17,6 +19,8 @@ breaks = {
   between-system-space = #0.1
   ragged-last-bottom = ##f
   ragged-bottom = ##f
+  oddFooterMarkup = \gitTagline
+  evenFooterMarkup = \gitTagline
 }
 
 
