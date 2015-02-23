@@ -24,7 +24,7 @@
 		      (string-append 
 			"readlink -f " 
 			filen 
-			"|sed 's#.*ov-ly-scores#https://github.com/overmersch/ov-ly-scores/tree/master#'"
+			"|sed \"s#`git rev-parse --show-toplevel`#https://github.com/overmersch/ov-ly-scores/tree/master#\""
 			)
 		      ) #\newline))
 
