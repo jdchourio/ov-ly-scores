@@ -347,7 +347,7 @@ doubleThreeRightUp = \relative c'' {
   \voiceOne
   
   \repeat volta 2 {
-    c4 c b b
+    c4 c b a
     a gis
     a2
     a4 b
