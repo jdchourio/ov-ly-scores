@@ -505,6 +505,7 @@ doubleThreeLeftDown = \relative c {
 doubleFourRight= \relative c'' {
   \global
   \stemUp
+  \override Beam #'damping = #4
   
   \repeat volta 2 {
     \para a8 s16 e s a s c ~
