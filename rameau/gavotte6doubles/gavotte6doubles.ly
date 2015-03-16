@@ -723,7 +723,7 @@ doubleSixRight = \relative c' {
     
     <e a c> q
     <d f b> <c f a>
-    <b d gis>8 r r4
+    <b e gis>8 r r4
   }
 
   \repeat volta 2 {
