@@ -733,7 +733,7 @@ doubleSixRight = \relative c' {
     <f a f'> <f a d>
     <f g b>2\prall
     <g c g'>4 <g c e>
-    <<{ c4. c8 } \\ { a8 g f e }>>
+    <<{ c4. c8 } \\ { a8[ g f e] }>>
     <d c'>4 < f g b>
     
     <e g c>2
