@@ -609,7 +609,7 @@ doubleFiveRight = \relative c' {
     d, b' b g' b, b d, d'
     g, c c g' c, c g c
     a8 b\prallup c e,
-    e16 c' c g' c, c d, b'
+    d16 c' c g' c, c d, b'
     
     <<{ \parb c2 } \\ { e, }>>
     e16 c' c c' c, c e, c'
