@@ -90,8 +90,8 @@ gavotteMiddle = \relative c' {
     s4. \once \hideNotes c''4*1/2 ~
     c2
     s4. \once \hideNotes d4*1/2 ~ d2
-    s2 s2 s2
-    \cstr \voiceTwo r8 \once \tieUp g8 ~ <e g>4
+    s2 s2 \voiceTwo g,2
+    \cstr r8 \once \tieUp g'8 ~ <e g>4
     
     e'4. e8
     \parb d4 d
@@ -129,8 +129,8 @@ gavotteLeft = \relative c' {
     f8[ e d f]
     \cstl << {c2} \\ {r4 r8 c, }>>
       
-    \clef treble \oneVoice c'8.[ f16 \para \parb g8. e16]
-    \para g4 gis\prallup
+    \clef treble \oneVoice c'8.[ d16 \para \parb e8. c16]
+    \para g'4 gis\prallup
     a a,
     e' d
     << { a'2 a4 r } \\ { c, a d e8 f }>>
