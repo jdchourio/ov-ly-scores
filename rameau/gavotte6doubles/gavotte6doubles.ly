@@ -570,7 +570,7 @@ doubleFourLeft= \relative c {
     f,[ f] g[ g] a[ a] e[ e]
     f[ f] d[ d] \cstl g,\noBeam \cstr d'\noBeam \cstl g,\noBeam \cstr d'\noBeam
     
-    \cstl c,8\noBeam \cstr c'16 s e s g s
+    \cstl \once \stemUp c,8\noBeam \cstr c'16 s e s g s
     c,8\noBeam e16 s g s c s
     \cstl g,8\noBeam \cstr d'16 s \cstl gis, s \cstr b' s
     \cstl a,8\noBeam \cstr c16 s e s a s
