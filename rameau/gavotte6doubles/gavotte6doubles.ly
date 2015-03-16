@@ -588,6 +588,7 @@ doubleFourLeft= \relative c {
 
 doubleFiveRight = \relative c' {
   \global
+  \override Beam #'damping = #4
   
   \repeat volta 2 {
     e16 c' c a' c, c e, c'
@@ -635,7 +636,8 @@ doubleFiveLeftUp = \relative c' {
     d,2
     r4 e
     s2
-    a,,8 a' gis e'
+    \once \override Beam #'positions = #'(2 . 2.5) a,,8 a' 
+    \once \override Beam #'positions = #'(3 . 3.5) gis e'
     
     s2
     d2
@@ -653,9 +655,9 @@ doubleFiveLeftUp = \relative c' {
     r4 g
     
     s2
-    c,,4 c'8 g' ~
+    c,,4 \once \override Beam #'positions = #'(4 . 4.5) c'8 g' ~
     g d4 e8 ~
-    e4 e8 a,
+    e4 \once \override Beam #'positions = #'(3.5 . 3) e8 a,
     s2
     
     r4 c
@@ -669,6 +671,7 @@ doubleFiveLeftUp = \relative c' {
 
 doubleFiveLeftDown = \relative c {
   \global
+  \override Beam #'damping = #5
   \voiceTwo
   
   \repeat volta 2 {
