@@ -197,7 +197,7 @@ doubleOneLeft = \relative c'' {
     <d b'> <d a'>
   } \alternative {
     { <e gis>2 }
-    { <e gis>16 a g fis \oneVoice e d \cstl c b 
+    { <e gis>16 a gis fis \oneVoice e d \cstl c b 
       c8[ c, e c] }
   }
 
