@@ -159,20 +159,20 @@ doubleOneRight = \relative c''' {
   }
 
   \repeat volta 2 {
-    a g f e d c \cstl b a
+    a g f e \once \override Beam #'positions = #'(1.5 . 0.5) d c \cstl b a
     \cstr f'' e d c b a g f
     b a g f e d c b
     g'' f e d c b a g
-    a g f e d c \cstl b a
+    a g f e \once \override Beam #'positions = #'(1.5 . 0.5) d c \cstl b a
     
     \voiceOne g f e d c b a g
     \para c4 r \cstr \oneVoice
     c'''16 b a g f e d c
     b' a g f e d c b
     a' g f e d c b a
-    b a gis fis \voiceOne e d \cstl c b
+    b a gis fis \voiceOne \once \override Beam #'positions = #'(1.5 . 1) e d \cstl c b
     
-    a b \oneVoice \cstr c d e fis g a
+    \once \override Beam #'damping = #5 a b \oneVoice \cstr c d e fis g a
     fis a gis a a8 \para f'! ~
     f e16 d c b a gis
   } \alternative {
