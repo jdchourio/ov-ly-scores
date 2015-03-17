@@ -41,6 +41,7 @@ global = {
   \override Staff.NoteCollision #'merge-differently-dotted = ##t
   %\set Timing.beamExceptions = #'( (end . (((1 . 16) . (4 4 4 4)))) )
   \override Staff.Rest #'style = #'classical
+  \override Beam #'damping = #2
 }
 
 right = \relative c'' {
