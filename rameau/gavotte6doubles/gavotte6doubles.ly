@@ -753,6 +753,7 @@ doubleSixRight = \relative c' {
 
 doubleSixLeft = \relative c {
   \global
+  \override Beam #'damping = #4
   
   \repeat volta 2 {
     a16 a' a c a a a, a'
