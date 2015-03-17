@@ -4,7 +4,7 @@
 
 breaks = {}
 
-#(set-global-staff-size 14.2)
+#(set-global-staff-size 15)
 
 \paper {
   #(set-paper-size "a4")
@@ -810,8 +810,15 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
+\noPageBreak
 
 \score {
   %\header { title = "1er Double de la gavotte" }
@@ -830,8 +837,15 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
+\noPageBreak
 
 \score {
   %\header { title = "2eme Double" }
@@ -851,6 +865,12 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
 
@@ -875,8 +895,16 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
+
+\noPageBreak
 
 \score {
   %\header { title = "4eme Double" }
@@ -895,6 +923,12 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
 
@@ -918,8 +952,16 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
+
+\noPageBreak
 
 \score {
   %\header { title = "6eme Double" }
@@ -938,5 +980,11 @@ doubleSixLeft = \relative c {
       >>
     }
   >>
+  \layout {
+    \context {
+      \Score
+      \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+  }
   %\layout { indent = 0 }
 }
