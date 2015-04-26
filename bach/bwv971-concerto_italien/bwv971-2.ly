@@ -5,22 +5,24 @@
 breaks = {
 }
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 18.2)
 
 \paper {
   #(set-paper-size "a4")
   print-page-number = ##f
-  %between-system-padding = #0.1
-  %between-system-space = #0.1
-  %ragged-last-bottom = ##f
-  %ragged-bottom = ##f
+  between-system-padding = #0.1
+  between-system-space = #0.1
+  ragged-last-bottom = ##f
+  ragged-bottom = ##f
   oddFooterMarkup = \gitTagline
   evenFooterMarkup = \gitTagline
 }
 
-cstr = \change Staff = "right"
-cstm = \change Staff = "middle"
-cstl = \change Staff = "left"
+csm = \change Staff = "middle"
+csl = \change Staff = "left"
+su = \stemUp
+sd = \stemDown
+sn = \stemNeutral
 
 \header {
   %title = "Concerto Italien"
@@ -32,13 +34,11 @@ global = {
   \key f \major
   \time 3/4
   \override Staff.NoteCollision #'merge-differently-dotted = ##t
-  %\override Staff.Rest #'style = #'classical
-  %\override Beam #'damping = #5
-  \override Stem.details.beamed-lengths = #'(4.5 4.5 5 6)
 }
 
 right = \relative c''' {
   \global
+  \override Stem.details.beamed-lengths = #'(4.5 4.5 5 6)
   
   R2.*3
   a4-\mordent^\markup { \italic "forte" } ~ a16 g( f e d cis d) f(
@@ -101,9 +101,11 @@ right = \relative c''' {
 }
 
 middle = \relative c' {
-  \global \voiceOne
+  \global 
+  %\voiceOne
+  \stemUp \tieUp
   
-  f8 r r f g a
+  \csm f8 r r f g a
   bes r r a g f
   e r r g f e
   f r r f g a
@@ -121,7 +123,7 @@ middle = \relative c' {
   bes r r a g f
   e r r e f g
   a r r g f ees
-  d r r d c bes
+  \csl d r r d c bes
   
   c r r c bes a
   bes r r a g f
@@ -136,7 +138,7 @@ middle = \relative c' {
   g r r g a e
   f4 ~ f8 e16 d e8 bes'
   a8 r r a b cis
-  d r r f g a
+  \csm d r r f g a
   
   bes r r a g f
   e r r g f e
@@ -144,7 +146,7 @@ middle = \relative c' {
   bes r r bes, c d
   
   e r r e f g
-  a r r a, bes c 
+  a r r  \clef bass a, bes c \clef treble \csl 
   d r r c bes a
   g r r f e d
   
@@ -168,75 +170,78 @@ middle = \relative c' {
 left = \relative c' {
   \global \voiceTwo
   
-  \cstm d8 \cstl d, d \cstm d' e f
-  g \cstl d, d f' e d
-  cis d, d e' d cis
-  d d, d d' e f
+  \csm \sd d8 \csl \su d, d \csm \sd d' e f
+  g \csl \su d, d \csm \sd f' e d
+  cis \csl \su d, d \csm \sd e' d cis
+  d \csl \su d, d \csm \sd d' e f
   
-  g d, d f' e d 
-  cis d, d e' d cis 
-  d d, d g f e
-  d d, d d'' c bes
+  g \csl \su d, d \csm \sd f' e d 
+  cis \csl \su d, d \csm \sd e' d cis 
+  d \csl \su d, d g f e
+  d \su d, d \csm \sd d'' c bes
   
-  c c, c c' bes a
-  bes bes, bes bes' a g
-  a a, a a' b cis!
-  d d, d d' e f
+  c \csl \su c, c \csm \sd c' bes a
+  bes \csl \su bes, bes \csm \sd bes' a g
+  a \csl \su a, a \csm \sd a' b cis!
+  \csm d \csl \su d, d \csm \sd d' e f
   
-  g g, g f' e d
-  c c, c c' d e
-  f f, f e' d c
-  bes bes, bes bes' a g
+  g \csl \su g, g \csm \sd f' e d
+  c \csl \su c, c \csm \sd c' d e
+  f \csl \su f, f \csm \sd e' d c
+  \csl \sd bes \su bes, bes \sd bes' a g
   
-  a a, a a' g f
-  g g, g f' e d
-  c c, c c' d e
-  f c, c d' e f
+  a \su a, a \sd a' g f
+  g \su g, g \sd f' e d
+  c \su c, c \sd c' d e
+  f \su c, c \sd d' e f
   
-  g c,, c e' f g
-  a c,, c a'' g f
-  g c,, c g'' f e
-  f c, c f' e d
+  g \su c,, c \sd e' f g
+  a \su c,, c \sd a'' g f
+  g \su c,, c \sd g'' f e
+  f \su c, c \sd f' e d
   
-  e c, c e' f c
+  e \su c, c \sd e' f c
   d bes c2
   f8 f, f g' f e
-  d d, d d'' e f
+  d \su d, d \csm \sd d'' e f
   
-  g d, d f' e d
-  cis d, d e' d cis
-  d d, d d' e f
-  g g,, g g' a bes
+  g \csl \su d, d \csm \sd f' e d
+  cis \csl \su d, d \csm \sd e' d cis
+  d \csl \su d, d \csm \sd d' e f
+  g \csl \su g,, g \csm  \sd g' a bes
   
-  c c, c c' d e
-  f f,, f f' g a
-  bes bes, bes a' g f
-  e e, e d' cis b
+  \csm c \csl \su c, c \csm \sd c' d e
+  f \csl \su f,, f \csm \sd f' g a \csl
+  bes \su bes, bes \sd a' g f
+  e \su e, e \sd d' cis b
   
-  a a, a a' b cis
-  d a, a b' cis d 
-  e a,, a cis' d e
-  f a,, a f'' e d
+  a \su a, a \sd a' b cis
+  d \su a, a \sd b' cis d 
+  e \su a,, a \sd cis' d e
+  f \su a,, a \sd f'' e d
   
-  e a,, a e'' d cis
-  d a, a d' cis b
-  cis a, a cis'! d a
+  e \su a,, a \sd e'' d cis
+  d \su a, a \sd d' cis b
+  cis \su a, a \sd cis'! d a
   bes g a2
   
-  d8 d, d d' e fis!
-  g d, d f' e d
-  e d, d cis' d f
+  d8 \su d, d \sd d' e fis!
+  g \su d, d \sd f' e d
+  e \su d, d \sd cis' d f
   b, bes a gis a4
-  d r r \bar "|."
+  d s s \bar "|."
 }
 
 \score {
-  \new PianoStaff <<
+  \new GrandStaff <<
     \new Staff = "right" {
       << 
         \breaks
         \new Voice = "right" { \right }
       >>
+    }
+    \new Staff = "middle" {
+      \new Voice { s2.*49 }
     }
     \new Staff = "left" { 
       <<
@@ -246,13 +251,10 @@ left = \relative c' {
       >>
     }
   >>
-  \layout { 
+  \layout {
     indent = 0 
     \context {
-      \Score
-      %\override NonMusicalPaperColumn.line-break-permission = ##f
-      %\override NonMusicalPaperColumn.page-break-permission = ##f
+      \Staff \RemoveEmptyStaves
     }
   }
 }
-
