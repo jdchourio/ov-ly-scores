@@ -195,8 +195,10 @@ left = \relative c' {
   a \su a, a \sd a' g f
   g \su g, g \sd f' e d
   c \su c, c \sd c' d e
+  \once \override Beam #'positions = #'(-1 . -2)
   f \su c, c \sd d' e f
   
+  \once \override Beam #'positions = #'(-1 . -2)
   g \su c,, c \sd e' f g
   a \su c,, c \sd a'' g f
   g \su c,, c \sd g'' f e
@@ -217,8 +219,11 @@ left = \relative c' {
   bes \su bes, bes \sd a' g f
   e \su e, e \sd d' cis b
   
+  \once \override Beam #'positions = #'(-3.6 . -2.6)
   a \su a, a \sd a' b cis!
+  \once \override Beam #'positions = #'(-3 . -2)
   d \su a, a \sd b' cis d 
+  \once \override Beam #'positions = #'(-3 . -2)
   e \su a,, a \sd cis' d e
   f \su a,, a \sd f'' e d
   
