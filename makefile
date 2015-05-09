@@ -76,9 +76,14 @@ pdf_purcell = $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	      $(pdf_purcell_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)  \
 	      $(pdf_purcell_none:%=pdf/%.pdf)
 
-#rameau
+# rameau
 pdf_rameau_none = livri poule gavotte6doubles
 pdf_rameau = $(pdf_rameau_none:%=pdf/%.pdf)
+
+
+# couperin 
+pdf_couperin_none = barricades
+pdf_couperin = $(pdf_couperin_none:%=pdf/%.pdf)
 
 
 # autres
@@ -86,7 +91,7 @@ pdf_others_none = Suite_jeremiah_clarke trio_vivaldi
 pdf_others = $(pdf_others_none:%=pdf/%.pdf)
 
 
-pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_others)
+pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(pdf_others)
 
 
 #
@@ -96,10 +101,12 @@ scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 
 bach_dirs = bwv964 bwv971-concerto_italien
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
+couperin_dirs = barricades
 
 VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(bach_dirs:%=$(CURDIR)/bach/%)		  \
 	$(rameau_dirs:%=$(CURDIR)/rameau/%)	  \
+	$(couperin_dirs:%=$(CURDIR)/couperin/%)	  \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)	  \
 	$(CURDIR)/others
 
@@ -174,6 +181,9 @@ pdf/z661-courante.pdf: z661-courante.ly
 	$(LILY_CMD) -o pdf $<
 
 pdf/z661-sarabande.pdf: z661-sarabande.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/barricades.pdf: barricades.ly 
 	$(LILY_CMD) -o pdf $<
 
 pdf/livri.pdf: livri.ly 
