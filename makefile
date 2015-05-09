@@ -76,7 +76,13 @@ pdf_purcell = $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	      $(pdf_purcell_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)  \
 	      $(pdf_purcell_none:%=pdf/%.pdf)
 
-pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_purcell)
+#rameau
+pdf_rameau_none = livri poule gavotte6doubles
+
+pdf_rameau = $(pdf_rameau_none:%=pdf/%.pdf)
+
+
+pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell)
 
 
 #
@@ -85,9 +91,11 @@ pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_purcell)
 scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 bach_dirs = bwv964 bwv971-concerto_italien
 purcell_dirs = fairy_queen z661
+rameau_dirs = livri poule gavotte6doubles
 
 VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(bach_dirs:%=$(CURDIR)/bach/%)		  \
+	$(rameau_dirs:%=$(CURDIR)/rameau/%)	  \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)
 
 
@@ -162,6 +170,16 @@ pdf/z661-courante.pdf: z661-courante.ly
 
 pdf/z661-sarabande.pdf: z661-sarabande.ly 
 	$(LILY_CMD) -o pdf $<
+
+pdf/livri.pdf: livri.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/poule.pdf: poule.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/gavotte6doubles.pdf: gavotte6doubles.ly 
+	$(LILY_CMD) -o pdf $<
+
 
 .PHONY : all
 
