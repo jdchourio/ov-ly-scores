@@ -3,7 +3,7 @@
 \include "../../tagline.ily"
 \include "k417.ily"
 
-#(set-global-staff-size 16.7)
+#(set-global-staff-size 16.5)
 
 \paper {
   #(set-paper-size "a4")
