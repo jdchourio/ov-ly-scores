@@ -13,13 +13,17 @@ A4x4=a4-210x297x4
 A3x1=a3-297x297x1
 A3x2=a3-297x297x2
 
+#
 # objets a construire
+#
+# scarlatti
 pdf_scarlatti_A4x1 = k1 k59 k63 k87 k64 k185 k67
 pdf_scarlatti_A4x2 = k1 k27 k35 k37 k48 k53 k54 k55 k56 k62 k77 k99 k100 k102
 pdf_scarlatti_A4x3 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102
 pdf_scarlatti_A4x4 = k41 k417 k417-longo
 pdf_scarlatti_A3x1 = k1 k35 k59 k62 k63 k64 k67 k87 k100 k102 k185
 pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102
+pdf_scarlatti_none = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 
 pdf_scarlatti_A4x1 := $(pdf_scarlatti_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)
 pdf_scarlatti_A4x2 := $(pdf_scarlatti_A4x2:%=pdf/$(A4x2)/%-$(A4x2).pdf)
@@ -27,17 +31,46 @@ pdf_scarlatti_A4x3 := $(pdf_scarlatti_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)
 pdf_scarlatti_A4x4 := $(pdf_scarlatti_A4x4:%=pdf/$(A4x4)/%-$(A4x4).pdf)
 pdf_scarlatti_A3x1 := $(pdf_scarlatti_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) $(pdf_scarlatti_A3x1:%=pdf/$(A3x1)/%-$(A3x1)r.pdf)
 pdf_scarlatti_A3x2 := $(pdf_scarlatti_A3x2:%=pdf/$(A3x2)/%-$(A3x2).pdf)
+pdf_scarlatti_none := $(pdf_scarlatti_none:%=pdf/%.pdf)
 
-pdf = $(pdf_scarlatti_A4x1) \
-	$(pdf_scarlatti_A4x2) \
-	$(pdf_scarlatti_A4x3) \
-	$(pdf_scarlatti_A4x4) \
-	$(pdf_scarlatti_A3x1) \
-	$(pdf_scarlatti_A3x2)
+pdf_scarlatti = $(pdf_scarlatti_A4x1) \
+		$(pdf_scarlatti_A4x2) \
+		$(pdf_scarlatti_A4x3) \
+		$(pdf_scarlatti_A4x4) \
+		$(pdf_scarlatti_A3x1) \
+		$(pdf_scarlatti_A3x2) \
+		$(pdf_scarlatti_none)
+
+# purcell
+pdf_purcell_A3x1 = act_tune dance_for_the_fairies Rondeau z661-prelude
+pdf_purcell_A3x2 = chaconne
+pdf_purcell_A4x1 = act_tune dance_for_the_fairies Rondeau z661-prelude
+pdf_purcell_A4x2 = act_tune
+pdf_purcell_A4x3 = chaconne
+pdf_purcell_none = z661-allemande z661-courante z661-prelude z661-sarabande
+
+pdf_purcell_A3x1 := $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)r.pdf)
+pdf_purcell_A3x2 := $(pdf_purcell_A3x2:%=pdf/$(A3x2)/%-$(A3x2).pdf)
+pdf_purcell_A4x1 := $(pdf_purcell_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)
+pdf_purcell_A4x2 := $(pdf_purcell_A4x2:%=pdf/$(A4x2)/%-$(A4x2).pdf)
+pdf_purcell_A4x3 := $(pdf_purcell_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)
+pdf_purcell_none := $(pdf_purcell_none:%=pdf/%.pdf)
+
+pdf_purcell = $(pdf_purcell_A3x1) \
+	      $(pdf_purcell_A3x2) \
+	      $(pdf_purcell_A4x1) \
+	      $(pdf_purcell_A4x2) \
+	      $(pdf_purcell_A4x3) \
+	      $(pdf_purcell_none)
+
+pdf = $(pdf_scarlatti) $(pdf_purcell)
 
 # chemins vers les sources
 scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
-VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%)
+purcell_dirs = fairy_queen z661
+
+VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
+	$(purcell_dirs:%=$(CURDIR)/purcell/%)
 
 # regles de construction + dependances
 pdf/$(A4x1)/%-$(A4x1).pdf: %-$(A4x1).ly %.ily
