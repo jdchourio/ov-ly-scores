@@ -18,6 +18,7 @@ A3x2=a3-297x297x2
 A3x3=a3-297x297x3
 A3x4=a3-297x297x4
 
+
 #
 # objets a construire
 #
@@ -77,7 +78,10 @@ pdf_purcell = $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 
 pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_purcell)
 
+
+#
 # chemins vers les sources
+#
 scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 bach_dirs = bwv964 bwv971-concerto_italien
 purcell_dirs = fairy_queen z661
@@ -86,7 +90,10 @@ VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(bach_dirs:%=$(CURDIR)/bach/%)		  \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)
 
+
+#
 # regles de construction + dependances
+#
 pdf/$(A4x1)/%-$(A4x1).pdf: %-$(A4x1).ly %.ily
 	mkdir -p pdf/$(A4x1) && $(LILY_CMD) -o pdf/$(A4x1) $<
 
@@ -128,11 +135,35 @@ png/%.png: %.ly %.ily
 
 all: $(pdf)
 
+
+#
 # cas particuliers
+#
+# - lorsqu'il n'y a pas de fichier .ily (travaux en cours, format unique, ...)
+# - lorsque le fichier .ily n'a pas le meme basename que le fichier .ly
+#
 pdf/$(A4x4)/k417-longo-$(A4x4).pdf: k417-longo-$(A4x4).ly k417.ily
 	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x4) $<
 
-.PHONY : all png pdf
+pdf/bwv971-1.pdf: bwv971-1.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/bwv971-2.pdf: bwv971-2.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/bwv971-3.pdf: bwv971-3.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/z661-allemande.pdf: z661-allemande.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/z661-courante.pdf: z661-courante.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/z661-sarabande.pdf: z661-sarabande.ly 
+	$(LILY_CMD) -o pdf $<
+
+.PHONY : all
 
 #./bach/bwv964/bwv964-adagio-a3-297x297x1l.ly
 #./bach/bwv964/bwv964-adagio-a3-297x297x1r.ly
