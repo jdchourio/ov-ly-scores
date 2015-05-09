@@ -41,6 +41,7 @@ global = {
   \override Staff.NoteCollision #'merge-differently-dotted = ##t
   %\set Timing.beamExceptions = #'( (end . (((1 . 16) . (4 4 4 4)))) )
   \override Staff.Rest #'style = #'classical
+  \override Beam #'damping = #2
 }
 
 right = \relative c'' {
@@ -113,7 +114,7 @@ right = \relative c'' {
     ees64*2 g a cis r8 r4 r
     r8 g g g g g
     g32*2 a cis e16 ~ e2 ~
-    e ~ e32 d cis b a g fis ees
+    e ~ e32 d cis b a g f e!
     <<{ f8 a d4. cis8\prall } \\ { f,4. f8 e g }>>
     <<{ \set tieWaitForNote = ##t c4( 
         \once \override Beam #'positions = #'(5 . 4) 

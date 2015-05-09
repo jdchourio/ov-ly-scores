@@ -2,7 +2,7 @@
 
 \include "../../tagline.ily"
 
-#(set-global-staff-size 15.8)
+#(set-global-staff-size 15.7)
 
 \paper {
   #(set-paper-size "a4")
