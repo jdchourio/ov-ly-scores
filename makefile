@@ -96,13 +96,12 @@ scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 
 bach_dirs = bwv964 bwv971-concerto_italien
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
-others_dirs = others
 
 VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(bach_dirs:%=$(CURDIR)/bach/%)		  \
 	$(rameau_dirs:%=$(CURDIR)/rameau/%)	  \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)	  \
-	$(others_dirs:%=$(CURDIR)/others/%)
+	$(CURDIR)/others
 
 
 #
@@ -183,10 +182,10 @@ pdf/livri.pdf: livri.ly
 pdf/poule.pdf: poule.ly 
 	$(LILY_CMD) -o pdf $<
 
-pdf/gavotte6doubles.pdf: gavotte6doubles.ly 
+pdf/gavotte6doubles.pdf: gavotte6doubles.ly
 	$(LILY_CMD) -o pdf $<
 
-pdf/Suite_jeremiah_clarke.pdf: Suite_jeremiah_clarke.ly 
+pdf/Suite_jeremiah_clarke.pdf: Suite_jeremiah_clarke.ly
 	$(LILY_CMD) -o pdf $<
 
 pdf/trio_vivaldi.pdf: trio_vivaldi.ly 
