@@ -87,7 +87,7 @@ pdf_couperin = $(pdf_couperin_none:%=pdf/%.pdf)
 
 
 # autres
-pdf_others_none = Suite_jeremiah_clarke trio_vivaldi
+pdf_others_none = Suite_jeremiah_clarke trio_vivaldi gavotte_campion
 pdf_others = $(pdf_others_none:%=pdf/%.pdf)
 
 
@@ -199,6 +199,9 @@ pdf/Suite_jeremiah_clarke.pdf: Suite_jeremiah_clarke.ly
 	$(LILY_CMD) -o pdf $<
 
 pdf/trio_vivaldi.pdf: trio_vivaldi.ly 
+	$(LILY_CMD) -o pdf $<
+
+pdf/gavotte_campion.pdf: gavotte_campion.ly 
 	$(LILY_CMD) -o pdf $<
 
 .PHONY : all
