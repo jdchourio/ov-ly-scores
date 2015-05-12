@@ -24,11 +24,11 @@ A3x4=a3-297x297x4
 #
 # scarlatti
 pdf_scarlatti_A4x1 = k1 k59 k63 k87 k64 k185 k67
-pdf_scarlatti_A4x2 = k1 k27 k35 k37 k48 k53 k54 k55 k56 k62 k77 k99 k100 k102
-pdf_scarlatti_A4x3 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102
+pdf_scarlatti_A4x2 = k1 k27 k35 k37 k48 k53 k54 k55 k56 k62 k77 k99 k100 k102 k491
+pdf_scarlatti_A4x3 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102 k491
 pdf_scarlatti_A4x4 = k41 k417 k417-longo
 pdf_scarlatti_A3x1 = k1 k35 k59 k62 k63 k64 k67 k87 k100 k102 k185
-pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102
+pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102 k491
 pdf_scarlatti_none = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 
 pdf_scarlatti = $(pdf_scarlatti_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)  \
@@ -97,7 +97,7 @@ pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) 
 #
 # chemins vers les sources
 #
-scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
+scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417 k491
 bach_dirs = bwv964 bwv971-concerto_italien
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
