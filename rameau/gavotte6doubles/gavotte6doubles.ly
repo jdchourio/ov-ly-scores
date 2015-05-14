@@ -1,6 +1,7 @@
 \version "2.18.2"
 
 \include "../../include/tagline.ily"
+\include "../../include/side-ornementations.ily"
 
 breaks = {}
 
@@ -18,9 +19,6 @@ breaks = {}
  
   %print-all-headers = ##t
 }
-
-
-\include "../side-ornementations.ily"
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"

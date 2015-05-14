@@ -1,8 +1,7 @@
 \version "2.18.2"
 
 \include "../../include/tagline.ily"
-
-\include "../side-ornementations.ily"
+\include "../../include/side-ornementations.ily"
 
 su = \stemUp
 sd = \stemDown

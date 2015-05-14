@@ -1,6 +1,7 @@
 \version "2.18.2"
 
 \include "../../include/tagline.ily"
+\include "../../include/side-ornementations.ily"
 
 breaks = {
   %s2.*4 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \pageBreak
@@ -23,9 +24,6 @@ breaks = {
   evenFooterMarkup = \gitTagline
 }
 
-
-
-\include "../side-ornementations.ily"
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
