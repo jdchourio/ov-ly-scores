@@ -1,39 +1,16 @@
 \version "2.18.2"
 
-\include "../../include/tagline.ily"
-
-breaks = {
-}
-
-#(set-global-staff-size 15.4)
-
-\paper {
-  #(set-paper-size "a4")
-  print-page-number = ##f
-  between-system-padding = #0.1
-  between-system-space = #0.1
-  ragged-last-bottom = ##f
-  ragged-bottom = ##f
-  oddFooterMarkup = \gitTagline
-  evenFooterMarkup = \gitTagline
-}
-
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
 \header {
-  %title = "Concerto Italien"
   piece = "Concerto"
-  tagline = ##f
 }
 
 global = {
   \key f \major
   \time 2/4
   \override Staff.NoteCollision #'merge-differently-dotted = ##t
-  %\override Staff.NoteCollision #'merge-differently-headed = ##t
-  %\override Staff.Rest #'style = #'classical
-  %\override Beam #'damping = #5
 }
 
 right = \relative c'' {
@@ -560,12 +537,5 @@ left = \relative c {
       >>
     }
   >>
-  \layout { 
-    indent = 0 
-    \context {
-      \Score
-      %\override NonMusicalPaperColumn.line-break-permission = ##f
-      %\override NonMusicalPaperColumn.page-break-permission = ##f
-    }
-  }
+  \layout { indent = 0 }
 }

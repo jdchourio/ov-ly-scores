@@ -42,13 +42,13 @@ pdf_scarlatti = $(pdf_scarlatti_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)  \
 
 # bach
 pdf_bach_A3x1 = bwv964-adagio bwv964-andante
-pdf_bach_A3x2 = bwv964-adagio bwv964-allegro
+pdf_bach_A3x2 = bwv964-adagio bwv964-allegro bwv971-concerto bwv971-andante bwv971-allegro
 pdf_bach_A3x4 = bwv964-fuga
 pdf_bach_A4x1 = bwv964-andante
-pdf_bach_A4x3 = bwv964-allegro
+pdf_bach_A4x3 = bwv964-allegro bwv971-concerto bwv971-andante bwv971-allegro
 pdf_bach_A4x4 = bwv964-fuga
 pdf_bach_A4x6 = bwv964-fuga
-pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga bwv971-1 bwv971-2 bwv971-3
+pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga
 
 pdf_bach = $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)r.pdf) \
@@ -174,15 +174,6 @@ pdf/$(A4x4)/k417-longo-$(A4x4).pdf: k417-longo-$(A4x4).ly k417.ily
 
 pdf/$(A4x1)/z661-courante-sarabande-$(A4x1).pdf: z661-courante-sarabande-$(A4x1).ly z661-courante.ily z661-sarabande.ily
 	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x1) $<
-
-pdf/bwv971-1.pdf: bwv971-1.ly 
-	$(LILY_CMD) -o pdf $<
-
-pdf/bwv971-2.pdf: bwv971-2.ly 
-	$(LILY_CMD) -o pdf $<
-
-pdf/bwv971-3.pdf: bwv971-3.ly 
-	$(LILY_CMD) -o pdf $<
 
 pdf/barricades.pdf: barricades.ly 
 	$(LILY_CMD) -o pdf $<

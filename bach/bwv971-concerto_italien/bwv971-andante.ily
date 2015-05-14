@@ -1,23 +1,5 @@
 \version "2.18.2"
 
-\include "../../include/tagline.ily"
-
-breaks = {
-}
-
-#(set-global-staff-size 18.2)
-
-\paper {
-  #(set-paper-size "a4")
-  print-page-number = ##f
-  between-system-padding = #0.1
-  between-system-space = #0.1
-  ragged-last-bottom = ##f
-  ragged-bottom = ##f
-  oddFooterMarkup = \gitTagline
-  evenFooterMarkup = \gitTagline
-}
-
 csm = \change Staff = "middle"
 csl = \change Staff = "left"
 su = \stemUp
@@ -27,9 +9,7 @@ forte = \markup { \italic "forte" }
 piano = \markup { \italic "piano" }
 
 \header {
-  %title = "Concerto Italien"
   piece = "Andante"
-  tagline = ##f
 }
 
 global = {
