@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../tagline.ily"
+\include "../include/tagline.ily"
   
 #(set-global-staff-size 18)
   

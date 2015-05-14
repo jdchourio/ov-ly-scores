@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\include "../tagline.ily"
+\include "../include/tagline.ily"
 
 \header {
   title = "Trois suites dans le goût anglais"

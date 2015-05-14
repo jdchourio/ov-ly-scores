@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../../tagline.ily"
+\include "../../include/tagline.ily"
 
 breaks = {
   s1*3 \break s1*4 \break s1*5 \break s1*4 \break s1*4 \break s1*5 \break \pageBreak
@@ -22,7 +22,7 @@ breaks = {
 
 
 
-%\include "../../gitcommands.ily"
+%\include "../../include/gitcommands.ily"
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"

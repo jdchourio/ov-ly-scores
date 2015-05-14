@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../../general.ily"
+\include "../../include/general.ily"
 
 breaks = {
   \partial 2.*5/6

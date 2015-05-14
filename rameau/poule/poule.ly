@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../../tagline.ily"
+\include "../../include/tagline.ily"
 
 breaks = {
   %s2.*4 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \pageBreak

@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../../tagline.ily"
+\include "../../include/tagline.ily"
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"

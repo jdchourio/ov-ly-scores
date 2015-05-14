@@ -1,5 +1,7 @@
 
-\include "../../tagline.ily"
+#(ly:set-option 'relative-includes #t)
+\include "tagline.ily"
+#(ly:set-option 'relative-includes #f)
 
 \paper {
   print-page-number = ##f

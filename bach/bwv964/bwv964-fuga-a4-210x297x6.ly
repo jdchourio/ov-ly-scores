@@ -1,7 +1,7 @@
 \version "2.18.2"
 
-\include "../../general.ily"
-\include "../../a4-210x297.ily"
+\include "../../include/general.ily"
+\include "../../include/a4-210x297.ily"
 
 breaks = {
   s2*150 \pageBreak

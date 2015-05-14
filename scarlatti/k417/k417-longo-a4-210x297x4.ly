@@ -1,7 +1,7 @@
 \version "2.16.2"
 
-\include "../../general.ily"
-\include "../../a4-210x297.ily"
+\include "../../include/general.ily"
+\include "../../include/a4-210x297.ily"
 \include "k417.ily"
 
 #(set-global-staff-size 16.3)

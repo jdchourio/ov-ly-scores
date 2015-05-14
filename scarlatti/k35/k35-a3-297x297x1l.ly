@@ -1,7 +1,7 @@
 \version "2.18.2"
 
-\include "../../general.ily"
-\include "../../a3-297x297l.ily"
+\include "../../include/general.ily"
+\include "../../include/a3-297x297l.ily"
 
 #(set-global-staff-size 17.2)
 

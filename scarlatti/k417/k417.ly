@@ -1,6 +1,6 @@
 \version "2.16.2"
 
-\include "../../general.ily"
+\include "../../include/general.ily"
 \include "k417.ily"
 
 breaks = {

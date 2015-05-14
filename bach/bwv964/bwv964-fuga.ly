@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-\include "../../general.ily"
+\include "../../include/general.ily"
 
 breaks = {
   s2*5 \break s2*5 \break s2*5 \break s2*4 \break s2*5 \break s2*5 \pageBreak
