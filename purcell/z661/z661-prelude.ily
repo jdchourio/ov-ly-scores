@@ -5,13 +5,6 @@
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
-\header {
-  title = "Suite in G Minor"
-  meter = "Prelude"
-  opus = "Z661"
-  tagline = ##f
-}
-
 global = {
   \key g \minor
   \time 2/2
@@ -125,6 +118,11 @@ left = \relative c' {
 }
 
 \score {
+  \header {
+    title = "Prelude"
+    opus = "Z661"
+  }
+
   \new PianoStaff <<
     \new Staff = "right" {
       << 

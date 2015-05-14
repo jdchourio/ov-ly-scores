@@ -5,13 +5,6 @@
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
-\header {
-  title = "Corant"
-  %meter = "Corant"
-  opus = "Z661"
-  tagline = ##f
-}
-
 global = {
   \key g \minor
   \time 3/2
@@ -136,6 +129,11 @@ leftDown = \relative c {
 }
 
 \score {
+  \header {
+    title = "Corant"
+    opus = "Z661"
+  }
+
   \new PianoStaff <<
     \new Staff = "right" {
       %<< 

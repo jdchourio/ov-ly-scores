@@ -63,7 +63,7 @@ pdf_bach = $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 # purcell
 pdf_purcell_A3x1 = act_tune dance_for_the_fairies Rondeau z661-prelude
 pdf_purcell_A3x2 = chaconne
-pdf_purcell_A4x1 = act_tune dance_for_the_fairies Rondeau z661-prelude
+pdf_purcell_A4x1 = act_tune dance_for_the_fairies Rondeau z661-prelude z661-allemande z661-courante-sarabande
 pdf_purcell_A4x2 = act_tune
 pdf_purcell_A4x3 = chaconne
 pdf_purcell_none = z661-allemande z661-courante z661-prelude z661-sarabande
@@ -164,6 +164,9 @@ all: $(pdf)
 #
 pdf/$(A4x4)/k417-longo-$(A4x4).pdf: k417-longo-$(A4x4).ly k417.ily
 	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x4) $<
+
+pdf/$(A4x1)/z661-courante-sarabande-$(A4x1).pdf: z661-courante-sarabande-$(A4x1).ly z661-courante.ily z661-sarabande.ily
+	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x1) $<
 
 pdf/bwv971-1.pdf: bwv971-1.ly 
 	$(LILY_CMD) -o pdf $<

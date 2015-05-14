@@ -5,12 +5,6 @@
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
 
-\header {
-  title = "Saraband"
-  opus = "Z661"
-  tagline = ##f
-}
-
 global = {
   \key g \minor
   \override Staff.TimeSignature.style = #'single-digit
@@ -108,6 +102,11 @@ leftDown = \relative c' {
 }
 
 \score {
+  \header {
+    title = "Saraband"
+    opus = "Z661"
+  }
+
   \new PianoStaff <<
     \new Staff = "right" {
       %<< 

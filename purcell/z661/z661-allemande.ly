@@ -26,4 +26,5 @@ breaks = {
 }
 
 #(set-global-staff-size 20)
+\paper { print-all-headers = ##t }
 \include "z661-allemande.ily"

@@ -5,6 +5,6 @@
 
 breaks = {}
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 16.4)
 \paper { print-all-headers = ##t }
-\include "z661-prelude.ily"
+\include "z661-allemande.ily"
