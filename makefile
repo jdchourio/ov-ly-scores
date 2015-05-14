@@ -15,8 +15,9 @@ A4x6=a4-210x297x6
 
 A3x1=a3-297x297x1
 A3x2=a3-297x297x2
-A3x3=a3-297x297x3
 A3x4=a3-297x297x4
+
+NONE = default
 
 
 #
@@ -38,7 +39,7 @@ pdf_scarlatti = $(pdf_scarlatti_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)  \
   		$(pdf_scarlatti_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
   		$(pdf_scarlatti_A3x1:%=pdf/$(A3x1)/%-$(A3x1)r.pdf) \
   		$(pdf_scarlatti_A3x2:%=pdf/$(A3x2)/%-$(A3x2).pdf)  \
-  		$(pdf_scarlatti_none:%=pdf/%.pdf)
+  		$(pdf_scarlatti_none:%=pdf/$(NONE)/%.pdf)
 
 # bach
 pdf_bach_A3x1 = bwv964-adagio bwv964-andante
@@ -58,7 +59,7 @@ pdf_bach = $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)  \
 	   $(pdf_bach_A4x4:%=pdf/$(A4x4)/%-$(A4x4).pdf)  \
 	   $(pdf_bach_A4x6:%=pdf/$(A4x6)/%-$(A4x6).pdf)  \
-	   $(pdf_bach_none:%=pdf/%.pdf)
+	   $(pdf_bach_none:%=pdf/$(NONE)/%.pdf)
 
 # purcell
 pdf_purcell_A3x1 = act_tune dance_for_the_fairies Rondeau z661-prelude
@@ -74,7 +75,7 @@ pdf_purcell = $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	      $(pdf_purcell_A4x1:%=pdf/$(A4x1)/%-$(A4x1).pdf)  \
 	      $(pdf_purcell_A4x2:%=pdf/$(A4x2)/%-$(A4x2).pdf)  \
 	      $(pdf_purcell_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)  \
-	      $(pdf_purcell_none:%=pdf/%.pdf)
+	      $(pdf_purcell_none:%=pdf/$(NONE)/%.pdf)
 
 # rameau
 pdf_rameau_A3x2 = poule
@@ -86,18 +87,18 @@ pdf_rameau = $(pdf_rameau_A3x2:%=pdf/$(A3x2)/%-$(A3x2).pdf) \
   	     $(pdf_rameau_A4x2:%=pdf/$(A4x2)/%-$(A4x2).pdf) \
   	     $(pdf_rameau_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf) \
   	     $(pdf_rameau_A4x4:%=pdf/$(A4x4)/%-$(A4x4).pdf) \
-  	     $(pdf_rameau_none:%=pdf/%.pdf)
+  	     $(pdf_rameau_none:%=pdf/$(NONE)/%.pdf)
 
 # couperin 
 pdf_couperin_none = barricades
-pdf_couperin = $(pdf_couperin_none:%=pdf/%.pdf)
+pdf_couperin = $(pdf_couperin_none:%=pdf/$(NONE)/%.pdf)
 
 
 # autres
 pdf_others_none = Suite_jeremiah_clarke trio_vivaldi gavotte_campion
-pdf_others = $(pdf_others_none:%=pdf/%.pdf)
+pdf_others = $(pdf_others_none:%=pdf/$(NONE)/%.pdf)
 
-
+# total
 pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(pdf_others)
 
 
@@ -117,80 +118,113 @@ VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)	  \
 	$(CURDIR)/others
 
-
 #
-# regles de construction + dependances
+# target par défaut
 #
-pdf/$(A4x1)/%-$(A4x1).pdf: %-$(A4x1).ly %.ily
-	mkdir -p pdf/$(A4x1) && $(LILY_CMD) -o pdf/$(A4x1) $<
-
-pdf/$(A4x2)/%-$(A4x2).pdf: %-$(A4x2).ly %.ily
-	mkdir -p pdf/$(A4x2) && $(LILY_CMD) -o pdf/$(A4x2) $<
-
-pdf/$(A4x3)/%-$(A4x3).pdf: %-$(A4x3).ly %.ily
-	mkdir -p pdf/$(A4x3) && $(LILY_CMD) -o pdf/$(A4x3) $<
-
-pdf/$(A4x4)/%-$(A4x4).pdf: %-$(A4x4).ly %.ily
-	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x4) $<
-
-pdf/$(A4x5)/%-$(A4x5).pdf: %-$(A4x5).ly %.ily
-	mkdir -p pdf/$(A4x5) && $(LILY_CMD) -o pdf/$(A4x5) $<
-
-pdf/$(A4x6)/%-$(A4x6).pdf: %-$(A4x6).ly %.ily
-	mkdir -p pdf/$(A4x6) && $(LILY_CMD) -o pdf/$(A4x6) $<
-
-pdf/$(A3x1)/%-$(A3x1)l.pdf: %-$(A3x1)l.ly %.ily
-	mkdir -p pdf/$(A3x1) && $(LILY_CMD) -o pdf/$(A3x1) $<
-
-pdf/$(A3x1)/%-$(A3x1)r.pdf: %-$(A3x1)r.ly %.ily
-	mkdir -p pdf/$(A3x1) && $(LILY_CMD) -o pdf/$(A3x1) $<
-
-pdf/$(A3x2)/%-$(A3x2).pdf: %-$(A3x2).ly %.ily
-	mkdir -p pdf/$(A3x2) && $(LILY_CMD) -o pdf/$(A3x2) $<
-
-pdf/$(A3x3)/%-$(A3x3).pdf: %-$(A3x3).ly %.ily
-	mkdir -p pdf/$(A3x3) && $(LILY_CMD) -o pdf/$(A3x3) $<
-
-pdf/$(A3x4)/%-$(A3x4).pdf: %-$(A3x4).ly %.ily
-	mkdir -p pdf/$(A3x4) && $(LILY_CMD) -o pdf/$(A3x4) $<
-
-pdf/%.pdf: %.ly %.ily
-	mkdir -p pdf && $(LILY_CMD) -o pdf $<
-
-png/%.png: %.ly %.ily
-	mkdir -p png && $(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=300 -o png $<
-
+.PHONY : all clean
 all: $(pdf)
 
+clean: ; rm $(pdf)
+
 
 #
-# cas particuliers
+# regles de construction
 #
-# - lorsqu'il n'y a pas de fichier .ily (travaux en cours, format unique, ...)
-# - lorsque le fichier .ily n'a pas le meme basename que le fichier .ly
+.SECONDEXPANSION:
+
+pdf/$(A4x1) pdf/$(A4x2) pdf/$(A4x3) pdf/$(A4x4) pdf/$(A4x5) pdf/$(A4x6) \
+pdf/$(A3x1) pdf/$(A3x2) pdf/$(A3x4) pdf/$(NONE) png : 
+	mkdir -p $@
+
+pdf/$(A4x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A4x2)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A4x3)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A4x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A4x5)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A4x6)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+
+pdf/$(A3x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A3x2)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+pdf/$(A3x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+
+pdf/$(NONE)/%.pdf: %.ly | $$(@D) ;$(LILY_CMD) -o $(@D) $<
+
+png/%.png: %.ly | $$(@D)
+	$(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=300 -o $(@D) $<
+
+
 #
-pdf/$(A4x4)/k417-longo-$(A4x4).pdf: k417-longo-$(A4x4).ly k417.ily
-	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x4) $<
+# Dependances
+#
 
-pdf/$(A4x1)/z661-courante-sarabande-$(A4x1).pdf: z661-courante-sarabande-$(A4x1).ly z661-courante.ily z661-sarabande.ily
-	mkdir -p pdf/$(A4x4) && $(LILY_CMD) -o pdf/$(A4x1) $<
+# includes généraux
+pdf/*/*.pdf : include/general.ily include/tagline.ily 
 
-pdf/barricades.pdf: barricades.ly 
-	$(LILY_CMD) -o pdf $<
+# formats
+pdf/$(A4x1)/*/pdf  : include/a4-210x297.ily
+pdf/$(A4x2)/*/pdf  : include/a4-210x297.ily
+pdf/$(A4x3)/*/pdf  : include/a4-210x297.ily
+pdf/$(A4x4)/*/pdf  : include/a4-210x297.ily
+pdf/$(A4x5)/*/pdf  : include/a4-210x297.ily
+pdf/$(A4x6)/*/pdf  : include/a4-210x297.ily
 
-pdf/livri.pdf: livri.ly 
-	$(LILY_CMD) -o pdf $<
+pdf/$(A3x1)/*l.pdf : include/a3-297x297l.ily include/a3-297x297.ily
+pdf/$(A3x1)/*r.pdf : include/a3-297x297r.ily include/a3-297x297.ily
+pdf/$(A3x2)/*.pdf  : include/a3-297x297.ily
+pdf/$(A3x4)/*.pdf  : include/a3-297x297.ily
 
-pdf/gavotte6doubles.pdf: gavotte6doubles.ly
-	$(LILY_CMD) -o pdf $<
+# rameau
+pdf/*/poule*.pdf : poule.ily
+pdf/*/livri*.pdf pdf/*/poule*.pdf pdf/*/gavotte6doubles*.pdf : include/rameau-ornements.ily
 
-pdf/Suite_jeremiah_clarke.pdf: Suite_jeremiah_clarke.ly
-	$(LILY_CMD) -o pdf $<
+# purcell
+pdf/*/z661*.pdf : include/purcell-ornements.ily
 
-pdf/trio_vivaldi.pdf: trio_vivaldi.ly 
-	$(LILY_CMD) -o pdf $<
+pdf/*/z661-*prelude*.pdf   : z661-prelude.ily
+pdf/*/z661-*allemande*.pdf : z661-allemande.ily
+pdf/*/z661-*courante*.pdf  : z661-courante.ily
+pdf/*/z661-*sarabande*.pdf : z661-sarabande.ily
 
-pdf/gavotte_campion.pdf: gavotte_campion.ly 
-	$(LILY_CMD) -o pdf $<
+pdf/*/act_tune*.pdf		 : act_tune.ily
+pdf/*/Rondeau*.pdf 		 : Rondeau.ily
+pdf/*/dance_for_the_fairies*.pdf : dance_for_the_fairies.ily
+pdf/*/chaconne*.pdf 		 : chaconne.ily
 
-.PHONY : all
+# bach
+pdf/*/bwv964-andante*.pdf : bwv964-andante.ily
+pdf/*/bwv964-allegro*.pdf : bwv964-allegro.ily
+pdf/*/bwv964-adagio*.pdf  : bwv964-adagio.ily 
+pdf/*/bwv964-fuga*.pdf    : bwv964-fuga.ily   
+
+pdf/*/bwv971-concerto.pdf : bwv971-concerto.ily
+pdf/*/bwv971-andante.pdf  : bwv971-andante.ily
+pdf/*/bwv971-allegro.pdf  : bwv971-allegro.ily
+
+# scarlatti
+pdf/*/k1*.pdf   : k1.ily
+pdf/*/k27*.pdf  : k27.ily
+pdf/*/k30*.pdf  : k30.ily
+pdf/*/k35*.pdf  : k35.ily
+pdf/*/k37*.pdf  : k37.ily
+pdf/*/k41*.pdf  : k41.ily
+pdf/*/k48*.pdf  : k48.ily
+pdf/*/k53*.pdf  : k53.ily
+pdf/*/k54*.pdf  : k54.ily
+pdf/*/k55*.pdf  : k55.ily
+pdf/*/k56*.pdf  : k56.ily
+pdf/*/k58*.pdf  : k58.ily
+pdf/*/k59*.pdf  : k59.ily
+pdf/*/k61*.pdf  : k61.ily
+pdf/*/k62*.pdf  : k62.ily
+pdf/*/k63*.pdf  : k63.ily
+pdf/*/k64*.pdf  : k64.ily
+pdf/*/k67*.pdf  : k67.ily
+pdf/*/k77*.pdf  : k77.ily
+pdf/*/k87*.pdf  : k87.ily
+pdf/*/k93*.pdf  : k93.ily
+pdf/*/k99*.pdf  : k99.ily
+pdf/*/k100*.pdf : k100.ily
+pdf/*/k102*.pdf : k102.ily
+pdf/*/k185*.pdf : k185.ily
+pdf/*/k417*.pdf : k417.ily
+pdf/*/k491*.pdf : k491.ily
