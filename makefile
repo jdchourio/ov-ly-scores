@@ -77,9 +77,16 @@ pdf_purcell = $(pdf_purcell_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	      $(pdf_purcell_none:%=pdf/%.pdf)
 
 # rameau
+pdf_rameau_A3x2 = poule
+pdf_rameau_A4x2 = poule
+pdf_rameau_A4x3 = poule
+pdf_rameau_A4x4 = poule
 pdf_rameau_none = livri poule gavotte6doubles
-pdf_rameau = $(pdf_rameau_none:%=pdf/%.pdf)
-
+pdf_rameau = $(pdf_rameau_A3x2:%=pdf/$(A3x2)/%-$(A3x2).pdf) \
+  	     $(pdf_rameau_A4x2:%=pdf/$(A4x2)/%-$(A4x2).pdf) \
+  	     $(pdf_rameau_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf) \
+  	     $(pdf_rameau_A4x4:%=pdf/$(A4x4)/%-$(A4x4).pdf) \
+  	     $(pdf_rameau_none:%=pdf/%.pdf)
 
 # couperin 
 pdf_couperin_none = barricades
@@ -181,9 +188,6 @@ pdf/barricades.pdf: barricades.ly
 	$(LILY_CMD) -o pdf $<
 
 pdf/livri.pdf: livri.ly 
-	$(LILY_CMD) -o pdf $<
-
-pdf/poule.pdf: poule.ly 
 	$(LILY_CMD) -o pdf $<
 
 pdf/gavotte6doubles.pdf: gavotte6doubles.ly

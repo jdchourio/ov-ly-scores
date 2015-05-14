@@ -1,29 +1,6 @@
 \version "2.18.2"
 
-\include "../../include/tagline.ily"
 \include "../../include/rameau-ornements.ily"
-
-breaks = {
-  %s2.*4 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \pageBreak
-  %s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*5 \break s2.*6 \pageBreak
-
-  s2.*9 \break s2.*10 \break s2.*11 \break s2.*12 \break s2.*8 \break s2.*9 \break \pageBreak
-  s2.*9 \break s2.*10 \break s2.*8 \break s2.*8 \break s2.*8 \break s2.*8 \break 
-}
-
-#(set-global-staff-size 16)
-
-\paper {
-  #(set-paper-size "a4" 'landscape)
-  print-page-number = ##f
-  between-system-padding = #0.1
-  between-system-space = #0.1
-  ragged-last-bottom = ##f
-  ragged-bottom = ##f
-  oddFooterMarkup = \gitTagline
-  evenFooterMarkup = \gitTagline
-}
-
 
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
@@ -372,10 +349,5 @@ left = \relative c' {
   >>
   \layout { 
     indent = 0 
-    \context {
-      \Score
-      \override NonMusicalPaperColumn.line-break-permission = ##f
-      \override NonMusicalPaperColumn.page-break-permission = ##f
-    }
   }
 }
