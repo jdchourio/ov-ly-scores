@@ -1,20 +1,10 @@
 \version "2.16.2"
 
-\include "../../tagline.ily"
+\include "../../general.ily"
+\include "../../a4-210x297.ily"
 \include "k417.ily"
 
 #(set-global-staff-size 16.5)
-
-\paper {
-  #(set-paper-size "a4")
-  print-page-number = ##f
-  between-system-padding = #0.1
-  between-system-space = #0.1
-  ragged-last-bottom = ##f
-  ragged-bottom = ##f
-  oddFooterMarkup = \gitTagline
-  evenFooterMarkup = \gitTagline
-}
 
 \score {
   \new PianoStaff <<
