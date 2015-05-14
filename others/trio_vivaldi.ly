@@ -20,8 +20,8 @@ global = {
   \set Timing.beamExceptions = #'((end . (((1 . 16).(4))))) 
   
   % alterations
-  \accidentalStyle #'Score "modern-cautionary"
-  
+  \accidentalStyle Score.modern-cautionary
+
   \override ParenthesesItem #'padding = #0.1
   \override ParenthesesItem #'font-size = #2
 }
