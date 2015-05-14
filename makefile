@@ -174,15 +174,6 @@ pdf/bwv971-2.pdf: bwv971-2.ly
 pdf/bwv971-3.pdf: bwv971-3.ly 
 	$(LILY_CMD) -o pdf $<
 
-pdf/z661-allemande.pdf: z661-allemande.ly 
-	$(LILY_CMD) -o pdf $<
-
-pdf/z661-courante.pdf: z661-courante.ly 
-	$(LILY_CMD) -o pdf $<
-
-pdf/z661-sarabande.pdf: z661-sarabande.ly 
-	$(LILY_CMD) -o pdf $<
-
 pdf/barricades.pdf: barricades.ly 
 	$(LILY_CMD) -o pdf $<
 
