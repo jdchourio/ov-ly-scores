@@ -1,8 +1,9 @@
 \version "2.18.2"
 
+\include "../../include/purcell-ornements.ily"
+
 cstr = \change Staff = "right"
 cstl = \change Staff = "left"
-shake = \markup { \path #.25 #'((moveto 0 0)(lineto 1.5 .5)(moveto 0 .5)(lineto 1.5 1)) }
 
 \header {
   title = "Suite in G Minor"
