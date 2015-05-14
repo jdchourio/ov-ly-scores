@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 \include "../../include/tagline.ily"
-\include "../../include/side-ornementations.ily"
+\include "../../include/rameau-ornements.ily"
 
 breaks = {}
 
