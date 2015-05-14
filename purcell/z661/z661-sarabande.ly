@@ -1,5 +1,6 @@
 \version "2.18.2"
 
+\include "../../include/tagline.ily"
 \include "../../include/purcell-ornements.ily"
 
 cstr = \change Staff = "right"
@@ -105,6 +106,15 @@ leftDown = \relative c' {
   r ees c
   r fis, g
   r d s \bar "|.|"
+}
+
+breaks = {
+    s2. \noBreak s2. \noBreak s2. \noBreak s2. \break
+    s2. \noBreak s2. \noBreak s2. \noBreak s2. \break 
+
+    s2. \noBreak s2. \noBreak s2. \noBreak s2. \break
+    s2. \noBreak s2. \noBreak s2. \noBreak s2. \break
+    s2. \noBreak s2. \noBreak s2. \noBreak s2. \break
 }
 
 \score {

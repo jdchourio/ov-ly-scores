@@ -1,5 +1,6 @@
 \version "2.18.2"
 
+\include "../../include/tagline.ily"
 \include "../../include/purcell-ornements.ily"
 
 cstr = \change Staff = "right"
@@ -132,6 +133,22 @@ leftDown = \relative c {
     g4. f8 ees4 d c2
     d1 ~ d4 d
     s2 g,,2 ~ g
+  }
+}
+
+breaks = {
+  \partial 8
+  \repeat volta 2 {
+    s8 s1. \noBreak s1. \noBreak s1. \noBreak s1. \break
+    s1. \noBreak s1. \noBreak s1. \noBreak s1. \break
+    s1. \noBreak 
+  }
+  
+  \partial 8
+  \repeat volta 2 {
+    s8 s1. \noBreak s1. \noBreak s1. \break
+    s1. \noBreak s1. \noBreak s1. \noBreak s1. \break
+    s1. \noBreak s1. \noBreak s1. \noBreak s1. \noBreak s1. \break
   }
 }
 
