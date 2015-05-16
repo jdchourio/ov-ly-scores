@@ -17,7 +17,7 @@ A3x1=a3-297x297x1
 A3x2=a3-297x297x2
 A3x4=a3-297x297x4
 
-A4_175x4 =a4-175x297x1
+A4_175x4 =a4-175x297x4
 
 NONE = default
 
@@ -204,9 +204,9 @@ pdf/*/bwv964-allegro*.pdf : bwv964-allegro.ily
 pdf/*/bwv964-adagio*.pdf  : bwv964-adagio.ily 
 pdf/*/bwv964-fuga*.pdf    : bwv964-fuga.ily   
 
-pdf/*/bwv971-concerto.pdf : bwv971-concerto.ily
-pdf/*/bwv971-andante.pdf  : bwv971-andante.ily
-pdf/*/bwv971-allegro.pdf  : bwv971-allegro.ily
+pdf/*/bwv971-concerto*.pdf : bwv971-concerto.ily
+pdf/*/bwv971-andante*.pdf  : bwv971-andante.ily
+pdf/*/bwv971-allegro*.pdf  : bwv971-allegro.ily
 
 # scarlatti
 pdf/*/k1*.pdf   : k1.ily
