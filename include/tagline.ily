@@ -28,6 +28,14 @@
 			)
 		      ) #\newline))
 
+#(define basefilen (string-split 
+		    (strsystem_internal 
+		      (string-append 
+			"basename " 
+			filen 
+			)
+		      ) #\newline))
+
 #(define shaone (string-split 
 		    (strsystem_internal 
 		      (string-append 
@@ -48,11 +56,12 @@ gitTagline = \markup {
   \abs-fontsize #8 {
     \fill-line {
       \concat {
-	\filen " " 
+	\basefilen " - " 
+	"lilypond " 
+	#(lilypond-version)
+        " - "
 	\shaone
 	\isClean
-	" lilypond " 
-	#(lilypond-version)
       }
     }
   }
