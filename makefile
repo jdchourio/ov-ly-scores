@@ -17,6 +17,8 @@ A3x1=a3-297x297x1
 A3x2=a3-297x297x2
 A3x4=a3-297x297x4
 
+A4_175x4 =a4-175x297x1
+
 NONE = default
 
 
@@ -50,6 +52,7 @@ pdf_bach_A4x3 = bwv964-allegro bwv971-concerto bwv971-andante bwv971-allegro
 pdf_bach_A4x4 = bwv964-fuga
 pdf_bach_A4x6 = bwv964-fuga
 pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga
+pdf_bach_A4_175x4 = bwv971-concerto bwv971-andante bwv971-allegro
 
 pdf_bach = $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)r.pdf) \
@@ -59,6 +62,7 @@ pdf_bach = $(pdf_bach_A3x1:%=pdf/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A4x3:%=pdf/$(A4x3)/%-$(A4x3).pdf)  \
 	   $(pdf_bach_A4x4:%=pdf/$(A4x4)/%-$(A4x4).pdf)  \
 	   $(pdf_bach_A4x6:%=pdf/$(A4x6)/%-$(A4x6).pdf)  \
+	   $(pdf_bach_A4_175x4:%=pdf/$(A4_175x4)/%-$(A4_175x4).pdf)  \
 	   $(pdf_bach_none:%=pdf/$(NONE)/%.pdf)
 
 # purcell
@@ -133,7 +137,7 @@ clean: ; rm $(pdf)
 .SECONDEXPANSION:
 
 pdf/$(A4x1) pdf/$(A4x2) pdf/$(A4x3) pdf/$(A4x4) pdf/$(A4x5) pdf/$(A4x6) \
-pdf/$(A3x1) pdf/$(A3x2) pdf/$(A3x4) pdf/$(NONE) png : 
+pdf/$(A3x1) pdf/$(A3x2) pdf/$(A3x4) pdf/$(NONE) pdf/$(A4_175x4) png : 
 	mkdir -p $@
 
 pdf/$(A4x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
@@ -148,6 +152,8 @@ pdf/$(A3x2)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 pdf/$(A3x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 
 pdf/$(NONE)/%.pdf: %.ly | $$(@D) ;$(LILY_CMD) -o $(@D) $<
+
+pdf/$(A4_175x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 
 png/%.png: %.ly | $$(@D)
 	$(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=300 -o $(@D) $<
@@ -172,6 +178,8 @@ pdf/$(A3x1)/*l.pdf : include/a3-297x297l.ily include/a3-297x297.ily
 pdf/$(A3x1)/*r.pdf : include/a3-297x297r.ily include/a3-297x297.ily
 pdf/$(A3x2)/*.pdf  : include/a3-297x297.ily
 pdf/$(A3x4)/*.pdf  : include/a3-297x297.ily
+
+pdf/$(A4_175x4)/*.pdf  : include/a4-175x297.ily
 
 # rameau
 pdf/*/poule*.pdf : poule.ily
