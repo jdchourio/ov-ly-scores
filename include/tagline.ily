@@ -48,7 +48,7 @@ gitTagline = \markup {
   \abs-fontsize #8 {
     \fill-line {
       \concat {
-	\relfilen " " 
+	\filen " " 
 	\shaone
 	\isClean
 	" lilypond " 
