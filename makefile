@@ -160,7 +160,7 @@ clean: ; rm $(pdf)
 
 $(PDF)/$(A4x1) $(PDF)/$(A4x2) $(PDF)/$(A4x3) $(PDF)/$(A4x4) $(PDF)/$(A4x5) $(PDF)/$(A4x6) \
 $(PDF)/$(A3x1) $(PDF)/$(A3x2) $(PDF)/$(A3x4) $(PDF)/$(NONE) $(PDF)/$(A4_175x2) $(PDF)/$(A4_175x3) \
-$(PDF)/$(A4_175x4) $(PDF)/$(A4_175x6)png : 
+$(PDF)/$(A4_175x4) $(PDF)/$(A4_175x6) png : 
 	mkdir -p $@
 
 $(PDF)/$(A4x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
