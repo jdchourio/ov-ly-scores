@@ -94,6 +94,7 @@ pdf_purcell_A4x1 = act_tune dance_for_the_fairies Rondeau z661-prelude z661-alle
 pdf_purcell_A4x2 = act_tune
 pdf_purcell_A4x3 = chaconne
 pdf_purcell_none = z661-allemande z661-courante z661-prelude z661-sarabande
+pdf_purcell_A4_175x2 = z661-prelude z661-allemande z661-courante-sarabande
 
 pdf_purcell = $(pdf_purcell_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
   	      $(pdf_purcell_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)r.pdf) \
@@ -101,6 +102,7 @@ pdf_purcell = $(pdf_purcell_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
 	      $(pdf_purcell_A4x1:%=$(PDF)/$(A4x1)/%-$(A4x1).pdf)  \
 	      $(pdf_purcell_A4x2:%=$(PDF)/$(A4x2)/%-$(A4x2).pdf)  \
 	      $(pdf_purcell_A4x3:%=$(PDF)/$(A4x3)/%-$(A4x3).pdf)  \
+	      $(pdf_purcell_A4_175x2:%=$(PDF)/$(A4_175x2)/%-$(A4_175x2).pdf)  \
 	      $(pdf_purcell_none:%=$(PDF)/$(NONE)/%.pdf)
 
 # rameau
