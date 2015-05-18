@@ -25,6 +25,7 @@ A3x2=a3-297x297x2
 A3x4=a3-297x297x4
 
 A4_175x2 =a4-175x297x2
+A4_175x3 =a4-175x297x3
 A4_175x4 =a4-175x297x4
 
 NONE = default
@@ -42,6 +43,7 @@ pdf_scarlatti_A3x1 = k1 k35 k59 k62 k63 k64 k67 k87 k100 k102 k185
 pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102 k491
 pdf_scarlatti_none = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 pdf_scarlatti_A4_175x2 = k1 k35 k59 k62 k63 k67 k87 k102 k185 
+pdf_scarlatti_A4_175x3 = k77
 pdf_scarlatti_A4_175x4 = k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k61 k93 k99 k100 k293 k417 k417-longo k491
 
 pdf_scarlatti = $(pdf_scarlatti_A4x1:%=$(PDF)/$(A4x1)/%-$(A4x1).pdf)  \
@@ -52,6 +54,7 @@ pdf_scarlatti = $(pdf_scarlatti_A4x1:%=$(PDF)/$(A4x1)/%-$(A4x1).pdf)  \
   		$(pdf_scarlatti_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)r.pdf) \
   		$(pdf_scarlatti_A3x2:%=$(PDF)/$(A3x2)/%-$(A3x2).pdf)  \
   		$(pdf_scarlatti_A4_175x2:%=$(PDF)/$(A4_175x2)/%-$(A4_175x2).pdf)  \
+  		$(pdf_scarlatti_A4_175x3:%=$(PDF)/$(A4_175x3)/%-$(A4_175x3).pdf)  \
   		$(pdf_scarlatti_A4_175x4:%=$(PDF)/$(A4_175x4)/%-$(A4_175x4).pdf)  \
   		$(pdf_scarlatti_none:%=$(PDF)/$(NONE)/%.pdf)
 
@@ -149,7 +152,8 @@ clean: ; rm $(pdf)
 .SECONDEXPANSION:
 
 $(PDF)/$(A4x1) $(PDF)/$(A4x2) $(PDF)/$(A4x3) $(PDF)/$(A4x4) $(PDF)/$(A4x5) $(PDF)/$(A4x6) \
-$(PDF)/$(A3x1) $(PDF)/$(A3x2) $(PDF)/$(A3x4) $(PDF)/$(NONE) $(PDF)/$(A4_175x2) $(PDF)/$(A4_175x4) png : 
+$(PDF)/$(A3x1) $(PDF)/$(A3x2) $(PDF)/$(A3x4) $(PDF)/$(NONE) $(PDF)/$(A4_175x2) $(PDF)/$(A4_175x3) \
+$(PDF)/$(A4_175x4) png : 
 	mkdir -p $@
 
 $(PDF)/$(A4x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
@@ -166,6 +170,7 @@ $(PDF)/$(A3x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 $(PDF)/$(NONE)/%.pdf: %.ly | $$(@D) ;$(LILY_CMD) -o $(@D) $<
 
 $(PDF)/$(A4_175x2)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+$(PDF)/$(A4_175x3)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 $(PDF)/$(A4_175x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 
 png/%.png: %.ly | $$(@D)
@@ -193,6 +198,7 @@ $(PDF)/$(A3x2)/*.pdf  : include/a3-297x297.ily
 $(PDF)/$(A3x4)/*.pdf  : include/a3-297x297.ily
 
 $(PDF)/$(A4_175x2)/*.pdf  : include/a4-175x297.ily
+$(PDF)/$(A4_175x3)/*.pdf  : include/a4-175x297.ily
 $(PDF)/$(A4_175x4)/*.pdf  : include/a4-175x297.ily
 
 # rameau
