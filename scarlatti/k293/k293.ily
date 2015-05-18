@@ -322,13 +322,13 @@ left = \relative c {
   \new PianoStaff <<
     \new Staff = "right" {
       << 
-        %\breaks
+        \breaks
         \right
       >>
     }
     \new Staff = "left" { 
       <<
-        %\breaks
+        \breaks
         \clef bass \left 
       >>
     }
