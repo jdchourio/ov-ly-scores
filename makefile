@@ -67,7 +67,10 @@ pdf_bach_A4x3 = bwv964-allegro bwv971-concerto bwv971-andante bwv971-allegro
 pdf_bach_A4x4 = bwv964-fuga
 pdf_bach_A4x6 = bwv964-fuga
 pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga
+pdf_bach_A4_175x2 = bwv964-adagio bwv964-andante
+pdf_bach_A4_175x3 = bwv964-allegro
 pdf_bach_A4_175x4 = bwv971-concerto bwv971-andante bwv971-allegro
+pdf_bach_A4_175x6 = bwv964-fuga
 
 pdf_bach = $(pdf_bach_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)r.pdf) \
@@ -77,7 +80,10 @@ pdf_bach = $(pdf_bach_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A4x3:%=$(PDF)/$(A4x3)/%-$(A4x3).pdf)  \
 	   $(pdf_bach_A4x4:%=$(PDF)/$(A4x4)/%-$(A4x4).pdf)  \
 	   $(pdf_bach_A4x6:%=$(PDF)/$(A4x6)/%-$(A4x6).pdf)  \
+	   $(pdf_bach_A4_175x2:%=$(PDF)/$(A4_175x2)/%-$(A4_175x2).pdf)  \
+	   $(pdf_bach_A4_175x3:%=$(PDF)/$(A4_175x3)/%-$(A4_175x3).pdf)  \
 	   $(pdf_bach_A4_175x4:%=$(PDF)/$(A4_175x4)/%-$(A4_175x4).pdf)  \
+	   $(pdf_bach_A4_175x6:%=$(PDF)/$(A4_175x6)/%-$(A4_175x6).pdf)  \
 	   $(pdf_bach_none:%=$(PDF)/$(NONE)/%.pdf)
 
 # purcell
@@ -153,7 +159,7 @@ clean: ; rm $(pdf)
 
 $(PDF)/$(A4x1) $(PDF)/$(A4x2) $(PDF)/$(A4x3) $(PDF)/$(A4x4) $(PDF)/$(A4x5) $(PDF)/$(A4x6) \
 $(PDF)/$(A3x1) $(PDF)/$(A3x2) $(PDF)/$(A3x4) $(PDF)/$(NONE) $(PDF)/$(A4_175x2) $(PDF)/$(A4_175x3) \
-$(PDF)/$(A4_175x4) png : 
+$(PDF)/$(A4_175x4) $(PDF)/$(A4_175x6)png : 
 	mkdir -p $@
 
 $(PDF)/$(A4x1)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
@@ -172,6 +178,7 @@ $(PDF)/$(NONE)/%.pdf: %.ly | $$(@D) ;$(LILY_CMD) -o $(@D) $<
 $(PDF)/$(A4_175x2)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 $(PDF)/$(A4_175x3)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 $(PDF)/$(A4_175x4)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
+$(PDF)/$(A4_175x6)/%.pdf: %.ly | $$(@D) ; $(LILY_CMD) -o $(@D) $<
 
 png/%.png: %.ly | $$(@D)
 	$(LILY_CMD) --png -ddelete-intermediate-files=#f -dresolution=300 -o $(@D) $<
@@ -200,6 +207,7 @@ $(PDF)/$(A3x4)/*.pdf  : include/a3-297x297.ily
 $(PDF)/$(A4_175x2)/*.pdf  : include/a4-175x297.ily
 $(PDF)/$(A4_175x3)/*.pdf  : include/a4-175x297.ily
 $(PDF)/$(A4_175x4)/*.pdf  : include/a4-175x297.ily
+$(PDF)/$(A4_175x6)/*.pdf  : include/a4-175x297.ily
 
 # rameau
 $(PDF)/*/poule*.pdf : poule.ily
