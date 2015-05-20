@@ -45,9 +45,9 @@ pdf_scarlatti_A3x1 = k1 k35 k59 k62 k63 k64 k67 k87 k100 k102 k185
 pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102 k491
 pdf_scarlatti_none = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 pdf_scarlatti_A4_175x1 = k64
-pdf_scarlatti_A4_175x2 = k1 k35 k59 k62 k63 k67 k87 k102 k185 
+pdf_scarlatti_A4_175x2 = k1 k35 k59 k62 k63 k67 k87 k100 k102 k185 
 pdf_scarlatti_A4_175x3 = k77
-pdf_scarlatti_A4_175x4 = k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k61 k93 k99 k100 k293 k417 k417-longo k491
+pdf_scarlatti_A4_175x4 = k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k61 k93 k99 k293 k417 k417-longo k491
 
 pdf_scarlatti = $(pdf_scarlatti_A4x1:%=$(PDF)/$(A4x1)/%-$(A4x1).pdf)  \
   		$(pdf_scarlatti_A4x2:%=$(PDF)/$(A4x2)/%-$(A4x2).pdf)  \
