@@ -274,3 +274,90 @@ $(PDF)/*/k185*.pdf : k185.ily
 $(PDF)/*/k293*.pdf : k293.ily
 $(PDF)/*/k417*.pdf : k417.ily
 $(PDF)/*/k491*.pdf : k491.ily
+
+#
+# Assemblages
+#
+
+book-a4-175x297:
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=scores-a4-175x297.pdf \
+	  -f $(PDF)/$(A4_175x2)/k1-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x4)/k27-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k35-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k37-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k48-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k53-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k54-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k55-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k56-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x2)/k59-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x4)/k61-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x2)/k62-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/k63-$(A4_175x2).pdf			\
+	  -f $(PDF)/$(A4_175x1)/k64-$(A4_175x1).pdf			\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/k67-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x3)/k77-$(A4_175x3).pdf			\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/k87-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x4)/k99-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x2)/k100-$(A4_175x2).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/k102-$(A4_175x2).pdf			\
+	  -f $(PDF)/$(A4_175x2)/k185-$(A4_175x2).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k293-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k491-$(A4_175x4).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x4)/k30-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k41-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k58-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k93-$(A4_175x4).pdf			\
+	  -f $(PDF)/$(A4_175x4)/k417-longo-$(A4_175x4).pdf		\
+	  -f $(PDF)/$(A4_175x4)/k417-$(A4_175x4).pdf			\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/z661-prelude-$(A4_175x2).pdf		\
+	  -f $(PDF)/$(A4_175x2)/z661-allemande-$(A4_175x2).pdf		\
+	  -f $(PDF)/$(A4_175x2)/z661-courante-sarabande-$(A4_175x2).pdf	\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x4)/bwv971-concerto-$(A4_175x4).pdf		\
+	  -f $(PDF)/$(A4_175x4)/bwv971-andante-$(A4_175x4).pdf		\
+	  -f $(PDF)/$(A4_175x4)/bwv971-allegro-$(A4_175x4).pdf		\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/bwv964-adagio-$(A4_175x2).pdf		\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x6)/bwv964-fuga-$(A4_175x6).pdf		\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x2)/bwv964-andante-$(A4_175x2).pdf		\
+	  -c showpage							\
+	  -c showpage							\
+	  -f $(PDF)/$(A4_175x3)/bwv964-allegro-$(A4_175x3).pdf		\
+	  -c showpage																				\
+	  ""
+
