@@ -458,7 +458,6 @@ book-a4-175x297-verso1: book-a4-175x297
 
 book-a4-175x297-recto2: book-a4-175x297
 	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -c showpage								\
 	  -dFirstPage=4   -dLastPage=4   -f $<.pdf 				\
 	  -dFirstPage=8   -dLastPage=8   -f $<.pdf 				\
 	  -dFirstPage=12  -dLastPage=12  -f $<.pdf 				\
@@ -471,9 +470,7 @@ book-a4-175x297-recto2: book-a4-175x297
 	  -dFirstPage=40  -dLastPage=40  -f $<.pdf 				\
 	  -dFirstPage=44  -dLastPage=44  -f $<.pdf 				\
 	  -dFirstPage=48  -dLastPage=48  -f $<.pdf 				\
-	  -dFirstPage=52  -dLastPage=52  -f $<.pdf 				\
 	  -dFirstPage=56  -dLastPage=56  -f $<.pdf 				\
-	  -dFirstPage=60  -dLastPage=60  -f $<.pdf 				\
 	  -dFirstPage=64  -dLastPage=64  -f $<.pdf 				\
 	  -dFirstPage=68  -dLastPage=68  -f $<.pdf 				\
 	  -dFirstPage=72  -dLastPage=72  -f $<.pdf 				\
@@ -489,22 +486,17 @@ book-a4-175x297-recto2: book-a4-175x297
 	  -dFirstPage=112 -dLastPage=112 -f $<.pdf 				\
 	  -dFirstPage=116 -dLastPage=116 -f $<.pdf 				\
 	  -dFirstPage=120 -dLastPage=120 -f $<.pdf 				\
-	  -dFirstPage=124 -dLastPage=124 -f $<.pdf 				\
 	  -dFirstPage=128 -dLastPage=128 -f $<.pdf 				\
 	  -dFirstPage=132 -dLastPage=132 -f $<.pdf 				\
 	  -dFirstPage=136 -dLastPage=136 -f $<.pdf 				\
 	  -dFirstPage=140 -dLastPage=140 -f $<.pdf 				\
-	  -dFirstPage=144 -dLastPage=144 -f $<.pdf 				\
 	  -dFirstPage=148 -dLastPage=148 -f $<.pdf 				\
 	  -dFirstPage=152 -dLastPage=152 -f $<.pdf 				\
-	  -dFirstPage=156 -dLastPage=156 -f $<.pdf 				\
 	  -dFirstPage=160 -dLastPage=160 -f $<.pdf 				\
-	  -dFirstPage=164 -dLastPage=164 -f $<.pdf 				\
 
 
 book-a4-175x297-verso2: book-a4-175x297
 	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=3   -dLastPage=3   -f $<.pdf 				\
 	  -dFirstPage=7   -dLastPage=7   -f $<.pdf 				\
 	  -dFirstPage=11  -dLastPage=11  -f $<.pdf 				\
 	  -dFirstPage=15  -dLastPage=15  -f $<.pdf 				\
@@ -517,9 +509,7 @@ book-a4-175x297-verso2: book-a4-175x297
 	  -dFirstPage=43  -dLastPage=43  -f $<.pdf 				\
 	  -dFirstPage=47  -dLastPage=47  -f $<.pdf 				\
 	  -dFirstPage=51  -dLastPage=51  -f $<.pdf 				\
-	  -dFirstPage=55  -dLastPage=55  -f $<.pdf 				\
 	  -dFirstPage=59  -dLastPage=59  -f $<.pdf 				\
-	  -dFirstPage=63  -dLastPage=63  -f $<.pdf 				\
 	  -dFirstPage=67  -dLastPage=67  -f $<.pdf 				\
 	  -dFirstPage=71  -dLastPage=71  -f $<.pdf 				\
 	  -dFirstPage=75  -dLastPage=75  -f $<.pdf 				\
@@ -535,15 +525,12 @@ book-a4-175x297-verso2: book-a4-175x297
 	  -dFirstPage=115 -dLastPage=115 -f $<.pdf 				\
 	  -dFirstPage=119 -dLastPage=119 -f $<.pdf 				\
 	  -dFirstPage=123 -dLastPage=123 -f $<.pdf 				\
-	  -dFirstPage=127 -dLastPage=127 -f $<.pdf 				\
 	  -dFirstPage=131 -dLastPage=131 -f $<.pdf 				\
 	  -dFirstPage=135 -dLastPage=135 -f $<.pdf 				\
 	  -dFirstPage=139 -dLastPage=139 -f $<.pdf 				\
 	  -dFirstPage=143 -dLastPage=143 -f $<.pdf 				\
-	  -dFirstPage=147 -dLastPage=147 -f $<.pdf 				\
 	  -dFirstPage=151 -dLastPage=151 -f $<.pdf 				\
 	  -dFirstPage=155 -dLastPage=155 -f $<.pdf 				\
-	  -dFirstPage=159 -dLastPage=159 -f $<.pdf 				\
 	  -dFirstPage=163 -dLastPage=163 -f $<.pdf 				\
 
 
