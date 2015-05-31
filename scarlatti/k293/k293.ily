@@ -17,7 +17,7 @@ right = \relative c'' {
   \repeat volta 2 {
     r8 b d fis b2 ~
     b8 fis e fis g b, cis e
-    fis ais, b d e gis, ais cis
+    fis ais, b d e gis, ais! cis
     
     d2. g4 ~
     g fis2 e4 ~
@@ -46,7 +46,7 @@ right = \relative c'' {
     cis d d' cis b a gis fis
     
     <<{ cis'8 b a gis a2 } \\ { eis2 fis8 e d cis }>>
-    <<{ b'8 a gis fis g2 } \\ { d2 e8 d cis b }>>
+    <<{ b'8 a gis fis gis2 } \\ { d2 e8 d cis b }>>
     <<{ a'8 gis fis eis fis2 } \\ { cis2 d8 cis b a }>>
     <<{ gis'8 fis eis dis eis2 } \\ { b2 cis8 b a gis }>>
     
@@ -57,7 +57,7 @@ right = \relative c'' {
     
     fis d ~ 
     d8 d cis b a gis fis eis
-    fis b a gis a fis gis eis
+    fis b a gis a fis gis! eis
     fis4 cis''8 b a gis fis e
     
     d cis <<{ b'8 a } \\ { b,4 }>> gis'8 fis e d
@@ -67,8 +67,8 @@ right = \relative c'' {
     
     d b2 cis4 ~ 
     cis8 b a gis
-    <<{ cis2 ~ cis8 a b gis } \\ { fis8 e d cis d2 }>>
-    a'8 fis gis eis
+    <<{ cis2 ~ cis8 b a gis } \\ { fis8 e d cis d2 }>>
+    a'8 fis gis! eis
     fis4 cis''8 b a gis fis e
     
     d cis <<{ b' a } \\ { b,4 }>> gis'8 fis e d
@@ -78,16 +78,16 @@ right = \relative c'' {
     
     d b2 cis4 ~ 
     cis8 b a gis
-    <<{ cis2 ~ cis8 a b gis } \\ { fis8 e d cis d2 }>>
-    a'8 fis gis eis
+    <<{ cis2 ~ cis8 b a gis } \\ { fis8 e d cis d2 }>>
+    a'8 fis gis! eis
     fis4 fis'2-\prall fis4-\parenthesize\prall
     
     r8 cis' d b \acciaccatura { cis } b a \acciaccatura { b } a gis
     a4 fis2-\prall fis4-\parenthesize\prall
-    r8 gis a b \acciaccatura { b } a g fis eis
+    r8 gis a b \acciaccatura { b } a gis fis eis
     fis4 fis,-\prall r fis-\prall
     
-    r8 cis' d b \acciaccatura { b } b a \acciaccatura { b } a gis
+    r8 cis' d b \acciaccatura { cis } b a \acciaccatura { b } a gis
     a4 fis2-\prall fis4-\prall
     r8 gis a b \parenthesize \acciaccatura { b } a gis fis eis
     fis4 r r2
@@ -127,7 +127,7 @@ right = \relative c'' {
     
     <<{ e' d cis b cis2 } \\ { g a8 g fis e }>>
     <<{ d' cis b ais b2 } \\ { fis g8 fis e d }>>
-    <<{ cis' b ais gis ais2 } \\ { e fis8 e d cis }>>
+    <<{ cis' b ais gis ais!2 } \\ { e fis8 e d cis }>>
     <<{ b' fis b cis } \\ { d,4 }>> d'2
     
     e cis
@@ -190,7 +190,7 @@ left = \relative c {
     e a,
     d g,
     a \clef treble a'8^"G" g fis e
-    <<{ fis2^"G" b8 a g fis } \\ { fis e d cis d2 }>>
+    <<{ a2^"G" b8 a g fis } \\ { fis e d cis d2 }>>
     
     <<{ g2 a8 g fis e } \\ { e d cis b cis2 }>>
     <<{ fis2 g8 fis e d } \\ { d cis b a b2 }>>
@@ -209,13 +209,13 @@ left = \relative c {
     gis <cis, cis'>
     
     fis \clef treble fis'8 e d cis
-    <<{ b'8^"G" a gis fis gis2 } \\ { d2 e8 d cis b }>>
+    <<{ b'8^"G" a gis fis gis!2 } \\ { d2 e8 d cis b }>>
     <<{ a'8 gis fis eis fis2 } \\ { cis2 d8 cis b a }>>
-    <<{ gis'8 fis eis dis eis2 } \\ { b2 cis8 b a gis }>>
+    <<{ gis'8 fis eis dis eis!2 } \\ { b2 cis8 b a gis }>>
     
     \clef bass
     <<{ fis'8 e d cis d2 } \\ { a2 b8 a gis fis }>>
-    <eis c'>2 fis4 cis
+    <eis cis'>2 fis4 cis
     d <<{ b' a gis } \\ { b, cis2 }>>
     <fis, fis'>2 a'
     
@@ -272,7 +272,7 @@ left = \relative c {
     <<{ d' cis b a b2 } \\ { fis gis8 fis e d }>>
     
     <<{ cis' b a gis a2 } \\ { e fis8 e d cis }>>
-    <<{ b' a gis fis g2 } \\ { d e8 d cis b }>>
+    <<{ b' a gis fis gis2 } \\ { d e8 d cis b }>>
     <<{ cis2 a' } \\ { cis,1}>>
     <d a'>2 <dis b'>
     
@@ -287,7 +287,7 @@ left = \relative c {
     
     <<{ e' d cis b cis2 } \\ { g a8 g fis e }>>
     <<{ d' cis b ais b2 } \\ { fis g8 fis e d }>>
-    <<{ cis' b ais gis a2 } \\ { e fis8 e d cis }>>
+    <<{ cis' b ais gis ais2 } \\ { e fis8 e d cis }>>
     <d b'>2 b
     
     \repeat unfold 2 {
