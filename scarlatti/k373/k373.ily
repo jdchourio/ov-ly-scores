@@ -75,7 +75,7 @@ right = \relative c''' {
     \set Score.repeatCommands = #'((volta #f))
     fis g a bes
     bes c c, d e fis g a
-    a c bes, c d e fis g
+    a bes bes, c d e fis g
     g a a, bes c d e fis
     
     fis g g, a bes c d e
@@ -97,7 +97,7 @@ right = \relative c''' {
       fis d cis c b bes a g
       fis8 r r4 r2
       R1
-      r4 g'8 fis g d b g
+      r4 g'8 fis g d bes g
       ees' c d a bes g a fis
       g
     }
@@ -110,12 +110,12 @@ right = \relative c''' {
   }
 }
  
-left = \relative c'' {
+left = \relative c' {
   \global
   
   \repeat volta 2 {
-    R1 R1
-    \clef treble bes8_"G" a g f ees d c bes
+    << { R1 } \new Voice { \tiny g8_\markup { \italic "[2e]" } } >> R1
+    \clef treble bes'8_"G" a g f ees d c bes
     \clef bass a g fis e d c bes a
     
     g2. g'4 
@@ -136,7 +136,7 @@ left = \relative c'' {
     \clef treble d''8_"G" c bes a g f ees d
     \clef bass c bes a g f ees d c
     bes2. \clef treble <bes' bes'>4
-    <c c'> q q q
+    <c bes'> q q q
     
     <c f aes> q q q
     <b f' g> q q q
@@ -191,7 +191,7 @@ left = \relative c'' {
     R1
     
     \repeat unfold 2 {
-      r8 d'^"G" cis cis b bes a g
+      r8 d'^"G" cis c b bes a g
       fis g f ees d c bes a
       g2. g'4
       c, c' d d,
