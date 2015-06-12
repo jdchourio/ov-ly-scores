@@ -73,7 +73,7 @@ pdf_bach_A4x6 = bwv964-fuga
 pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga
 pdf_bach_A4_175x2 = bwv964-adagio bwv964-andante
 pdf_bach_A4_175x3 = bwv964-allegro
-pdf_bach_A4_175x4 = bwv971-concerto bwv971-andante bwv971-allegro
+pdf_bach_A4_175x4 = bwv971-concerto bwv971-andante bwv971-allegro bwv802-duetto1
 pdf_bach_A4_175x6 = bwv964-fuga
 
 pdf_bach = $(pdf_bach_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
@@ -137,7 +137,7 @@ pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) 
 # chemins vers les sources
 #
 scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k82 k87 k93 k95 k99 k100 k102 k185 k293 k308 k314 k333 k373 k417 k491
-bach_dirs = bwv964 bwv971-concerto_italien
+bach_dirs = bwv964 bwv971-concerto_italien bwv802-duetto1
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
 couperin_dirs = barricades
@@ -243,6 +243,8 @@ $(PDF)/*/bwv964-fuga*.pdf    : bwv964-fuga.ily
 $(PDF)/*/bwv971-concerto*.pdf : bwv971-concerto.ily
 $(PDF)/*/bwv971-andante*.pdf  : bwv971-andante.ily
 $(PDF)/*/bwv971-allegro*.pdf  : bwv971-allegro.ily
+
+$(PDF)/*/bwv802-duetto1*.pdf  : bwv802-duetto1.ily
 
 # scarlatti
 $(PDF)/*/k1*.pdf   : k1.ily
