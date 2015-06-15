@@ -292,10 +292,10 @@ $(PDF)/*/k491*.pdf : k491.ily
 
 books: books-a4-175x297
 
-books-a4-175x297: book1-a4-175x297-recto book1-a4-175x297-verso book2-a4-175x297-recto book2-a4-175x297-verso
+books-a4-175x297: book1-a4-175x297-recto.pdf book1-a4-175x297-verso.pdf book2-a4-175x297-recto.pdf book2-a4-175x297-verso.pdf
 
-book-a4-175x297:
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   	\
+book-a4-175x297.pdf:
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@       	\
 	  -f pdf/2.19.20/$(A4_175x2)/k1-$(A4_175x2).pdf				\
 	  -c showpage								\
 	  -c showpage								\
@@ -322,8 +322,9 @@ book-a4-175x297:
 	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x3)/k77-$(A4_175x3).pdf			\
 	  -c showpage								\
+	  -f pdf/2.19.20/$(A4_175x4)/k82-$(A4_175x4).pdf			\
 	  -f pdf/2.19.20/$(A4_175x2)/k87-$(A4_175x2).pdf			\
-	  -c showpage								\
+	  -f pdf/2.19.20/$(A4_175x1)/k95-$(A4_175x1).pdf			\
 	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x4)/k99-$(A4_175x4).pdf			\
 	  -f pdf/2.19.20/$(A4_175x2)/k100-$(A4_175x2).pdf			\
@@ -332,6 +333,11 @@ book-a4-175x297:
 	  -f pdf/2.19.20/$(A4_175x2)/k102-$(A4_175x2).pdf			\
 	  -f pdf/2.19.20/$(A4_175x2)/k185-$(A4_175x2).pdf			\
 	  -f pdf/2.19.20/$(A4_175x4)/k293-$(A4_175x4).pdf			\
+	  -f pdf/2.19.20/$(A4_175x3)/k308-$(A4_175x3).pdf			\
+	  -c showpage								\
+	  -f pdf/2.19.20/$(A4_175x4)/k314-$(A4_175x4).pdf			\
+	  -f pdf/2.19.20/$(A4_175x3)/k373-$(A4_175x3).pdf			\
+	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x4)/k491-$(A4_175x4).pdf			\
 	  -c showpage								\
 	  -c showpage								\
@@ -363,6 +369,15 @@ book-a4-175x297:
 	  -c showpage								\
 	  -c showpage								\
 	  -c showpage								\
+	  -f pdf/2.19.20/$(A4_175x4)/bwv802-duetto1-$(A4_175x4).pdf		\
+	  -f pdf/2.19.20/$(A4_175x4)/bwv803-duetto2-$(A4_175x4).pdf		\
+	  -f pdf/2.19.20/$(A4_175x4)/bwv804-duetto3-$(A4_175x4).pdf		\
+	  -f pdf/2.19.20/$(A4_175x3)/bwv805-duetto4-$(A4_175x3).pdf		\
+	  -c showpage								\
+	  -c showpage								\
+	  -c showpage								\
+	  -c showpage								\
+	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x2)/bwv964-adagio-$(A4_175x2).pdf		\
 	  -c showpage								\
 	  -c showpage								\
@@ -376,264 +391,326 @@ book-a4-175x297:
 	  -c showpage								\
 
 
-book1-a4-175x297: book-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -c showpage					\
-	 -dFirstPage=1   -dLastPage=2   -f $<.pdf 	\
-	 -dFirstPage=5   -dLastPage=6   -f $<.pdf 	\
-	 -dFirstPage=9   -dLastPage=10  -f $<.pdf 	\
-	 -dFirstPage=13  -dLastPage=14  -f $<.pdf 	\
-	 -dFirstPage=17  -dLastPage=18  -f $<.pdf 	\
-	 -dFirstPage=21  -dLastPage=22  -f $<.pdf 	\
-	 -dFirstPage=25  -dLastPage=26  -f $<.pdf 	\
-	 -dFirstPage=29  -dLastPage=30  -f $<.pdf 	\
-	 -dFirstPage=33  -dLastPage=34  -f $<.pdf 	\
-	 -dFirstPage=37  -dLastPage=38  -f $<.pdf 	\
-	 -dFirstPage=41  -dLastPage=42  -f $<.pdf 	\
-	 -dFirstPage=45  -dLastPage=46  -f $<.pdf 	\
-	 -dFirstPage=49  -dLastPage=50  -f $<.pdf 	\
-	 -dFirstPage=53  -dLastPage=54  -f $<.pdf 	\
-	 -dFirstPage=57  -dLastPage=58  -f $<.pdf 	\
-	 -dFirstPage=61  -dLastPage=62  -f $<.pdf 	\
-	 -dFirstPage=65  -dLastPage=66  -f $<.pdf 	\
-	 -dFirstPage=69  -dLastPage=70  -f $<.pdf 	\
-	 -dFirstPage=73  -dLastPage=74  -f $<.pdf 	\
-	 -dFirstPage=77  -dLastPage=78  -f $<.pdf 	\
-	 -dFirstPage=81  -dLastPage=82  -f $<.pdf 	\
-	 -dFirstPage=85  -dLastPage=86  -f $<.pdf 	\
-	 -dFirstPage=89  -dLastPage=90  -f $<.pdf 	\
-	 -dFirstPage=93  -dLastPage=94  -f $<.pdf 	\
-	 -dFirstPage=97  -dLastPage=98  -f $<.pdf 	\
-	 -dFirstPage=101 -dLastPage=102 -f $<.pdf 	\
-	 -dFirstPage=105 -dLastPage=106 -f $<.pdf 	\
-	 -dFirstPage=109 -dLastPage=110 -f $<.pdf 	\
-	 -dFirstPage=113 -dLastPage=114 -f $<.pdf 	\
-	 -dFirstPage=117 -dLastPage=118 -f $<.pdf 	\
-	 -dFirstPage=121 -dLastPage=122 -f $<.pdf 	\
-	 -dFirstPage=125 -dLastPage=126 -f $<.pdf 	\
-	 -dFirstPage=129 -dLastPage=130 -f $<.pdf 	\
-	 -dFirstPage=133 -dLastPage=134 -f $<.pdf 	\
-	 -dFirstPage=137 -dLastPage=138 -f $<.pdf 	\
-	 -dFirstPage=141 -dLastPage=142 -f $<.pdf 	\
-	 -dFirstPage=145 -dLastPage=146 -f $<.pdf 	\
-	 -dFirstPage=149 -dLastPage=150 -f $<.pdf 	\
-	 -dFirstPage=153 -dLastPage=154 -f $<.pdf 	\
-	 -dFirstPage=157 -dLastPage=158 -f $<.pdf 	\
-	 -dFirstPage=161 -dLastPage=162 -f $<.pdf 	\
+book1-full-a4-175x297.pdf: book-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	 -dFirstPage=1   -dLastPage=2   -f $< \
+	 -dFirstPage=5   -dLastPage=6   -f $< \
+	 -dFirstPage=9   -dLastPage=10  -f $< \
+	 -dFirstPage=13  -dLastPage=14  -f $< \
+	 -dFirstPage=17  -dLastPage=18  -f $< \
+	 -dFirstPage=21  -dLastPage=22  -f $< \
+	 -dFirstPage=25  -dLastPage=26  -f $< \
+	 -dFirstPage=29  -dLastPage=30  -f $< \
+	 -dFirstPage=33  -dLastPage=34  -f $< \
+	 -dFirstPage=37  -dLastPage=38  -f $< \
+	 -dFirstPage=41  -dLastPage=42  -f $< \
+	 -dFirstPage=45  -dLastPage=46  -f $< \
+	 -dFirstPage=49  -dLastPage=50  -f $< \
+	 -dFirstPage=53  -dLastPage=54  -f $< \
+	 -dFirstPage=57  -dLastPage=58  -f $< \
+	 -dFirstPage=61  -dLastPage=62  -f $< \
+	 -dFirstPage=65  -dLastPage=66  -f $< \
+	 -dFirstPage=69  -dLastPage=70  -f $< \
+	 -dFirstPage=73  -dLastPage=74  -f $< \
+	 -dFirstPage=77  -dLastPage=78  -f $< \
+	 -dFirstPage=81  -dLastPage=82  -f $< \
+	 -dFirstPage=85  -dLastPage=86  -f $< \
+	 -dFirstPage=89  -dLastPage=90  -f $< \
+	 -dFirstPage=93  -dLastPage=94  -f $< \
+	 -dFirstPage=97  -dLastPage=98  -f $< \
+	 -dFirstPage=101 -dLastPage=102 -f $< \
+	 -dFirstPage=105 -dLastPage=106 -f $< \
+	 -dFirstPage=109 -dLastPage=110 -f $< \
+	 -dFirstPage=113 -dLastPage=114 -f $< \
+	 -dFirstPage=117 -dLastPage=118 -f $< \
+	 -dFirstPage=121 -dLastPage=122 -f $< \
+	 -dFirstPage=125 -dLastPage=126 -f $< \
+	 -dFirstPage=129 -dLastPage=130 -f $< \
+	 -dFirstPage=133 -dLastPage=134 -f $< \
+	 -dFirstPage=137 -dLastPage=138 -f $< \
+	 -dFirstPage=141 -dLastPage=142 -f $< \
+	 -dFirstPage=145 -dLastPage=146 -f $< \
+	 -dFirstPage=149 -dLastPage=150 -f $< \
+	 -dFirstPage=153 -dLastPage=154 -f $< \
+	 -dFirstPage=157 -dLastPage=158 -f $< \
+	 -dFirstPage=161 -dLastPage=162 -f $< \
+	 -dFirstPage=165 -dLastPage=166 -f $< \
+	 -dFirstPage=169 -dLastPage=170 -f $< \
+	 -dFirstPage=173 -dLastPage=174 -f $< \
+	 -dFirstPage=177 -dLastPage=178 -f $< \
+	 -dFirstPage=181 -dLastPage=182 -f $< \
+	 -dFirstPage=185 -dLastPage=186 -f $< \
+	 -dFirstPage=189 -dLastPage=190 -f $< \
+	 -dFirstPage=193 -dLastPage=194 -f $< \
+	 -dFirstPage=197 -dLastPage=198 -f $< \
 
 
-book2-a4-175x297: book-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=4   -dLastPage=4   -f $<.pdf \
-	  -dFirstPage=7   -dLastPage=8   -f $<.pdf \
-	  -dFirstPage=11  -dLastPage=12  -f $<.pdf \
-	  -dFirstPage=15  -dLastPage=16  -f $<.pdf \
-	  -dFirstPage=19  -dLastPage=20  -f $<.pdf \
-	  -dFirstPage=23  -dLastPage=24  -f $<.pdf \
-	  -dFirstPage=27  -dLastPage=28  -f $<.pdf \
-	  -dFirstPage=31  -dLastPage=32  -f $<.pdf \
-	  -dFirstPage=35  -dLastPage=36  -f $<.pdf \
-	  -dFirstPage=39  -dLastPage=40  -f $<.pdf \
-	  -dFirstPage=43  -dLastPage=44  -f $<.pdf \
-	  -dFirstPage=47  -dLastPage=48  -f $<.pdf \
-	  -dFirstPage=51  -dLastPage=51  -f $<.pdf \
-	  -dFirstPage=56  -dLastPage=56  -f $<.pdf \
-	  -dFirstPage=59  -dLastPage=59  -f $<.pdf \
-	  -dFirstPage=64  -dLastPage=64  -f $<.pdf \
-	  -dFirstPage=67  -dLastPage=68  -f $<.pdf \
-	  -dFirstPage=71  -dLastPage=72  -f $<.pdf \
-	  -dFirstPage=75  -dLastPage=76  -f $<.pdf \
-	  -dFirstPage=79  -dLastPage=80  -f $<.pdf \
-	  -dFirstPage=83  -dLastPage=84  -f $<.pdf \
-	  -dFirstPage=87  -dLastPage=88  -f $<.pdf \
-	  -dFirstPage=91  -dLastPage=92  -f $<.pdf \
-	  -dFirstPage=95  -dLastPage=96  -f $<.pdf \
-	  -dFirstPage=99  -dLastPage=100 -f $<.pdf \
-	  -dFirstPage=103 -dLastPage=104 -f $<.pdf \
-	  -dFirstPage=107 -dLastPage=108 -f $<.pdf \
-	  -dFirstPage=111 -dLastPage=112 -f $<.pdf \
-	  -dFirstPage=115 -dLastPage=116 -f $<.pdf \
-	  -dFirstPage=119 -dLastPage=120 -f $<.pdf \
-	  -dFirstPage=123 -dLastPage=123 -f $<.pdf \
-	  -dFirstPage=128 -dLastPage=128 -f $<.pdf \
-	  -dFirstPage=131 -dLastPage=132 -f $<.pdf \
-	  -dFirstPage=135 -dLastPage=136 -f $<.pdf \
-	  -dFirstPage=139 -dLastPage=140 -f $<.pdf \
-	  -dFirstPage=143 -dLastPage=143 -f $<.pdf \
-	  -dFirstPage=148 -dLastPage=148 -f $<.pdf \
-	  -dFirstPage=151 -dLastPage=152 -f $<.pdf \
-	  -dFirstPage=155 -dLastPage=155 -f $<.pdf \
-	  -dFirstPage=160 -dLastPage=160 -f $<.pdf \
-          -dFirstPage=163 -dLastPage=163 -f $<.pdf \
+book2-full-a4-175x297.pdf: book-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	  -dFirstPage=3   -dLastPage=4   -f $< \
+	  -dFirstPage=7   -dLastPage=8   -f $< \
+	  -dFirstPage=11  -dLastPage=12  -f $< \
+	  -dFirstPage=15  -dLastPage=16  -f $< \
+	  -dFirstPage=19  -dLastPage=20  -f $< \
+	  -dFirstPage=23  -dLastPage=24  -f $< \
+	  -dFirstPage=27  -dLastPage=28  -f $< \
+	  -dFirstPage=31  -dLastPage=32  -f $< \
+	  -dFirstPage=35  -dLastPage=36  -f $< \
+	  -dFirstPage=39  -dLastPage=40  -f $< \
+	  -dFirstPage=43  -dLastPage=44  -f $< \
+	  -dFirstPage=47  -dLastPage=48  -f $< \
+	  -dFirstPage=51  -dLastPage=52  -f $< \
+	  -dFirstPage=55  -dLastPage=56  -f $< \
+	  -dFirstPage=59  -dLastPage=60  -f $< \
+	  -dFirstPage=63  -dLastPage=64  -f $< \
+	  -dFirstPage=67  -dLastPage=68  -f $< \
+	  -dFirstPage=71  -dLastPage=72  -f $< \
+	  -dFirstPage=75  -dLastPage=76  -f $< \
+	  -dFirstPage=79  -dLastPage=80  -f $< \
+	  -dFirstPage=83  -dLastPage=84  -f $< \
+	  -dFirstPage=87  -dLastPage=88  -f $< \
+	  -dFirstPage=91  -dLastPage=92  -f $< \
+	  -dFirstPage=95  -dLastPage=96  -f $< \
+	  -dFirstPage=99  -dLastPage=100 -f $< \
+	  -dFirstPage=103 -dLastPage=104 -f $< \
+	  -dFirstPage=107 -dLastPage=108 -f $< \
+	  -dFirstPage=111 -dLastPage=112 -f $< \
+	  -dFirstPage=115 -dLastPage=116 -f $< \
+	  -dFirstPage=119 -dLastPage=120 -f $< \
+	  -dFirstPage=123 -dLastPage=124 -f $< \
+	  -dFirstPage=127 -dLastPage=128 -f $< \
+	  -dFirstPage=131 -dLastPage=132 -f $< \
+	  -dFirstPage=135 -dLastPage=136 -f $< \
+	  -dFirstPage=139 -dLastPage=140 -f $< \
+	  -dFirstPage=143 -dLastPage=144 -f $< \
+	  -dFirstPage=147 -dLastPage=148 -f $< \
+	  -dFirstPage=151 -dLastPage=152 -f $< \
+	  -dFirstPage=155 -dLastPage=156 -f $< \
+	  -dFirstPage=159 -dLastPage=160 -f $< \
+          -dFirstPage=163 -dLastPage=164 -f $< \
+          -dFirstPage=167 -dLastPage=168 -f $< \
+          -dFirstPage=171 -dLastPage=172 -f $< \
+          -dFirstPage=175 -dLastPage=176 -f $< \
+          -dFirstPage=179 -dLastPage=180 -f $< \
+          -dFirstPage=183 -dLastPage=184 -f $< \
+          -dFirstPage=187 -dLastPage=188 -f $< \
+          -dFirstPage=191 -dLastPage=192 -f $< \
+          -dFirstPage=195 -dLastPage=196 -f $< \
+          -dFirstPage=199 -dLastPage=200 -f $< \
 
 
-
-book1-a4-175x297-recto: book1-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=1    -dLastPage=1   -f $<.pdf  \
-	  -dFirstPage=3    -dLastPage=3   -f $<.pdf  \
-	  -dFirstPage=5    -dLastPage=5   -f $<.pdf  \
-	  -dFirstPage=7    -dLastPage=7   -f $<.pdf  \
-	  -dFirstPage=9    -dLastPage=9   -f $<.pdf  \
-	  -dFirstPage=11   -dLastPage=11  -f $<.pdf  \
-	  -dFirstPage=13   -dLastPage=13  -f $<.pdf  \
-	  -dFirstPage=15   -dLastPage=15  -f $<.pdf  \
-	  -dFirstPage=17   -dLastPage=17  -f $<.pdf  \
-	  -dFirstPage=19   -dLastPage=19  -f $<.pdf  \
-	  -dFirstPage=21   -dLastPage=21  -f $<.pdf  \
-	  -dFirstPage=23   -dLastPage=23  -f $<.pdf  \
-	  -dFirstPage=25   -dLastPage=25  -f $<.pdf  \
-	  -dFirstPage=27   -dLastPage=27  -f $<.pdf  \
-	  -dFirstPage=29   -dLastPage=29  -f $<.pdf  \
-	  -dFirstPage=31   -dLastPage=31  -f $<.pdf  \
-	  -dFirstPage=33   -dLastPage=33  -f $<.pdf  \
-	  -dFirstPage=35   -dLastPage=35  -f $<.pdf  \
-	  -dFirstPage=37   -dLastPage=37  -f $<.pdf  \
-	  -dFirstPage=39   -dLastPage=39  -f $<.pdf  \
-	  -dFirstPage=41   -dLastPage=41  -f $<.pdf  \
-	  -dFirstPage=43   -dLastPage=43  -f $<.pdf  \
-	  -dFirstPage=45   -dLastPage=45  -f $<.pdf  \
-	  -dFirstPage=47   -dLastPage=47  -f $<.pdf  \
-	  -dFirstPage=49   -dLastPage=49  -f $<.pdf  \
-	  -dFirstPage=51   -dLastPage=51  -f $<.pdf  \
-	  -dFirstPage=53   -dLastPage=53  -f $<.pdf  \
-	  -dFirstPage=55   -dLastPage=55  -f $<.pdf  \
-	  -dFirstPage=57   -dLastPage=57  -f $<.pdf  \
-	  -dFirstPage=59   -dLastPage=59  -f $<.pdf  \
-	  -dFirstPage=61   -dLastPage=61  -f $<.pdf  \
-	  -dFirstPage=63   -dLastPage=63  -f $<.pdf  \
-	  -dFirstPage=65   -dLastPage=65  -f $<.pdf  \
-	  -dFirstPage=67   -dLastPage=67  -f $<.pdf  \
-	  -dFirstPage=69   -dLastPage=69  -f $<.pdf  \
-	  -dFirstPage=71   -dLastPage=71  -f $<.pdf  \
-	  -dFirstPage=73   -dLastPage=73  -f $<.pdf  \
-	  -dFirstPage=75   -dLastPage=75  -f $<.pdf  \
-	  -dFirstPage=77   -dLastPage=77  -f $<.pdf  \
-	  -dFirstPage=79   -dLastPage=79  -f $<.pdf  \
-	  -dFirstPage=81   -dLastPage=81  -f $<.pdf  \
-	  -dFirstPage=83   -dLastPage=83  -f $<.pdf  \
+book1-a4-175x297.pdf: book1-full-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	 -c showpage \
+	 -dFirstPage=1   -dLastPage=100 -f $< \
 
 
-book1-a4-175x297-verso: book1-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=2   -dLastPage=2   -f $<.pdf  \
-	  -dFirstPage=4   -dLastPage=4   -f $<.pdf  \
-	  -dFirstPage=6   -dLastPage=6   -f $<.pdf  \
-	  -dFirstPage=8   -dLastPage=8   -f $<.pdf  \
-	  -dFirstPage=10  -dLastPage=10  -f $<.pdf  \
-	  -dFirstPage=12  -dLastPage=12  -f $<.pdf  \
-	  -dFirstPage=14  -dLastPage=14  -f $<.pdf  \
-	  -dFirstPage=16  -dLastPage=16  -f $<.pdf  \
-	  -dFirstPage=18  -dLastPage=18  -f $<.pdf  \
-	  -dFirstPage=20  -dLastPage=20  -f $<.pdf  \
-	  -dFirstPage=22  -dLastPage=22  -f $<.pdf  \
-	  -dFirstPage=24  -dLastPage=24  -f $<.pdf  \
-	  -dFirstPage=26  -dLastPage=26  -f $<.pdf  \
-	  -dFirstPage=28  -dLastPage=28  -f $<.pdf  \
-	  -dFirstPage=30  -dLastPage=30  -f $<.pdf  \
-	  -dFirstPage=32  -dLastPage=32  -f $<.pdf  \
-	  -dFirstPage=34  -dLastPage=34  -f $<.pdf  \
-	  -dFirstPage=36  -dLastPage=36  -f $<.pdf  \
-	  -dFirstPage=38  -dLastPage=38  -f $<.pdf  \
-	  -dFirstPage=40  -dLastPage=40  -f $<.pdf  \
-	  -dFirstPage=42  -dLastPage=42  -f $<.pdf  \
-	  -dFirstPage=44  -dLastPage=44  -f $<.pdf  \
-	  -dFirstPage=46  -dLastPage=46  -f $<.pdf  \
-	  -dFirstPage=48  -dLastPage=48  -f $<.pdf  \
-	  -dFirstPage=50  -dLastPage=50  -f $<.pdf  \
-	  -dFirstPage=52  -dLastPage=52  -f $<.pdf  \
-	  -dFirstPage=54  -dLastPage=54  -f $<.pdf  \
-	  -dFirstPage=56  -dLastPage=56  -f $<.pdf  \
-	  -dFirstPage=58  -dLastPage=58  -f $<.pdf  \
-	  -dFirstPage=60  -dLastPage=60  -f $<.pdf  \
-	  -dFirstPage=62  -dLastPage=62  -f $<.pdf  \
-	  -dFirstPage=64  -dLastPage=64  -f $<.pdf  \
-	  -dFirstPage=66  -dLastPage=66  -f $<.pdf  \
-	  -dFirstPage=68  -dLastPage=68  -f $<.pdf  \
-	  -dFirstPage=70  -dLastPage=70  -f $<.pdf  \
-	  -dFirstPage=72  -dLastPage=72  -f $<.pdf  \
-	  -dFirstPage=74  -dLastPage=74  -f $<.pdf  \
-	  -dFirstPage=76  -dLastPage=76  -f $<.pdf  \
-	  -dFirstPage=78  -dLastPage=78  -f $<.pdf  \
-	  -dFirstPage=80  -dLastPage=80  -f $<.pdf  \
-	  -dFirstPage=82  -dLastPage=82  -f $<.pdf  \
+book2-a4-175x297.pdf: book2-full-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	 -c showpage \
+	 -dFirstPage=3   -dLastPage=18  -f $< \
+	 -dFirstPage=21  -dLastPage=22  -f $< \
+	 -dFirstPage=25  -dLastPage=26  -f $< \
+	 -dFirstPage=29  -dLastPage=36  -f $< \
+	 -dFirstPage=39  -dLastPage=70  -f $< \
+	 -dFirstPage=73  -dLastPage=88  -f $< \
+	 -dFirstPage=93  -dLastPage=94  -f $< \
+	 -dFirstPage=99  -dLastPage=99  -f $< \
 
 
-book2-a4-175x297-recto: book2-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=1    -dLastPage=1   -f $<.pdf  \
-	  -dFirstPage=3    -dLastPage=3   -f $<.pdf  \
-	  -dFirstPage=5    -dLastPage=5   -f $<.pdf  \
-	  -dFirstPage=7    -dLastPage=7   -f $<.pdf  \
-	  -dFirstPage=9    -dLastPage=9   -f $<.pdf  \
-	  -dFirstPage=11   -dLastPage=11  -f $<.pdf  \
-	  -dFirstPage=13   -dLastPage=13  -f $<.pdf  \
-	  -dFirstPage=15   -dLastPage=15  -f $<.pdf  \
-	  -dFirstPage=17   -dLastPage=17  -f $<.pdf  \
-	  -dFirstPage=19   -dLastPage=19  -f $<.pdf  \
-	  -dFirstPage=21   -dLastPage=21  -f $<.pdf  \
-	  -dFirstPage=23   -dLastPage=23  -f $<.pdf  \
-	  -dFirstPage=25   -dLastPage=25  -f $<.pdf  \
-	  -dFirstPage=27   -dLastPage=27  -f $<.pdf  \
-	  -dFirstPage=29   -dLastPage=29  -f $<.pdf  \
-	  -dFirstPage=31   -dLastPage=31  -f $<.pdf  \
-	  -dFirstPage=33   -dLastPage=33  -f $<.pdf  \
-	  -dFirstPage=35   -dLastPage=35  -f $<.pdf  \
-	  -dFirstPage=37   -dLastPage=37  -f $<.pdf  \
-	  -dFirstPage=39   -dLastPage=39  -f $<.pdf  \
-	  -dFirstPage=41   -dLastPage=41  -f $<.pdf  \
-	  -dFirstPage=43   -dLastPage=43  -f $<.pdf  \
-	  -dFirstPage=45   -dLastPage=45  -f $<.pdf  \
-	  -dFirstPage=47   -dLastPage=47  -f $<.pdf  \
-	  -dFirstPage=49   -dLastPage=49  -f $<.pdf  \
-	  -dFirstPage=51   -dLastPage=51  -f $<.pdf  \
-	  -dFirstPage=53   -dLastPage=53  -f $<.pdf  \
-	  -dFirstPage=55   -dLastPage=55  -f $<.pdf  \
-	  -dFirstPage=57   -dLastPage=57  -f $<.pdf  \
-	  -dFirstPage=59   -dLastPage=59  -f $<.pdf  \
-	  -dFirstPage=61   -dLastPage=61  -f $<.pdf  \
-	  -dFirstPage=63   -dLastPage=63  -f $<.pdf  \
-	  -dFirstPage=65   -dLastPage=65  -f $<.pdf  \
-	  -dFirstPage=67   -dLastPage=67  -f $<.pdf  \
-	  -dFirstPage=69   -dLastPage=69  -f $<.pdf  \
+book1-a4-175x297-recto.pdf: book1-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	  -dFirstPage=1   -dLastPage=1   -f $< \
+	  -dFirstPage=3   -dLastPage=3   -f $< \
+	  -dFirstPage=5   -dLastPage=5   -f $< \
+	  -dFirstPage=7   -dLastPage=7   -f $< \
+	  -dFirstPage=9   -dLastPage=9   -f $< \
+	  -dFirstPage=11  -dLastPage=11  -f $< \
+	  -dFirstPage=13  -dLastPage=13  -f $< \
+	  -dFirstPage=15  -dLastPage=15  -f $< \
+	  -dFirstPage=17  -dLastPage=17  -f $< \
+	  -dFirstPage=19  -dLastPage=19  -f $< \
+	  -dFirstPage=21  -dLastPage=21  -f $< \
+	  -dFirstPage=23  -dLastPage=23  -f $< \
+	  -dFirstPage=25  -dLastPage=25  -f $< \
+	  -dFirstPage=27  -dLastPage=27  -f $< \
+	  -dFirstPage=29  -dLastPage=29  -f $< \
+	  -dFirstPage=31  -dLastPage=31  -f $< \
+	  -dFirstPage=33  -dLastPage=33  -f $< \
+	  -dFirstPage=35  -dLastPage=35  -f $< \
+	  -dFirstPage=37  -dLastPage=37  -f $< \
+	  -dFirstPage=39  -dLastPage=39  -f $< \
+	  -dFirstPage=41  -dLastPage=41  -f $< \
+	  -dFirstPage=43  -dLastPage=43  -f $< \
+	  -dFirstPage=45  -dLastPage=45  -f $< \
+	  -dFirstPage=47  -dLastPage=47  -f $< \
+	  -dFirstPage=49  -dLastPage=49  -f $< \
+	  -dFirstPage=51  -dLastPage=51  -f $< \
+	  -dFirstPage=53  -dLastPage=53  -f $< \
+	  -dFirstPage=55  -dLastPage=55  -f $< \
+	  -dFirstPage=57  -dLastPage=57  -f $< \
+	  -dFirstPage=59  -dLastPage=59  -f $< \
+	  -dFirstPage=61  -dLastPage=61  -f $< \
+	  -dFirstPage=63  -dLastPage=63  -f $< \
+	  -dFirstPage=65  -dLastPage=65  -f $< \
+	  -dFirstPage=67  -dLastPage=67  -f $< \
+	  -dFirstPage=69  -dLastPage=69  -f $< \
+	  -dFirstPage=71  -dLastPage=71  -f $< \
+	  -dFirstPage=73  -dLastPage=73  -f $< \
+	  -dFirstPage=75  -dLastPage=75  -f $< \
+	  -dFirstPage=77  -dLastPage=77  -f $< \
+	  -dFirstPage=79  -dLastPage=79  -f $< \
+	  -dFirstPage=81  -dLastPage=81  -f $< \
+	  -dFirstPage=83  -dLastPage=83  -f $< \
+	  -dFirstPage=85  -dLastPage=85  -f $< \
+	  -dFirstPage=87  -dLastPage=87  -f $< \
+	  -dFirstPage=89  -dLastPage=89  -f $< \
+	  -dFirstPage=91  -dLastPage=91  -f $< \
+	  -dFirstPage=93  -dLastPage=93  -f $< \
+	  -dFirstPage=95  -dLastPage=95  -f $< \
+	  -dFirstPage=97  -dLastPage=97  -f $< \
+	  -dFirstPage=99  -dLastPage=99  -f $< \
+	  -dFirstPage=101 -dLastPage=101 -f $< \
 
 
-book2-a4-175x297-verso: book2-a4-175x297
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@.pdf   \
-	  -dFirstPage=2   -dLastPage=2   -f $<.pdf  \
-	  -dFirstPage=4   -dLastPage=4   -f $<.pdf  \
-	  -dFirstPage=6   -dLastPage=6   -f $<.pdf  \
-	  -dFirstPage=8   -dLastPage=8   -f $<.pdf  \
-	  -dFirstPage=10  -dLastPage=10  -f $<.pdf  \
-	  -dFirstPage=12  -dLastPage=12  -f $<.pdf  \
-	  -dFirstPage=14  -dLastPage=14  -f $<.pdf  \
-	  -dFirstPage=16  -dLastPage=16  -f $<.pdf  \
-	  -dFirstPage=18  -dLastPage=18  -f $<.pdf  \
-	  -dFirstPage=20  -dLastPage=20  -f $<.pdf  \
-	  -dFirstPage=22  -dLastPage=22  -f $<.pdf  \
-	  -dFirstPage=24  -dLastPage=24  -f $<.pdf  \
-	  -dFirstPage=26  -dLastPage=26  -f $<.pdf  \
-	  -dFirstPage=28  -dLastPage=28  -f $<.pdf  \
-	  -dFirstPage=30  -dLastPage=30  -f $<.pdf  \
-	  -dFirstPage=32  -dLastPage=32  -f $<.pdf  \
-	  -dFirstPage=34  -dLastPage=34  -f $<.pdf  \
-	  -dFirstPage=36  -dLastPage=36  -f $<.pdf  \
-	  -dFirstPage=38  -dLastPage=38  -f $<.pdf  \
-	  -dFirstPage=40  -dLastPage=40  -f $<.pdf  \
-	  -dFirstPage=42  -dLastPage=42  -f $<.pdf  \
-	  -dFirstPage=44  -dLastPage=44  -f $<.pdf  \
-	  -dFirstPage=46  -dLastPage=46  -f $<.pdf  \
-	  -dFirstPage=48  -dLastPage=48  -f $<.pdf  \
-	  -dFirstPage=50  -dLastPage=50  -f $<.pdf  \
-	  -dFirstPage=52  -dLastPage=52  -f $<.pdf  \
-	  -dFirstPage=54  -dLastPage=54  -f $<.pdf  \
-	  -dFirstPage=56  -dLastPage=56  -f $<.pdf  \
-	  -dFirstPage=58  -dLastPage=58  -f $<.pdf  \
-	  -dFirstPage=60  -dLastPage=60  -f $<.pdf  \
-	  -dFirstPage=62  -dLastPage=62  -f $<.pdf  \
-	  -dFirstPage=64  -dLastPage=64  -f $<.pdf  \
-	  -dFirstPage=66  -dLastPage=66  -f $<.pdf  \
-	  -dFirstPage=68  -dLastPage=68  -f $<.pdf  \
-	  -dFirstPage=70  -dLastPage=70  -f $<.pdf  \
+book1-a4-175x297-verso.pdf: book1-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	  -dFirstPage=2   -dLastPage=2   -f $< \
+	  -dFirstPage=4   -dLastPage=4   -f $< \
+	  -dFirstPage=6   -dLastPage=6   -f $< \
+	  -dFirstPage=8   -dLastPage=8   -f $< \
+	  -dFirstPage=10  -dLastPage=10  -f $< \
+	  -dFirstPage=12  -dLastPage=12  -f $< \
+	  -dFirstPage=14  -dLastPage=14  -f $< \
+	  -dFirstPage=16  -dLastPage=16  -f $< \
+	  -dFirstPage=18  -dLastPage=18  -f $< \
+	  -dFirstPage=20  -dLastPage=20  -f $< \
+	  -dFirstPage=22  -dLastPage=22  -f $< \
+	  -dFirstPage=24  -dLastPage=24  -f $< \
+	  -dFirstPage=26  -dLastPage=26  -f $< \
+	  -dFirstPage=28  -dLastPage=28  -f $< \
+	  -dFirstPage=30  -dLastPage=30  -f $< \
+	  -dFirstPage=32  -dLastPage=32  -f $< \
+	  -dFirstPage=34  -dLastPage=34  -f $< \
+	  -dFirstPage=36  -dLastPage=36  -f $< \
+	  -dFirstPage=38  -dLastPage=38  -f $< \
+	  -dFirstPage=40  -dLastPage=40  -f $< \
+	  -dFirstPage=42  -dLastPage=42  -f $< \
+	  -dFirstPage=44  -dLastPage=44  -f $< \
+	  -dFirstPage=46  -dLastPage=46  -f $< \
+	  -dFirstPage=48  -dLastPage=48  -f $< \
+	  -dFirstPage=50  -dLastPage=50  -f $< \
+	  -dFirstPage=52  -dLastPage=52  -f $< \
+	  -dFirstPage=54  -dLastPage=54  -f $< \
+	  -dFirstPage=56  -dLastPage=56  -f $< \
+	  -dFirstPage=58  -dLastPage=58  -f $< \
+	  -dFirstPage=60  -dLastPage=60  -f $< \
+	  -dFirstPage=62  -dLastPage=62  -f $< \
+	  -dFirstPage=64  -dLastPage=64  -f $< \
+	  -dFirstPage=66  -dLastPage=66  -f $< \
+	  -dFirstPage=68  -dLastPage=68  -f $< \
+	  -dFirstPage=70  -dLastPage=70  -f $< \
+	  -dFirstPage=72  -dLastPage=72  -f $< \
+	  -dFirstPage=74  -dLastPage=74  -f $< \
+	  -dFirstPage=76  -dLastPage=76  -f $< \
+	  -dFirstPage=78  -dLastPage=78  -f $< \
+	  -dFirstPage=80  -dLastPage=80  -f $< \
+	  -dFirstPage=82  -dLastPage=82  -f $< \
+	  -dFirstPage=84  -dLastPage=84  -f $< \
+	  -dFirstPage=86  -dLastPage=86  -f $< \
+	  -dFirstPage=88  -dLastPage=88  -f $< \
+	  -dFirstPage=90  -dLastPage=90  -f $< \
+	  -dFirstPage=92  -dLastPage=92  -f $< \
+	  -dFirstPage=94  -dLastPage=94  -f $< \
+	  -dFirstPage=96  -dLastPage=96  -f $< \
+	  -dFirstPage=98  -dLastPage=98  -f $< \
+	  -dFirstPage=100 -dLastPage=100 -f $< \
 
+
+book2-a4-175x297-recto.pdf: book2-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	  -dFirstPage=1   -dLastPage=1   -f $< \
+	  -dFirstPage=3   -dLastPage=3   -f $< \
+	  -dFirstPage=5   -dLastPage=5   -f $< \
+	  -dFirstPage=7   -dLastPage=7   -f $< \
+	  -dFirstPage=9   -dLastPage=9   -f $< \
+	  -dFirstPage=11  -dLastPage=11  -f $< \
+	  -dFirstPage=13  -dLastPage=13  -f $< \
+	  -dFirstPage=15  -dLastPage=15  -f $< \
+	  -dFirstPage=17  -dLastPage=17  -f $< \
+	  -dFirstPage=19  -dLastPage=19  -f $< \
+	  -dFirstPage=21  -dLastPage=21  -f $< \
+	  -dFirstPage=23  -dLastPage=23  -f $< \
+	  -dFirstPage=25  -dLastPage=25  -f $< \
+	  -dFirstPage=27  -dLastPage=27  -f $< \
+	  -dFirstPage=29  -dLastPage=29  -f $< \
+	  -dFirstPage=31  -dLastPage=31  -f $< \
+	  -dFirstPage=33  -dLastPage=33  -f $< \
+	  -dFirstPage=35  -dLastPage=35  -f $< \
+	  -dFirstPage=37  -dLastPage=37  -f $< \
+	  -dFirstPage=39  -dLastPage=39  -f $< \
+	  -dFirstPage=41  -dLastPage=41  -f $< \
+	  -dFirstPage=43  -dLastPage=43  -f $< \
+	  -dFirstPage=45  -dLastPage=45  -f $< \
+	  -dFirstPage=47  -dLastPage=47  -f $< \
+	  -dFirstPage=49  -dLastPage=49  -f $< \
+	  -dFirstPage=51  -dLastPage=51  -f $< \
+	  -dFirstPage=53  -dLastPage=53  -f $< \
+	  -dFirstPage=55  -dLastPage=55  -f $< \
+	  -dFirstPage=57  -dLastPage=57  -f $< \
+	  -dFirstPage=59  -dLastPage=59  -f $< \
+	  -dFirstPage=61  -dLastPage=61  -f $< \
+	  -dFirstPage=63  -dLastPage=63  -f $< \
+	  -dFirstPage=65  -dLastPage=65  -f $< \
+	  -dFirstPage=67  -dLastPage=67  -f $< \
+	  -dFirstPage=69  -dLastPage=69  -f $< \
+	  -dFirstPage=71  -dLastPage=71  -f $< \
+	  -dFirstPage=73  -dLastPage=73  -f $< \
+	  -dFirstPage=75  -dLastPage=75  -f $< \
+	  -dFirstPage=77  -dLastPage=77  -f $< \
+	  -dFirstPage=79  -dLastPage=79  -f $< \
+
+
+book2-a4-175x297-verso.pdf: book2-a4-175x297.pdf
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
+	  -dFirstPage=2   -dLastPage=2   -f $< \
+	  -dFirstPage=4   -dLastPage=4   -f $< \
+	  -dFirstPage=6   -dLastPage=6   -f $< \
+	  -dFirstPage=8   -dLastPage=8   -f $< \
+	  -dFirstPage=10  -dLastPage=10  -f $< \
+	  -dFirstPage=12  -dLastPage=12  -f $< \
+	  -dFirstPage=14  -dLastPage=14  -f $< \
+	  -dFirstPage=16  -dLastPage=16  -f $< \
+	  -dFirstPage=18  -dLastPage=18  -f $< \
+	  -dFirstPage=20  -dLastPage=20  -f $< \
+	  -dFirstPage=22  -dLastPage=22  -f $< \
+	  -dFirstPage=24  -dLastPage=24  -f $< \
+	  -dFirstPage=26  -dLastPage=26  -f $< \
+	  -dFirstPage=28  -dLastPage=28  -f $< \
+	  -dFirstPage=30  -dLastPage=30  -f $< \
+	  -dFirstPage=32  -dLastPage=32  -f $< \
+	  -dFirstPage=34  -dLastPage=34  -f $< \
+	  -dFirstPage=36  -dLastPage=36  -f $< \
+	  -dFirstPage=38  -dLastPage=38  -f $< \
+	  -dFirstPage=40  -dLastPage=40  -f $< \
+	  -dFirstPage=42  -dLastPage=42  -f $< \
+	  -dFirstPage=44  -dLastPage=44  -f $< \
+	  -dFirstPage=46  -dLastPage=46  -f $< \
+	  -dFirstPage=48  -dLastPage=48  -f $< \
+	  -dFirstPage=50  -dLastPage=50  -f $< \
+	  -dFirstPage=52  -dLastPage=52  -f $< \
+	  -dFirstPage=54  -dLastPage=54  -f $< \
+	  -dFirstPage=56  -dLastPage=56  -f $< \
+	  -dFirstPage=58  -dLastPage=58  -f $< \
+	  -dFirstPage=60  -dLastPage=60  -f $< \
+	  -dFirstPage=62  -dLastPage=62  -f $< \
+	  -dFirstPage=64  -dLastPage=64  -f $< \
+	  -dFirstPage=66  -dLastPage=66  -f $< \
+	  -dFirstPage=68  -dLastPage=68  -f $< \
+	  -dFirstPage=70  -dLastPage=70  -f $< \
+	  -dFirstPage=72  -dLastPage=72  -f $< \
+	  -dFirstPage=74  -dLastPage=74  -f $< \
+	  -dFirstPage=76  -dLastPage=76  -f $< \
+	  -dFirstPage=78  -dLastPage=78  -f $< \
+	  -dFirstPage=80  -dLastPage=80  -f $< \
 
