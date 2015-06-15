@@ -182,7 +182,7 @@ right = \relative c'' {
   d'16 a bes d ees, d' c bes
   a g a c f, ees' d c
   
-  <<{ c8[ bes' d, ees]
+  <<{ d8[ bes' d, ees]
       f4 g
       f8 bes4 aes16 g
       <ees g>8 <d f> } \\
