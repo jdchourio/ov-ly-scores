@@ -20,7 +20,7 @@ right = \relative c''' {
     e8 d a' g \appoggiatura c,4 b2-\prall
     
     c2 r4 c
-    c8 b e d \appoggiatura g,4 f2
+    c8 b e d \appoggiatura g,8 f2
     e-\prall r4 c'
     c16( b e d) d2 f,4
 
@@ -52,13 +52,13 @@ right = \relative c''' {
     \repeat unfold 2 { r8 g16 a b[ c d e] e8 d r4 }
     r8 g,16 a b[ c d e] e8 d4 d8
     \repeat unfold 2 { 
-      \acciaccatura e d[ c16 b] \acciaccatura d8 b[ a16 g] \acciaccatura a8 g[ fis16 e]
+      \acciaccatura e d[ c16 b] \acciaccatura c8 b[ a16 g] \acciaccatura a8 g[ fis16 e]
     } \alternative { {a8 d } { a4-\prall } }
     g1-\fermata
   }
   
   \repeat volta 2 {
-    d'4 ~ d16 b c d b4 ~ b16 g a b
+    d'4 ~ d16 b c d \once \tieUp b4 ~ b16 g a b
     g2-\parenthesize-\prall r4 f'4
     f16( e a g) g2 bes,4
     bes16( a d c) c2 f4
@@ -134,7 +134,8 @@ left = \relative c' {
     }
     
     <<{ g2 } \\ { e4 c}>> r4 <d fis>
-    \repeat unfold 2 { g <b, g'> <c g'> d }
+    g <b, g'> <c g'> d
+    r <b g'> <c g'> d 
     g,1-\fermata
   }
   
