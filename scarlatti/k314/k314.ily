@@ -100,7 +100,7 @@ right = \relative c''' {
     b d
     
     a4 <ais g'> <b fis'> <cis e>
-    <<{ d1 ~ d2 cis } \\ { fis,2 g1 }>>
+    <<{ d1 ~ d2 cis } \\ { s2 fis, g1 }>>
     fis2 b
     
     g b
@@ -113,7 +113,7 @@ right = \relative c''' {
     d b fis b d b fis eis
     cis' ais fis ais cis fis, cis cis'
     
-    d fis, d fis d' dis, d fis
+    d fis, d fis d' fis, d fis
     d' gis, d gis d' gis, d gis
     d' gis, d gis d' gis, e gis
     d' gis, f gis d' a f a
@@ -158,7 +158,7 @@ right = \relative c''' {
     }
     
     \repeat unfold 2 {
-      d'2 e f g a
+      d'2 e fis g a
       b8 d fis, a g b d, fis
       e g fis e d c b a
     } \alternative {
@@ -252,7 +252,7 @@ left = \relative c'' {
     g d cis d g d cis d
     
     fis g e fis d e cis d
-    r b ais b d b a b
+    r b ais b d b ais b
     e b ais b e b ais b
     d b ais b d b ais b
     
