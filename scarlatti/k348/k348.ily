@@ -23,7 +23,7 @@ right = \relative c'' {
     
     R2. \oneVoice
     r16 d e fis g d b g d c' b a
-    b c e fis g d b g d c' b a
+    b d e fis g d b g d c' b a
     
     \voiceOne b2 c4
     b2 c4 \oneVoice
@@ -148,7 +148,7 @@ left = \relative c {
     
     \repeat unfold 2 {
       b'16 dis fis b  \cstr \voiceTwo dis fis dis b e g e b \cstl \oneVoice }
-    a, c dis fis \cstr \voiceTwo dis' fis dis a dis fis d a \cstl \oneVoice
+    a, c dis fis \cstr \voiceTwo dis' fis dis a dis fis dis a \cstl \oneVoice
     
     g,4 <g' e'> <fis dis'>
     e16 \cstr \voiceTwo e' dis e g e dis e \cstl \oneVoice e, \cstr \voiceTwo d' c b \cstl \oneVoice
