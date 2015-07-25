@@ -357,6 +357,11 @@ book-a4-175x297.pdf:
 	  -c showpage								\
 	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x2)/k343-$(A4_175x2).pdf			\
+	  -f pdf/2.19.20/$(A4_175x2)/k347-$(A4_175x2).pdf			\
+	  -f pdf/2.19.20/$(A4_175x2)/k348-$(A4_175x2).pdf			\
+	  -f pdf/2.19.20/$(A4_175x4)/k351-$(A4_175x4).pdf			\
+	  -f pdf/2.19.20/$(A4_175x3)/k358-$(A4_175x3).pdf			\
+	  -c showpage								\
 	  -f pdf/2.19.20/$(A4_175x4)/k491-$(A4_175x4).pdf			\
 	  -c showpage								\
 	  -c showpage								\
@@ -466,6 +471,9 @@ book1-full-a4-175x297.pdf: book-a4-175x297.pdf
 	 -dFirstPage=205 -dLastPage=206 -f $< \
 	 -dFirstPage=209 -dLastPage=210 -f $< \
 	 -dFirstPage=213 -dLastPage=214 -f $< \
+	 -dFirstPage=217 -dLastPage=218 -f $< \
+	 -dFirstPage=221 -dLastPage=222 -f $< \
+	 -dFirstPage=225 -dLastPage=226 -f $< \
 
 
 book2-full-a4-175x297.pdf: book-a4-175x297.pdf
@@ -524,13 +532,16 @@ book2-full-a4-175x297.pdf: book-a4-175x297.pdf
           -dFirstPage=207 -dLastPage=208 -f $< \
           -dFirstPage=211 -dLastPage=212 -f $< \
           -dFirstPage=215 -dLastPage=216 -f $< \
+          -dFirstPage=219 -dLastPage=220 -f $< \
+          -dFirstPage=223 -dLastPage=224 -f $< \
+          -dFirstPage=227 -dLastPage=228 -f $< \
 
 
 book1-a4-175x297.pdf: book1-full-a4-175x297.pdf
 	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$@ \
 	 -c showpage \
 	 -dFirstPage=1   -dLastPage=48  -f $< \
-	 -dFirstPage=57  -dLastPage=108 -f $< \
+	 -dFirstPage=57  -dLastPage=114 -f $< \
 
 
 book2-a4-175x297.pdf: book2-full-a4-175x297.pdf
@@ -540,10 +551,10 @@ book2-a4-175x297.pdf: book2-full-a4-175x297.pdf
 	 -dFirstPage=21  -dLastPage=22  -f $< \
 	 -dFirstPage=25  -dLastPage=26  -f $< \
 	 -dFirstPage=29  -dLastPage=36  -f $< \
-	 -dFirstPage=39  -dLastPage=78  -f $< \
-	 -dFirstPage=81  -dLastPage=96  -f $< \
-	 -dFirstPage=101 -dLastPage=102 -f $< \
-	 -dFirstPage=107 -dLastPage=107 -f $< \
+	 -dFirstPage=39  -dLastPage=82  -f $< \
+	 -dFirstPage=85  -dLastPage=102 -f $< \
+	 -dFirstPage=107 -dLastPage=108 -f $< \
+	 -dFirstPage=113 -dLastPage=113 -f $< \
 
 
 book1-a4-175x297-recto.pdf: book1-a4-175x297.pdf
@@ -599,6 +610,9 @@ book1-a4-175x297-recto.pdf: book1-a4-175x297.pdf
 	  -dFirstPage=97  -dLastPage=97  -f $< \
 	  -dFirstPage=99  -dLastPage=99  -f $< \
 	  -dFirstPage=101 -dLastPage=101 -f $< \
+	  -dFirstPage=103 -dLastPage=103 -f $< \
+	  -dFirstPage=105 -dLastPage=105 -f $< \
+	  -dFirstPage=107 -dLastPage=107 -f $< \
 
 
 book1-a4-175x297-verso.pdf: book1-a4-175x297.pdf
@@ -653,6 +667,9 @@ book1-a4-175x297-verso.pdf: book1-a4-175x297.pdf
 	  -dFirstPage=96  -dLastPage=96  -f $< \
 	  -dFirstPage=98  -dLastPage=98  -f $< \
 	  -dFirstPage=100 -dLastPage=100 -f $< \
+	  -dFirstPage=102 -dLastPage=102 -f $< \
+	  -dFirstPage=104 -dLastPage=104 -f $< \
+	  -dFirstPage=106 -dLastPage=106 -f $< \
 
 
 book2-a4-175x297-recto.pdf: book2-a4-175x297.pdf
@@ -701,6 +718,9 @@ book2-a4-175x297-recto.pdf: book2-a4-175x297.pdf
 	  -dFirstPage=83  -dLastPage=83  -f $< \
 	  -dFirstPage=85  -dLastPage=85  -f $< \
 	  -dFirstPage=87  -dLastPage=87  -f $< \
+	  -dFirstPage=89  -dLastPage=89  -f $< \
+	  -dFirstPage=91  -dLastPage=91  -f $< \
+	  -dFirstPage=93  -dLastPage=93  -f $< \
 
 
 book2-a4-175x297-verso.pdf: book2-a4-175x297.pdf
@@ -749,4 +769,7 @@ book2-a4-175x297-verso.pdf: book2-a4-175x297.pdf
 	  -dFirstPage=84  -dLastPage=84  -f $< \
 	  -dFirstPage=86  -dLastPage=86  -f $< \
 	  -dFirstPage=88  -dLastPage=88  -f $< \
+	  -dFirstPage=90  -dLastPage=90  -f $< \
+	  -dFirstPage=92  -dLastPage=92  -f $< \
+	  -dFirstPage=94  -dLastPage=94  -f $< \
 
