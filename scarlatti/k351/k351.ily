@@ -24,9 +24,10 @@ right = \relative c'' {
   d bes'8*2/3 a d c4 bes-\prall
   a bes8*2/3 a d c4 bes-\parenthesize-\prall
 
-  \repeat unfold 2 {
-    bes bes' c, ~ c8*2/3 d ees
-    d[ ees f] ees[ d c] bes4 a-\prall }
+  c bes' c, ~ c8*2/3 d ees
+  d[ ees f] ees[ d c] bes4 a-\prall
+  bes bes' c, ~ c8*2/3 d ees
+  d[ ees f] ees[ d c] bes4 a-\prall
   \bar "||" \time 3/8
   
   bes8^"Allegrissimo" f bes
@@ -36,7 +37,7 @@ right = \relative c'' {
   d c ees
   d f bes,
   bes a c
-  d bes d
+  c bes d
   d c ees
   d4 f8
   f c ees
@@ -83,9 +84,10 @@ right = \relative c'' {
   d bes'8*2/3 a d c4 bes-\parenthesize\prall
   a bes8*2/3 a d c4 bes-\parenthesize-\prall
 
-  \repeat unfold 2 {
-    bes bes' c, ~ c8*2/3 d ees
-    d[ ees f] ees[ d c] bes4 a-\parenthesize\prall }
+  c bes' c, ~ c8*2/3 d ees
+  d[ ees f] ees[ d c] bes4 a\prall
+  bes bes' c, ~ c8*2/3 d ees
+  d[ ees f] g[ ees c] bes4 a-\parenthesize\prall 
   \bar "||" \time 3/8
   
   bes8^"[Allegrissimo]" f bes
@@ -151,9 +153,10 @@ right = \relative c'' {
   d bes'8*2/3 a d c4 bes-\prall
   a bes8*2/3 a d c4 bes-\parenthesize-\prall
 
-  \repeat unfold 2 {
-    bes bes' c, ~ c8*2/3 d ees
-    d[ ees f] ees[ d c] bes4 a-\prall }
+  c bes' c, ~ c8*2/3 d ees
+  d[ ees f] ees[ d c] bes4 a-\prall
+  bes bes' c, ~ c8*2/3 d ees
+  d[ ees f] g[ ees c] bes4 a-\prall
   \bar "||"
   
   bes4^"Allegrissimo" bes' bes d
@@ -296,7 +299,7 @@ left = \relative c {
   a g f
   bes c c, \bar "||" \time 2/2
   
-  bes2 r4 bes'
+  f2 r4 bes
   bes ees, f a
   bes2 r4 g
   g ees f f,
@@ -312,7 +315,7 @@ left = \relative c {
   bes ees, f f,
   \bar "||" \time 3/8
   
-  bes'4 bes8
+  bes'4 d8
   c4 ees8
   d4 bes8
   a f a
