@@ -138,7 +138,7 @@ pdf_others_none = Suite_jeremiah_clarke trio_vivaldi gavotte_campion
 pdf_others = $(pdf_others_none:%=$(PDF)/$(NONE)/%.pdf)
 
 # total
-pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(mozart) $(pdf_others)
+pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(pdf_mozart) $(pdf_others)
 
 
 #
