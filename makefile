@@ -71,7 +71,8 @@ pdf_bach_A4x3 = bwv964-allegro bwv971-concerto bwv971-andante bwv971-allegro
 pdf_bach_A4x4 = bwv964-fuga
 pdf_bach_A4x6 = bwv964-fuga
 pdf_bach_none = bwv964-adagio bwv964-allegro bwv964-fuga
-pdf_bach_A4_175x2 = bwv964-adagio bwv964-andante
+pdf_bach_A4_175x1 = invention10
+pdf_bach_A4_175x2 = bwv964-adagio bwv964-andante invention01 invention02 invention03 invention04 invention05 invention06 invention07 invention08 invention09 invention11 invention12 invention13 invention14 invention15 Sinfonia01 Sinfonia02 Sinfonia03 Sinfonia04 Sinfonia05 Sinfonia06 Sinfonia07 Sinfonia08 Sinfonia09 Sinfonia10 Sinfonia11 Sinfonia12 Sinfonia13 Sinfonia14 Sinfonia15
 pdf_bach_A4_175x3 = bwv964-allegro bwv805-duetto4
 pdf_bach_A4_175x4 = bwv971-concerto bwv971-andante bwv971-allegro bwv802-duetto1 bwv803-duetto2 bwv804-duetto3
 pdf_bach_A4_175x6 = bwv964-fuga
@@ -84,6 +85,7 @@ pdf_bach = $(pdf_bach_A3x1:%=$(PDF)/$(A3x1)/%-$(A3x1)l.pdf) \
 	   $(pdf_bach_A4x3:%=$(PDF)/$(A4x3)/%-$(A4x3).pdf)  \
 	   $(pdf_bach_A4x4:%=$(PDF)/$(A4x4)/%-$(A4x4).pdf)  \
 	   $(pdf_bach_A4x6:%=$(PDF)/$(A4x6)/%-$(A4x6).pdf)  \
+	   $(pdf_bach_A4_175x1:%=$(PDF)/$(A4_175x1)/%-$(A4_175x1).pdf)  \
 	   $(pdf_bach_A4_175x2:%=$(PDF)/$(A4_175x2)/%-$(A4_175x2).pdf)  \
 	   $(pdf_bach_A4_175x3:%=$(PDF)/$(A4_175x3)/%-$(A4_175x3).pdf)  \
 	   $(pdf_bach_A4_175x4:%=$(PDF)/$(A4_175x4)/%-$(A4_175x4).pdf)  \
@@ -124,29 +126,37 @@ pdf_rameau = $(pdf_rameau_A3x2:%=$(PDF)/$(A3x2)/%-$(A3x2).pdf) \
 pdf_couperin_none = barricades
 pdf_couperin = $(pdf_couperin_none:%=$(PDF)/$(NONE)/%.pdf)
 
+# mozart
+pdf_mozart_A4_175x3 = k545-3
+pdf_mozart_A4_175x4 = k545-1 k545-2
+pdf_mozart = $(pdf_mozart_A4x3:%=$(PDF)/$(A4x3)/%-$(A4x3).pdf)  \
+	     $(pdf_mozart_A4x4:%=$(PDF)/$(A4x4)/%-$(A4x4).pdf)
+
 
 # autres
 pdf_others_none = Suite_jeremiah_clarke trio_vivaldi gavotte_campion
 pdf_others = $(pdf_others_none:%=$(PDF)/$(NONE)/%.pdf)
 
 # total
-pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(pdf_others)
+pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) $(mozart) $(pdf_others)
 
 
 #
 # chemins vers les sources
 #
 scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k82 k87 k93 k95 k99 k100 k102 k185 k293 k308 k314 k322 k333 k341 k343 k347 k348 k351 k358 k373 k417 k451 k452 k491
-bach_dirs = bwv964 bwv971-concerto_italien bwv802-duetto1 bwv803-duetto2 bwv804-duetto3 bwv805-duetto4
+bach_dirs = bwv964 bwv971-concerto_italien bwv802-duetto1 bwv803-duetto2 bwv804-duetto3 bwv805-duetto4 inventions sinfonias
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
 couperin_dirs = barricades
+mozart_dirs = k545
 
 VPATH = $(scarlatti_dirs:%=$(CURDIR)/scarlatti/%) \
 	$(bach_dirs:%=$(CURDIR)/bach/%)		  \
 	$(rameau_dirs:%=$(CURDIR)/rameau/%)	  \
 	$(couperin_dirs:%=$(CURDIR)/couperin/%)	  \
 	$(purcell_dirs:%=$(CURDIR)/purcell/%)	  \
+	$(mozart_dirs:%=$(CURDIR)/mozart/%)	  \
 	$(CURDIR)/others
 
 #
