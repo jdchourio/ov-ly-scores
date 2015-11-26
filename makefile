@@ -129,8 +129,8 @@ pdf_couperin = $(pdf_couperin_none:%=$(PDF)/$(NONE)/%.pdf)
 # mozart
 pdf_mozart_A4_175x3 = k545-3
 pdf_mozart_A4_175x4 = k545-1 k545-2
-pdf_mozart = $(pdf_mozart_A4x3:%=$(PDF)/$(A4x3)/%-$(A4x3).pdf)  \
-	     $(pdf_mozart_A4x4:%=$(PDF)/$(A4x4)/%-$(A4x4).pdf)
+pdf_mozart = $(pdf_mozart_A4_175x3:%=$(PDF)/$(A4_175x3)/%-$(A4_175x3).pdf)  \
+	     $(pdf_mozart_A4_175x4:%=$(PDF)/$(A4_175x4)/%-$(A4_175x4).pdf)
 
 
 # autres
@@ -258,6 +258,43 @@ $(PDF)/*/bwv802-duetto1*.pdf  : bwv802-duetto1.ily
 $(PDF)/*/bwv803-duetto2*.pdf  : bwv803-duetto2.ily
 $(PDF)/*/bwv804-duetto3*.pdf  : bwv804-duetto3.ily
 $(PDF)/*/bwv805-duetto4*.pdf  : bwv805-duetto4.ily
+
+$(PDF)/*/invention01*.pdf  : invention01.ily
+$(PDF)/*/invention02*.pdf  : invention02.ily
+$(PDF)/*/invention03*.pdf  : invention03.ily
+$(PDF)/*/invention04*.pdf  : invention04.ily
+$(PDF)/*/invention05*.pdf  : invention05.ily
+$(PDF)/*/invention06*.pdf  : invention06.ily
+$(PDF)/*/invention07*.pdf  : invention07.ily
+$(PDF)/*/invention08*.pdf  : invention08.ily
+$(PDF)/*/invention09*.pdf  : invention09.ily
+$(PDF)/*/invention10*.pdf  : invention10.ily
+$(PDF)/*/invention11*.pdf  : invention11.ily
+$(PDF)/*/invention12*.pdf  : invention12.ily
+$(PDF)/*/invention13*.pdf  : invention13.ily
+$(PDF)/*/invention14*.pdf  : invention14.ily
+$(PDF)/*/invention15*.pdf  : invention15.ily
+
+$(PDF)/*/Sinfonia01*.pdf  : Sinfonia01.ily
+$(PDF)/*/Sinfonia02*.pdf  : Sinfonia02.ily
+$(PDF)/*/Sinfonia03*.pdf  : Sinfonia03.ily
+$(PDF)/*/Sinfonia04*.pdf  : Sinfonia04.ily
+$(PDF)/*/Sinfonia05*.pdf  : Sinfonia05.ily
+$(PDF)/*/Sinfonia06*.pdf  : Sinfonia06.ily
+$(PDF)/*/Sinfonia07*.pdf  : Sinfonia07.ily
+$(PDF)/*/Sinfonia08*.pdf  : Sinfonia08.ily
+$(PDF)/*/Sinfonia09*.pdf  : Sinfonia09.ily
+$(PDF)/*/Sinfonia10*.pdf  : Sinfonia10.ily
+$(PDF)/*/Sinfonia11*.pdf  : Sinfonia11.ily
+$(PDF)/*/Sinfonia12*.pdf  : Sinfonia12.ily
+$(PDF)/*/Sinfonia13*.pdf  : Sinfonia13.ily
+$(PDF)/*/Sinfonia14*.pdf  : Sinfonia14.ily
+$(PDF)/*/Sinfonia15*.pdf  : Sinfonia15.ily
+
+# mozart
+$(PDF)/*/k545-1*.pdf   : k545-1.ily
+$(PDF)/*/k545-2*.pdf   : k545-2.ily
+$(PDF)/*/k545-3*.pdf   : k545-3.ily
 
 # scarlatti
 $(PDF)/*/k1*.pdf   : k1.ily
