@@ -5,5 +5,5 @@
 
 breaks = {}
 
-#(set-global-staff-size 15.4)
+#(set-global-staff-size 15.9)
 \include "bwv971-allegro.ily"

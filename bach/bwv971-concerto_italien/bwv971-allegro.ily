@@ -13,7 +13,7 @@ global = {
 right = \relative c'' {
   \global
   
-  f4 f,2 g8 a
+  f4^\markup { \italic "forte" } f,2 g8 a
   bes^\markup { \musicglyph #"scripts.segno" }  c d e f g a bes
   <<{ c4 <a c> <g c> <g bes>
       <f a>2 <e g> } \\
@@ -31,7 +31,7 @@ right = \relative c'' {
   
   c8( d e) bes'-. a( bes c) f-.
   e( f g) bes-. a( bes c) ees,-.
-  d(e f) c'-. bes a g f
+  d( e! f) c'-. bes a g f
   e f g e c2
   
   f4 f,2 g8 a
@@ -57,15 +57,15 @@ right = \relative c'' {
       f4 <c f> q <bes e>
       <a c>2 }>> r2
   
-  r8 a'(-\markup { \italic "piano" } bes c bes a g f)
+  r8 a'(^\markup { \italic "piano" } bes c bes a g f)
   ees' c d4 ~ d8 bes a bes
-  e bes f' bes,g' bes, a g
+  e! bes f' bes,g' bes, a g
   a c bes a bes a g a
   
-  f4 a-\markup { "forte" } c a
+  f4 a^\markup { "forte" } c a
   f bes8 c d4 f,
   g bes e c
-  f8 e f4 ~ f8 c[-\markup { \italic "piano" } bes c]
+  f8 e f4 ~ f8 c[^\markup { \italic "piano" } bes c]
   
   a' bes a g f e d c
   b g' b, a g d' e f
@@ -88,7 +88,7 @@ right = \relative c'' {
   b f c' f, d' f, e d
   e g f e f e d e
   
-  c4 e-\markup { \italic "forte" } g e
+  c4 e^\markup { \italic "forte" } g e
   c f8 g a4 c,
   d f b g
   c g g' f
@@ -120,7 +120,7 @@ right = \relative c'' {
     { r8 c4 c8 r c b a 
       g4 f e2 ~ e4 g g f e2 }>> r2
   
-  g8-\markup { \italic "piano" } e c e g e bes' e,
+  g8^\markup { \italic "piano" } e c e g e bes' e,
   a f c f a f c' f,
   g e c e g e bes' e,
   a f c f a f bes f
@@ -130,13 +130,13 @@ right = \relative c'' {
     d bes f bes d bes f' bes, }
   
   \repeat unfold 2 {
-    g' cis, bes cis g' cis, g' d
+    g' cis, bes! cis g' cis, g' d
     g e a, e' g e g d }
   
-  g cis, bes cis g' cis, g' d
+  g cis, bes! cis g' cis, g' d
   g f g e f e d e
   f g a4 a, cis
-  d8 d[-\markup { \italic "forte" } c bes] a g f e
+  d8 d[^\markup { \italic "forte" } c bes] a g f e
 
   d e f g a b cis d
   e f g e f e d e
@@ -194,15 +194,15 @@ right = \relative c'' {
   \change Staff = "left" \voiceOne 
   f g a b cis \change Staff = "right" \oneVoice d e f
   g a b cis d e f g
+  <<{ a4 <f a> <e a> <e g> } \\ { r4 d cis a }>>
+  \voiceOne <a d f>2 <cis e>
   
-  <<{ a4 <f a> <e a> <e g> <d f>2 e } \\
-    { r4 d cis a a2 cis }>>
-  
-  f8-\markup { \italic "piano" } g f e d c b a
+  f8^\markup { \italic "piano" } g f e d c b a
   g f' g, f g b c d
   e f e d c b a g
   f e' f, e f a b c
   d e d c b a gis fis
+  \oneVoice
   
   <<{ r4 gis8 fis gis4 a
       b1 ~ b4 d8 c d4 f ~
@@ -214,7 +214,7 @@ right = \relative c'' {
       b e2 d8 c b4 r r2 }>>
   
   <<{ d1 ~ d2. } \\ { r4 gis,8 fis gis4 b e,2. }>> r4
-  r8 e-\markup { \italic "forte" } fis gis a b c d
+  r8 e^\markup { \italic "forte" } fis gis a b c d
   <<{ e4 <c e> <b e> <b d> <a c>2 <gis b> } \\ 
     { r4 a gis e e2 e }>>
   
@@ -240,7 +240,7 @@ right = \relative c'' {
       <f a>2 <e g> } \\
     { s4 f e c c2 c ~ c8 }>>
   
-  a-\markup { \italic "piano" } f a c a ees' a,
+  a^\markup { \italic "piano" } f a c a ees' a,
   d bes f bes d bes f' bes,
   c a f a c a ees' a,
   d bes f bes d2 ~ 
@@ -257,10 +257,10 @@ right = \relative c'' {
   
   f8 a( bes c bes a g f)
   ees' c d4 ~ d8 bes a bes
-  e bes f' bes, g' bes, a g
+  e! bes f' bes, g' bes, a g
   a c bes a bes a g a
   
-  f4 a-\markup { \italic "forte" } c a 
+  f4 a^\markup { \italic "forte" } c a 
   f bes8 c d4 f,
   g bes e c
   f8 a, g f d' c bes c
@@ -283,7 +283,7 @@ right = \relative c'' {
   bes^\markup { \bold "D.C" } c d e f g a bes
   \bar "||" 
   
-  <<{ c,4\rest^\markup { \musicglyph #"scripts.coda" } <f, a c> <f a> g8 f f1-\fermata } \\
+  <<{ c,4\rest^\markup { \musicglyph #"scripts.coda" } <f, a c> <f a> <g e>8 f f1-\fermata } \\
     { f4 c c bes <a c>1 }>>
   \bar "|."
 }
@@ -291,7 +291,7 @@ right = \relative c'' {
 left = \relative c' {
   \global
   
-  <<{ a2-\markup { \italic "forte" } c } \\ { f, e }>>
+  <<{ a2 c } \\ { f, e }>>
   <<{ f4 bes a g f8 r r4 r2 } \\
     { d2 c4 bes 
       a8 f g a bes c d e }>>
@@ -329,17 +329,17 @@ left = \relative c' {
   a8 g a bes c4 c,
   f4 g8 a bes c d e
   
-  f4-\markup { \italic "forte" } a c a
+  f4_\markup { \italic "forte" } a c a
   f bes8 c d4 f,
   g bes e c
   f c a c
   
-  f,8 a[(-\markup { \italic "piano"} bes c] bes a g f)
+  f,8 \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur a[(_\markup { \italic "piano"} bes c] bes a g f)
   ees' c d4 ~ d8 bes a bes
-  e bes f' bes, g' bes, a g
+  e! bes f' bes, g' bes, a g
   a c bes a bes a g a
   
-  f4 a-\markup { \italic "forte" } c f ~
+  f4 a_\markup { \italic "forte" } c f ~
   f8 e d c b a g f
   e4 g c e ~ 
   e8 d c b a g f e
@@ -357,24 +357,26 @@ left = \relative c' {
   d f b g
   c g e g
   
-  c,8 e[(-\markup { \italic "piano" } f g] f e d c)
+  c,8 \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur e[(_\markup { \italic "piano" } f g] f e d c)
   bes' g a4 ~ a8 f e f
   b f c' f, d' f, e d
   e g f e f e d e
   
-  c4 e-\markup { \italic "forte" } g bes
+  c4 e_\markup { \italic "forte" } g bes
   a c a f
   b, d f a
   g b g e
   a, c e g
   f a f d
   
+  \stemUp
   g,8-. g'( f e f e d e)
   g,-. f'( e d e d c d)
   g,-. e'( d c d c b c)
   g-. d'( c b c b a b)
   g-. c( b a b a g a)
   
+  \stemNeutral
   b c d e f g a b
   c4 r b r
   <<{ r f' e d c8 r r4 r2 } \\
@@ -389,7 +391,7 @@ left = \relative c' {
   b g c8 d e f
   g f e f g4 g,
   
-  c,8 c'[-\markup { \italic "piano" } d e] f g a b
+  c,8 c'[_\markup { \italic "piano" } d e] f g a b
   c4 g e c
   c' a f c
   c' g e c
@@ -402,12 +404,12 @@ left = \relative c' {
   
   \repeat unfold 2 {
     e'4 g8 f e4 d
-    cis8 d cis b a b cis d }
+    cis8 d cis b a b! cis! d }
   
   e f g a bes4 d,
   cis8 a b cis d e f g
   a g f g a4 a,
-  d,8 d'[-\markup { \italic "forte" } e f] g a b cis
+  d,8 d'[_\markup { \italic "forte" } e f] g a b cis
   
   d4 d,,2 e8 f
   g a b cis d e f g 
@@ -415,7 +417,7 @@ left = \relative c' {
   f2-\upprall e
   
   \repeat unfold 2 {
-    g8 d cis d f d f d
+    g8 d cis d g d f d
     e d cis d e d f d }
   g d f d e d cis b
   
@@ -450,13 +452,14 @@ left = \relative c' {
   
   r8 f g a b cis d e
   f d e f g a b cis
-  \clef treble d e f g a f g a
+  \change Staff = "right" \voiceTwo d e f g a f g a
   d,4 a' f d
   
-  b d b g
-  c g' e c
-  \clef bass a c a f
-  b f' d b
+  \change Staff = "left" \oneVoice b d b g
+  \change Staff = "right" \voiceTwo c g' e c
+  \change Staff = "left" \oneVoice a c a f
+  \change Staff = "right" \voiceTwo b f' d b
+  \change Staff = "left" \oneVoice 
   
   gis8 d' e, d e d' fis, d'
   gis, d' gis, fis gis d' a d
@@ -510,12 +513,12 @@ left = \relative c' {
   g,4 bes e c
   f c a c
   
-  f,8 a,[-\markup { \italic "piano" } bes c] bes a g f
+  f,8 a,[_\markup { \italic "piano" } bes c] bes a g f
   ees' c d4 ~ d8 bes a bes
-  e bes f' bes, g' bes, a g
+  e! bes f' bes, g' bes, a g
   a c bes a bes a g a
   
-  f4 a-\markup { \italic "forte " } c ees
+  f4 a_\markup { \italic "forte " } c ees
   d f d bes
   e, g bes d
   c e c a
