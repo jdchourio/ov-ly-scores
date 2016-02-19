@@ -144,7 +144,7 @@ pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) 
 #
 # chemins vers les sources
 #
-scarlatti_dirs = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k82 k87 k93 k95 k99 k100 k102 k185 k293 k308 k314 k322 k333 k341 k343 k347 k348 k351 k358 k373 k417 k451 k452 k491
+scarlatti_dirs = k001 k027 k030 k035 k037 k041 k048 k053 k054 k055 k056 k058 k059 k061 k062 k063 k064 k067 k077 k082 k087 k093 k095 k099 k100 k102 k185 k293 k308 k314 k322 k333 k341 k343 k347 k348 k351 k358 k373 k417 k451 k452 k491
 bach_dirs = bwv964 bwv971-concerto_italien bwv802-duetto1 bwv803-duetto2 bwv804-duetto3 bwv805-duetto4 inventions sinfonias
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
