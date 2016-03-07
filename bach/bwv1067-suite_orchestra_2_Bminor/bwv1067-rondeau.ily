@@ -370,7 +370,7 @@ bc = \figuremode {
   \header { title = "Rondeau" }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Traverso" } { \clef treble \transpose b d' { \traverso } }
-    \new Staff \with { instrumentName = "Violin I" } { \clef treble \transpose b d' { \violinI } }
+    \new Staff \with { instrumentName = "Violin I" } { \clef treble \transpose b d' { \transposition a \violinI } }
     \new Staff \with { instrumentName = "Violin II"} { \clef treble \transpose b d' { \violinII } }
     \new Staff \with { instrumentName = "Viola"    } { \clef treble \transpose b d' { \viola } }
     \new Staff \with { instrumentName = "Continuo" } 
