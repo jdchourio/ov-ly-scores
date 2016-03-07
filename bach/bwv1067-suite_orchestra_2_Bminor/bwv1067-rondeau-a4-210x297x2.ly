@@ -5,5 +5,5 @@
 
 breaks = {}
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 15.5)
 \include "bwv1067-rondeau.ily"

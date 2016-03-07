@@ -1,7 +1,7 @@
 \version "2.18.2"
 
-\header {
-  title = "Rondeau"
+\paper {
+  print-all-headers = ##t
 }
 
 global = {
@@ -347,6 +347,7 @@ bc = \figuremode {
 }
 
 \score {
+  \header { title = "Rondeau" }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Traverso" } { \clef treble \traverso }
     \new Staff \with { instrumentName = "Violin I" } { \clef treble \violinI }
@@ -355,6 +356,26 @@ bc = \figuremode {
     \new Staff \with { instrumentName = "Continuo" } 
     <<
       { \clef bass \continuo } 
+      \new FiguredBass \bc
+      %{ s2 s1*6 \break s1*7 \break s1*6 \break s1*7 \break \pageBreak
+        s1*6 \break s1*6 \break s1*7 \break s1*6 s2 \break  
+      %}
+    >>
+  >>
+}
+
+\pageBreak 
+
+\score {
+  \header { title = "Rondeau" }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "Traverso" } { \clef treble \transpose b d' { \traverso } }
+    \new Staff \with { instrumentName = "Violin I" } { \clef treble \transpose b d' { \violinI } }
+    \new Staff \with { instrumentName = "Violin II"} { \clef treble \transpose b d' { \violinII } }
+    \new Staff \with { instrumentName = "Viola"    } { \clef treble \transpose b d' { \viola } }
+    \new Staff \with { instrumentName = "Continuo" } 
+    <<
+      { \clef bass \transpose b d { \continuo } }
       \new FiguredBass \bc
       %{ s2 s1*6 \break s1*7 \break s1*6 \break s1*7 \break \pageBreak
         s1*6 \break s1*6 \break s1*7 \break s1*6 s2 \break  
