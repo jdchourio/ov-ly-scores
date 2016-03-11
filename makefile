@@ -45,9 +45,9 @@ pdf_scarlatti_A3x1 = k1 k35 k59 k62 k63 k64 k67 k87 k100 k102 k185
 pdf_scarlatti_A3x2 = k27 k30 k37 k41 k48 k53 k54 k55 k56 k58 k61 k77 k93 k99 k100 k102 k491
 pdf_scarlatti_none = k1 k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k59 k61 k62 k63 k64 k67 k77 k87 k93 k99 k100 k102 k185 k417
 pdf_scarlatti_A4_175x1 = k64 k95
-pdf_scarlatti_A4_175x2 = k1 k35 k59 k62 k63 k67 k87 k100 k102 k185 k322 k333 k341 k343 k347 k348 k451 k452
+pdf_scarlatti_A4_175x2 = k1 k35 k43 k59 k62 k63 k67 k87 k100 k102 k185 k208 k322 k333 k341 k343 k347 k348 k451 k452 k462 k511
 pdf_scarlatti_A4_175x3 = k77 k308 k358 k373
-pdf_scarlatti_A4_175x4 = k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k61 k82 k93 k99 k293 k314 k351 k417 k417-longo k491
+pdf_scarlatti_A4_175x4 = k27 k30 k35 k37 k41 k48 k53 k54 k55 k56 k58 k61 k82 k93 k99 k293 k314 k351 k417 k417-longo k491 k517
 
 pdf_scarlatti = $(pdf_scarlatti_A4x1:%=$(PDF)/$(A4x1)/%-$(A4x1).pdf)  \
   		$(pdf_scarlatti_A4x2:%=$(PDF)/$(A4x2)/%-$(A4x2).pdf)  \
@@ -144,7 +144,7 @@ pdf = $(pdf_scarlatti) $(pdf_bach) $(pdf_rameau) $(pdf_purcell) $(pdf_couperin) 
 #
 # chemins vers les sources
 #
-scarlatti_dirs = k001 k027 k030 k035 k037 k041 k048 k053 k054 k055 k056 k058 k059 k061 k062 k063 k064 k067 k077 k082 k087 k093 k095 k099 k100 k102 k185 k293 k308 k314 k322 k333 k341 k343 k347 k348 k351 k358 k373 k417 k451 k452 k491
+scarlatti_dirs = k001 k027 k030 k035 k037 k041 k043 k048 k053 k054 k055 k056 k058 k059 k061 k062 k063 k064 k067 k077 k082 k087 k093 k095 k099 k100 k102 k185 k208 k293 k308 k314 k322 k333 k341 k343 k347 k348 k351 k358 k373 k417 k451 k452 k462 k491 k511 k517
 bach_dirs = bwv964 bwv971-concerto_italien bwv802-duetto1 bwv803-duetto2 bwv804-duetto3 bwv805-duetto4 inventions sinfonias
 purcell_dirs = fairy_queen z661
 rameau_dirs = livri poule gavotte6doubles
@@ -303,6 +303,7 @@ $(PDF)/*/k30*.pdf  : k30.ily
 $(PDF)/*/k35*.pdf  : k35.ily
 $(PDF)/*/k37*.pdf  : k37.ily
 $(PDF)/*/k41*.pdf  : k41.ily
+$(PDF)/*/k43*.pdf  : k43.ily 
 $(PDF)/*/k48*.pdf  : k48.ily
 $(PDF)/*/k53*.pdf  : k53.ily
 $(PDF)/*/k54*.pdf  : k54.ily
@@ -324,7 +325,7 @@ $(PDF)/*/k99*.pdf  : k99.ily
 $(PDF)/*/k100*.pdf : k100.ily
 $(PDF)/*/k102*.pdf : k102.ily
 $(PDF)/*/k185*.pdf : k185.ily
-$(PDF)/*/k185*.pdf : k185.ily
+$(PDF)/*/k208*.pdf : k208.ily
 $(PDF)/*/k293*.pdf : k293.ily
 $(PDF)/*/k308*.pdf : k308.ily
 $(PDF)/*/k314*.pdf : k314.ily
@@ -340,7 +341,11 @@ $(PDF)/*/k373*.pdf : k373.ily
 $(PDF)/*/k417*.pdf : k417.ily
 $(PDF)/*/k451*.pdf : k451.ily
 $(PDF)/*/k452*.pdf : k452.ily
+$(PDF)/*/k462*.pdf : k462.ily
 $(PDF)/*/k491*.pdf : k491.ily
+$(PDF)/*/k511*.pdf : k511.ily
+$(PDF)/*/k517*.pdf : k517.ily
+
 
 #
 # Assemblages
