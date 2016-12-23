@@ -7,7 +7,7 @@ breaks = {
   s1*5 \break s1*6 \break s1*5 \break s1*5 \break s1*5 \break s1*6 \break \pageBreak
 }
 
-#(set-global-staff-size 16)
+%#(set-global-staff-size 16)
 
 \paper {
   #(set-paper-size "a4")
@@ -91,6 +91,39 @@ rightUp = \relative c' {
 
   a8\noBeam bes d4 ~ d8 c f4 ~
   \Cust f1^\markup { \musicglyph #"scripts.segno" } \bar "||"
+  bes,8\noBeam bes d2 ees4 ~
+  ees c2 f4 ~
+  f d2 ees4 ~
+  ees ees2 d4
+  
+  ees2 ~ ees8\noBeam ees8 g4 ~
+  g g2 g4 ~ 
+  g g2 g4 ~
+  g f2 f4 ~
+  f f2 f4 ~
+  
+  f ees ~ ees ees ~
+  ees ees2 ees4 ~
+  ees d2 d4 ~
+  d d2 d4 ~
+  d c2 c4 ~
+  
+  c c2 bes4 ~
+  bes bes2 bes4 ~
+  bes bes2 bes4 ~
+  bes bes2 bes4 ~
+  bes4 a2 bes4 ~
+  
+  bes bes2 bes4 ~
+  bes bes ~ bes bes ~
+  bes bes2 bes8 a
+  bes\noBeam-\mordent-\fermata 
+  bes d4 ~ d8 c ~ <c f>4 ~
+  <c f>8^\markup { \musicglyph #"scripts.segno" } 
+  %s8 s2.
+  \bar "||"
+  <bes f d>1-\fermata_"Fin"
+  \bar "|."
 }
 
 rightDown = \relative c' {
@@ -162,8 +195,9 @@ rightDown = \relative c' {
 
   f g4 g8 ~ g f4 f8 ~
   f ees4 ees8 ~ ees g4 g8 ~
-  g f4 f8 ~ f f ~ f4 ~
-  f8
+  g f4 f8 ~ f\noBeam f ~ f4 ~
+  f8 bes4 bes8 ~ bes4. a8 ~
+  a
 }
 
 leftUp = \relative c {
@@ -235,8 +269,10 @@ leftUp = \relative c {
 
   d c2 d4 ~
   d c ~ c d ~
-  d c ~ s f,
-  d' f2 f4 ~
+  d <<{ c s f, } \\ { c'~ c2 }>> 
+  d4 f2 f4 ~
+  \Cust f8^\markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 leftDown = \relative c {
@@ -309,8 +345,12 @@ leftDown = \relative c {
 
   ees f
   g ees 
-  f ees'
-  bes f
+  f \once \stemUp ees'
+  \once \stemDown bes f
+  \Cust bes8
+  \bar "||"
+  <bes bes,>1-\fermata
+  \bar "|."
 }
 
 \score {
